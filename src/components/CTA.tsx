@@ -21,16 +21,14 @@ export const CTA = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              variant="secondary"
-              className="bg-white text-primary hover:bg-white/90 shadow-2xl group"
+              className="bg-white text-primary hover:bg-white/90 shadow-2xl group border-0"
             >
               Start Free Trial
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button 
               size="lg" 
-              variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary backdrop-blur-sm transition-all"
             >
               Schedule Demo
             </Button>
