@@ -2,8 +2,8 @@ import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-border bg-muted/30">
-      <div className="container mx-auto px-4 lg:px-8 py-12 lg:py-16">
+    <footer className="border-t border-border bg-background">
+      <div className="container mx-auto px-4 lg:px-8 py-8 lg:py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {/* Product */}
           <div>
