@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Phone, Wifi, Volume2, Mic, Star, User, CheckCircle, Headphones, FileText, Target, TrendingUp, Play, Pause } from "lucide-react";
+import { Phone, Wifi, Volume2, Mic, Star, User, CheckCircle, Headphones, FileText, Target, TrendingUp, Play, Pause, Hash, Calendar } from "lucide-react";
 
 export const HorizontalCallAnalytics = () => {
   const [waveData, setWaveData] = useState<number[]>(Array(30).fill(0));
@@ -262,20 +262,22 @@ export const HorizontalCallAnalytics = () => {
           </div>
         </div>
 
-        {/* New Elements: Call Metrics */}
+        {/* Reordered Elements: Sentiment, Next Action, Keywords */}
         <div className="grid grid-cols-3 gap-3">
           <div className="bg-blue-50 rounded-lg p-3 border border-blue-100 text-center">
             <TrendingUp className="h-5 w-5 text-blue-600 mx-auto mb-1" />
             <div className="text-xs text-muted-foreground">Sentiment</div>
             <div className="text-sm font-medium">Positive</div>
           </div>
-          <div className="bg-purple-50 rounded-lg p-3 border border-purple-100 text-center">
-            <div className="text-xs text-muted-foreground">Keywords</div>
-            <div className="text-sm font-medium">5 detected</div>
-          </div>
           <div className="bg-amber-50 rounded-lg p-3 border border-amber-100 text-center">
+            <Calendar className="h-5 w-5 text-amber-600 mx-auto mb-1" />
             <div className="text-xs text-muted-foreground">Next Action</div>
             <div className="text-sm font-medium">Follow-up</div>
+          </div>
+          <div className="bg-purple-50 rounded-lg p-3 border border-purple-100 text-center">
+            <Hash className="h-5 w-5 text-purple-600 mx-auto mb-1" />
+            <div className="text-xs text-muted-foreground">Keywords</div>
+            <div className="text-sm font-medium">5 detected</div>
           </div>
         </div>
       </div>
