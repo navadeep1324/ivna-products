@@ -1,6 +1,12 @@
-import { TrendingUp, Clock, Award, HeartHandshake } from "lucide-react";
+import { TrendingUp, Clock, Award, HeartHandshake, Users, DollarSign } from "lucide-react";
 
 const stats = [
+  {
+    icon: Users,
+    value: "500K+",
+    label: "Businesses",
+    description: "Trusted by companies worldwide",
+  },
   {
     icon: TrendingUp,
     value: "300%",
@@ -14,25 +20,16 @@ const stats = [
     description: "Reduce customer wait times significantly",
   },
   {
-    icon: Award,
-    value: "99.9%",
-    label: "Uptime SLA",
-    description: "Enterprise-grade reliability you can count on",
-  },
-  {
-    icon: HeartHandshake,
-    value: "24/7",
-    label: "Global Support",
-    description: "Round-the-clock assistance for your team",
+    icon: DollarSign,
+    value: "$2.5M",
+    label: "Saved Annually",
+    description: "Average cost savings for our clients",
   },
 ];
 
 export const Stats = () => {
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5 -z-10" />
-      
+    <section className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
           <h2 className="text-3xl lg:text-5xl font-bold mb-4">

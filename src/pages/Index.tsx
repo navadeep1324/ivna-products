@@ -3,12 +3,13 @@ import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
 import { Stats } from "@/components/Stats";
 import { ProductShowcase } from "@/components/ProductShowcase";
-import { LeadManagement } from "@/components/LeadManagement";
+// import { LeadManagement } from "@/components/LeadManagement";
 import { CallAnalytics } from "@/components/CallAnalytics";
 import { Testimonials } from "@/components/Testimonials";
 import { ContactForm } from "@/components/ContactForm";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
+import { ClientLogos } from "@/components/ClientLogos";
 
 const Index = () => {
   return (
@@ -16,31 +17,48 @@ const Index = () => {
       <Header />
       <main>
         {/* Introduction Section */}
-        <Hero />
+        <div className="bg-background">
+          <Hero />
+        </div>
         
         {/* Features Section */}
-        <Features />
+        <div className="bg-muted/30">
+          <Features />
+        </div>
         
         {/* Lead Management Section */}
-        <LeadManagement />
+        {/* <div className="bg-background">
+          <LeadManagement />
+        </div> */}
         
-        {/* Benefits Section */}
-        <Stats />
-        
-        {/* Call Analytics Section */}
-        <CallAnalytics />
+        {/* Benefits Section - now moved to Hero section */}
+        {/* <Stats /> - Removed as it's now in Hero section */}
+
+        {/* Call Analytics Section - Hidden as per requirements */}
+        {/* <CallAnalytics /> - Hidden */}
         
         {/* Product Videos / Screenshots Section */}
-        <ProductShowcase />
+        <div className="bg-muted/30">
+          <ProductShowcase />
+        </div>
         
-        {/* Testimonials Section */}
-        <Testimonials />
+        {/* Testimonials Section - Hidden as per requirements */}
+        {/* <Testimonials /> - Hidden */}
+        
+        {/* Client Logos Section - Added above contact form */}
+        <div className="bg-background">
+          <ClientLogos />
+        </div>
         
         {/* Contact Form Section */}
-        <ContactForm />
+        <div className="bg-muted/30">
+          <ContactForm />
+        </div>
         
-        {/* Call to Action Section */}
-        <CTA />
+        {/* Call to Action Section - Restored as per requirements */}
+        {/* <div className="bg-background">
+          <CTA />
+        </div> */}
       </main>
       <Footer />
     </div>

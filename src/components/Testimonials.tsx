@@ -41,7 +41,7 @@ export const Testimonials = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
@@ -63,6 +63,21 @@ export const Testimonials = () => {
               </div>
             </Card>
           ))}
+        </div>
+        
+        {/* Client Logos */}
+        <div className="mt-16">
+          <div className="text-center mb-12">
+            <h3 className="text-lg font-semibold text-muted-foreground mb-2">Trusted by innovative teams at</h3>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+            {["TechCorp", "InnovateCo", "Global Solutions", "Future Enterprises", "Digital Dynamics", "Nexus Group"].map((client, index) => (
+              <Card key={index} className="p-6 flex items-center justify-center border-border bg-card hover:shadow-md transition-shadow h-24">
+                <div className="text-xl font-bold text-foreground/80">{client}</div>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>

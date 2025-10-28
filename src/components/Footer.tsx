@@ -1,76 +1,84 @@
-import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const Footer = () => {
+  const handleBookDemoClick = () => {
+    // Scroll to contact form
+    const contactForm = document.getElementById("contact");
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleWatchDemoClick = () => {
+    // Scroll to Product Showcase section (VOIPro Professional Suite)
+    const productShowcase = document.getElementById("suite");
+    if (productShowcase) {
+      productShowcase.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <footer className="border-t border-border bg-background">
-      <div className="container mx-auto px-4 lg:px-8 py-8 lg:py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-          {/* Product */}
+    <footer className="border-t border-border bg-gradient-to-b from-primary/5 via-secondary/5 to-accent/5">
+      <div className="container mx-auto px-4 lg:px-8 py-8 lg:py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+          {/* Brand - Removed social media links */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                VOIPro
+              </span>
+            </div>
+            <p className="text-muted-foreground mb-4 text-base max-w-xs">
+              Transforming business communications with professional VOIP solutions.
+            </p>
+          </div>
+          
+          {/* Quick Links with Main Menu Items */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Product</h3>
+            <h3 className="font-semibold text-foreground mb-4 text-lg border-b border-primary/20 pb-2">Quick Links</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Features</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Security</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Roadmap</a></li>
+              <li><a href="#suite" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center text-base">Product Showcase</a></li>
+              <li><a href="#features" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center text-base">Features</a></li>
+              <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center text-base">Contact</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center text-base">Privacy Policy</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center text-base">Terms and Conditions</a></li>
             </ul>
           </div>
           
-          {/* Company */}
+          {/* Demo Buttons */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Company</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">About</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Blog</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Careers</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Press</a></li>
-            </ul>
-          </div>
-          
-          {/* Resources */}
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Resources</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Documentation</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Help Center</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Community</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">API Reference</a></li>
-            </ul>
-          </div>
-          
-          {/* Legal */}
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Legal</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Privacy</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Terms</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Cookie Policy</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Licenses</a></li>
-            </ul>
+            <h3 className="font-semibold text-foreground mb-4 text-lg border-b border-primary/20 pb-2">Product Demos</h3>
+            <div className="flex flex-col gap-3">
+              <Button 
+                variant="default" 
+                size="lg" 
+                className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white shadow-lg text-base py-3"
+                onClick={handleBookDemoClick}
+              >
+                Book a Demo
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-primary bg-background hover:bg-primary/10 text-primary group border-2 text-base py-3"
+                onClick={handleWatchDemoClick}
+              >
+                Watch Demo
+              </Button>
+            </div>
           </div>
         </div>
         
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-8 border-t border-border/30 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2">
-            <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              CloudFlow
-            </span>
-            <span className="text-muted-foreground">© 2024 All rights reserved.</span>
+            <span className="text-muted-foreground text-base">© 2025 VOIPro. All rights reserved.</span>
           </div>
           
-          <div className="flex items-center gap-4">
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Twitter">
-              <Twitter className="h-5 w-5" />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="LinkedIn">
-              <Linkedin className="h-5 w-5" />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="GitHub">
-              <Github className="h-5 w-5" />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Email">
-              <Mail className="h-5 w-5" />
-            </a>
+          <div className="flex flex-wrap justify-center gap-6">
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-base">Status</a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-base">Privacy Policy</a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-base">Terms of Service</a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-base">Cookie Policy</a>
           </div>
         </div>
       </div>
