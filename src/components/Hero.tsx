@@ -7,26 +7,26 @@ const stats = [
   {
     icon: TrendingDown,
     value: "40%",
-    label: "Cost Reduction",
-    description: "Save up to 40% compared to traditional phone systems",
+    label: "Faster",
+    description: "Faster client responses through real-time call tracking and alerts.",
   },
   {
     icon: Clock,
-    value: "5min",
-    label: "Setup Time",
-    description: "Get your system up and running in just 5 minutes",
+    value: "Up to 60%",
+    label: "Better Team",
+    description: "Performance with AI-driven insights and feedback",
   },
   {
     icon: Award,
-    value: "99.9%",
-    label: "Uptime SLA",
-    description: "Enterprise-grade reliability you can count on",
+    value: "6+ hours",
+    label: "Saves Time ",
+    description: " Weekly by eliminating manual note-taking and follow-ups. ",
   },
   {
     icon: HeartHandshake,
-    value: "24/7",
-    label: "Global Support",
-    description: "Round-the-clock assistance for your business",
+    value: "100% ",
+    label: "Visibility ",
+    description: "Visibility into every call, transcript, and action item.",
   },
 ];
 
@@ -69,16 +69,14 @@ export const Hero = () => {
               Enterprise VOIP Solutions
             </div>
             
-            <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-              Transform Your{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Business Communications
+            <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-loose">
+              AI That Simplifies, Analyzes, and Strengthens <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Your Communication
               </span>
             </h1>
             
-            <p className="text-lg text-muted-foreground mb-6 max-w-xl">
-              Empower your business with professional VOIP solutions designed for modern enterprises. 
-              Enhance collaboration, reduce costs, and scale effortlessly.
+            <p className="text-lg text-foreground mb-6 max-w-xl">
+              Turn every interaction into measurable growth with AI-powered insights and smart automation — because at VOiPro, we don’t just make communication work, we make it work for you. 
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3">
@@ -106,15 +104,15 @@ export const Hero = () => {
             <div className="flex items-center gap-6 mt-8 pt-6 border-t border-border opacity-0">
               <div>
                 <div className="text-2xl font-bold text-foreground">99.9%</div>
-                <div className="text-sm text-muted-foreground">Uptime</div>
+                <div className="text-sm text-foreground">Uptime</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-foreground">500K+</div>
-                <div className="text-sm text-muted-foreground">Businesses</div>
+                <div className="text-sm text-foreground">Businesses</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-foreground">100+</div>
-                <div className="text-sm text-muted-foreground">Countries</div>
+                <div className="text-sm text-foreground">Countries</div>
               </div>
             </div>
           </div>
@@ -135,13 +133,13 @@ export const Hero = () => {
         {/* Added missing heading for Key Business Benefits */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-3">
-            Key{" "}
+           What Makes  {" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Business Benefits
+              VOiPro a Game Changer
             </span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Measurable improvements that drive business success
+          <p className="text-lg text-foreground">
+           AI that helps your team communicate smarter and drive better ROI. 
           </p>
         </div>
         
@@ -151,14 +149,14 @@ export const Hero = () => {
               key={index}
               className="text-center group bg-card p-5 rounded-lg border border-border hover:border-primary/30 hover:shadow-md transition-all"
             >
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 mb-3 group-hover:scale-110 transition-transform duration-300">
-                <stat.icon className="h-6 w-6 text-primary" />
+              <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 mb-3 group-hover:scale-110 transition-transform duration-300">
+                <stat.icon className="h-8 w-8 md:h-12 md:w-12 text-primary" />
               </div>
-              <div className="text-3xl lg:text-4xl font-bold mb-1 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <div className="text-2xl lg:text-3xl font-bold mb-1 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 {stat.value}
               </div>
               <div className="text-base font-semibold mb-1 text-foreground">{stat.label}</div>
-              <p className="text-sm text-muted-foreground">{stat.description}</p>
+              <p className="text-sm md:text-base text-foreground">{stat.description}</p>
             </div>
           ))}
         </div>

@@ -4,33 +4,33 @@ import { Phone, Wifi, Shield, Zap, Users, Globe } from "lucide-react";
 const features = [
   {
     icon: Phone,
-    title: "Crystal Clear Audio",
-    description: "HD voice quality with advanced noise cancellation for professional conversations.",
+    title: "AI-Powered Call Analysis",
+    description: "Gives real-time feedback on conversation quality.",
   },
   {
     icon: Wifi,
-    title: "Seamless Connectivity",
-    description: "Reliable connections across all devices with automatic failover protection.",
+    title: "Conversation Summaries & Insight",
+    description: " Generates instant call summaries and action points.",
   },
   {
     icon: Shield,
-    title: "Enterprise Security",
-    description: "End-to-end encryption and compliance with global security standards.",
+    title: "Performance Dashboard",
+    description: "Offers detailed analytics on call duration, response time, and customer satisfaction trends.",
   },
   {
     icon: Zap,
-    title: "Lightning Fast Setup",
-    description: "Get your system up and running in minutes with our intuitive interface.",
+    title: "Intelligent Transcription",
+    description: "Transcribes every call with high accuracy, making it easy to review client interactions.",
   },
   {
     icon: Users,
-    title: "Team Collaboration",
-    description: "Unified communications with video conferencing and instant messaging.",
+    title: "Security & Compliance",
+    description: "Protects data with enterprise-grade encryption and access control.",
   },
   {
     icon: Globe,
-    title: "Global Reach",
-    description: "Connect with clients worldwide with local presence in 100+ countries.",
+    title: "Continuous Learning Engine",
+    description: "Gets smarter with every call for sharper insights and evaluations.",
   },
 ];
 
@@ -45,13 +45,13 @@ export const Features = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-3">
-            Everything You Need for{" "}
+            Power Features That{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Professional VOIP
+              Drive VOiPro 
             </span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Built for modern businesses who demand excellence in communication
+          <p className="text-lg text-foreground">
+            Discover intelligent features designed to enhance every call, every connection. 
           </p>
         </div>
         
@@ -63,11 +63,11 @@ export const Features = () => {
             >
               {/* Animated icon background */}
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-primary/5 rounded-full blur-xl"></div>
-              <div className="w-11 h-11 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-3 relative">
-                <feature.icon className="h-5 w-5 text-primary" />
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-3 relative">
+                <feature.icon className="h-6 w-6 md:h-8 md:w-8 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-card-foreground">{feature.title}</h3>
-              <p className="text-muted-foreground text-sm">{feature.description}</p>
+              <h3 className="text-lg font-semibold mb-2 text-foreground">{feature.title}</h3>
+              <p className="text-foreground text-sm md:text-base">{feature.description}</p>
             </Card>
           ))}
         </div>
@@ -79,37 +79,48 @@ export const Features = () => {
           <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-accent/5 rounded-full blur-xl animate-ping delay-500"></div>
           
           <div className="order-2 lg:order-1 relative z-10">
-            <h3 className="text-2xl font-bold mb-4 text-foreground">
-              Advanced <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Call</span> Management
+            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+           Know <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">What’s Happening</span> in Every Conversation 
             </h3>
-            <p className="text-muted-foreground mb-4">
-              Take control of your business communications with our sophisticated call management system. 
-              Route calls intelligently, set up automated attendants, and ensure no call goes unanswered.
+            <p className="text-foreground mb-4">
+              Stay in control with a unified view of all your business communications — track, analyze, and improve every conversation effortlessly. 
             </p>
             <ul className="space-y-2 mb-6">
               <li className="flex items-start">
                 <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
                 </div>
-                <span className="text-foreground">Interactive Voice Response (IVR) systems</span>
+                <span className="text-foreground">Caller details and communication history. </span>
               </li>
               <li className="flex items-start">
                 <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
                 </div>
-                <span className="text-foreground">Call queuing and forwarding</span>
+                <span className="text-foreground">Call quality indicators and performance scores. </span>
               </li>
               <li className="flex items-start">
                 <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
                 </div>
-                <span className="text-foreground">Voicemail to email transcription</span>
+                <span className="text-foreground">Follow-up status and assigned team member. </span>
               </li>
               <li className="flex items-start">
                 <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
                 </div>
-                <span className="text-foreground">Call recording and analytics</span>
+                <span className="text-foreground">Real-time AI insights and feedback. </span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                </div>
+                <span className="text-foreground">Quick filters to sort by date, client, or call type.   </span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                </div>
+                <span className="text-foreground">One-click access to transcripts and summaries. </span>
               </li>
             </ul>
           </div>
@@ -136,43 +147,57 @@ export const Features = () => {
             />
           </div>
           <div className="relative z-10">
-            <h3 className="text-2xl font-bold mb-4 text-foreground">
-              Real-Time <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Analytics</span> & Insights
+            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              Track  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Your Communication</span> With our AI Dashboard
             </h3>
-            <p className="text-muted-foreground mb-4">
-              Make data-driven decisions with our comprehensive analytics dashboard. 
-              Monitor performance metrics, track call volumes, and optimize your communication strategy.
+            <p className="text-foreground mb-4">
+              Gain a 360° view of your calls, enquiries, and team performance — all powered by real-time AI analytics that help you make faster, smarter business decisions. 
             </p>
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="bg-gradient-to-br from-primary/5 to-accent/5 p-4 rounded-lg border border-border relative overflow-hidden">
-                {/* Animated element */}
-                <div className="absolute top-0 right-0 w-8 h-8 bg-primary/10 rounded-full blur-lg animate-pulse"></div>
-                <div className="text-2xl font-bold text-primary">99.9%</div>
-                <div className="text-sm text-muted-foreground">Uptime Guarantee</div>
-              </div>
-              <div className="bg-gradient-to-br from-primary/5 to-accent/5 p-4 rounded-lg border border-border relative overflow-hidden">
-                {/* Animated element */}
-                <div className="absolute top-0 right-0 w-8 h-8 bg-primary/10 rounded-full blur-lg animate-pulse delay-300"></div>
-                <div className="text-2xl font-bold text-primary">50%</div>
-                <div className="text-sm text-muted-foreground">Avg. Cost Reduction</div>
-              </div>
-              <div className="bg-gradient-to-br from-primary/5 to-accent/5 p-4 rounded-lg border border-border relative overflow-hidden">
-                {/* Animated element */}
-                <div className="absolute top-0 right-0 w-8 h-8 bg-primary/10 rounded-full blur-lg animate-pulse delay-500"></div>
-                <div className="text-2xl font-bold text-primary">24/7</div>
-                <div className="text-sm text-muted-foreground">Support Coverage</div>
-              </div>
-              <div className="bg-gradient-to-br from-primary/5 to-accent/5 p-4 rounded-lg border border-border relative overflow-hidden">
-                {/* Animated element */}
-                <div className="absolute top-0 right-0 w-8 h-8 bg-primary/10 rounded-full blur-lg animate-pulse delay-700"></div>
-                <div className="text-2xl font-bold text-primary">100+</div>
-                <div className="text-sm text-muted-foreground">Countries Supported</div>
-              </div>
-            </div>
-            <p className="text-muted-foreground">
-              Our platform provides actionable insights to help you improve customer service, 
-              reduce operational costs, and scale your business communications effectively.
-            </p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-start">
+                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                </div>
+                <span className="text-foreground">Call Summary Snapshot. </span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                </div>
+                <span className="text-foreground">Call Type Analysis. </span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                </div>
+                <span className="text-foreground">Recordings & Transcriptions. </span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                </div>
+                <span className="text-foreground">RLead Enquiry Tracking. </span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                </div>
+                <span className="text-foreground">Quality Call Insights. </span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                </div>
+                <span className="text-foreground">Team Performance Dashboard. </span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                </div>
+                <span className="text-foreground">Strategic Analytics & Trends. </span>
+              </li>
+            </ul>
+          
           </div>
         </div>
       </div>

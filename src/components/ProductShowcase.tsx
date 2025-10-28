@@ -65,29 +65,6 @@ export const ProductShowcase = () => {
     setCurrentSlide(index);
   };
 
-  const features = [
-    {
-      icon: Phone,
-      title: "HD Voice Calling",
-      description: "Crystal clear audio with advanced noise cancellation"
-    },
-    {
-      icon: Wifi,
-      title: "Seamless Connectivity",
-      description: "Reliable connections across all devices and networks"
-    },
-    {
-      icon: Users,
-      title: "Team Collaboration",
-      description: "Unified communications with video and messaging"
-    },
-    {
-      icon: Settings,
-      title: "Easy Management",
-      description: "Intuitive dashboard for system configuration"
-    }
-  ];
-
   return (
     <section id="suite" className="py-16 lg:py-24 bg-muted/30 relative overflow-hidden">
       {/* Animated background elements */}
@@ -98,32 +75,28 @@ export const ProductShowcase = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            VOIPro{" "}
+            VoiPro {" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Professional Suite
+              Overview 
             </span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            A complete solution for enterprise communications and collaboration
+          <p className="text-lg text-foreground">
+            The next-generation platform for enterprises to simplify collaboration and strengthen client engagement. 
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-10">
-          {/* Video Demo Section with Slideshow */}
+          {/* Video Demo Section with Dashboard Images Only */}
           <div className="space-y-6 relative">
             {/* Animated background elements */}
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-accent/5 rounded-full blur-xl animate-ping delay-300"></div>
             
             <h3 className="text-2xl font-bold text-foreground flex items-center gap-2 relative z-10">
               <Play className="h-6 w-6 text-primary" />
-              Platform Overview
+              Platform Demo
             </h3>
-            <p className="text-muted-foreground relative z-10">
-              See how VOIPro transforms business communications with our professional platform. 
-              Watch our dashboard in action with real-time analytics and system management.
-            </p>
             
-            {/* Slideshow Carousel with Controls */}
+            {/* Slideshow Carousel with Controls - Dashboard Images Only */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-gradient-to-br from-primary/10 to-accent/10">
               {/* Animated elements */}
               <div className="absolute top-2 right-2 w-8 h-8 bg-white/20 rounded-full blur-sm animate-pulse"></div>
@@ -189,12 +162,6 @@ export const ProductShowcase = () => {
                 </div>
               </div>
             </div>
-            
-            <div className="flex flex-wrap gap-2 relative z-10">
-              <span className="px-3 py-1 bg-gradient-to-r from-primary/10 to-accent/10 text-primary rounded-full text-sm">HD Audio</span>
-              <span className="px-3 py-1 bg-gradient-to-r from-primary/10 to-accent/10 text-primary rounded-full text-sm">Video Conferencing</span>
-              <span className="px-3 py-1 bg-gradient-to-r from-primary/10 to-accent/10 text-primary rounded-full text-sm">Analytics</span>
-            </div>
           </div>
           
           {/* Screenshots Gallery */}
@@ -203,7 +170,7 @@ export const ProductShowcase = () => {
             <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-primary/5 rounded-full blur-xl animate-ping delay-700"></div>
             
             <h3 className="text-2xl font-bold text-foreground relative z-10">Platform Screenshots</h3>
-            <p className="text-muted-foreground relative z-10">
+            <p className="text-foreground relative z-10">
               Explore our intuitive dashboard and feature-rich interface designed for seamless communication management.
             </p>
             

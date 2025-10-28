@@ -34,9 +34,9 @@ export const ContactForm = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-foreground">Get in Touch</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-foreground">Ready to Transform Your Communication?</h2>
             <p className="text-lg text-foreground/80">
-              Have questions? Our team is here to help you transform your business communications.
+              We’re here to answer your questions and guide you toward smarter, seamless communication. Book your demo now!
             </p>
           </div>
           

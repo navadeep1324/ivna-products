@@ -26,8 +26,8 @@ export const ClientLogos = () => {
               Clients
             </span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Join thousands of businesses that trust VOIPro for their communication needs
+          <p className="text-foreground max-w-2xl mx-auto">
+            From startups to enterprises — VOiPro keeps teams connected and efficient. 
           </p>
         </div>
         
