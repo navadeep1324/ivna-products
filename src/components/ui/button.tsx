@@ -9,13 +9,13 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_10px_40px_-10px_hsl(var(--primary)/0.5)]",
+        default: "bg-gradient-to-r from-primary to-accent text-primary-foreground hover:from-primary/90 hover:to-accent/90 shadow-lg",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-border bg-background hover:bg-accent hover:text-accent-foreground",
+        outline: "border border-border bg-background hover:bg-secondary",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.3)] hover:shadow-[0_25px_70px_-15px_hsl(var(--primary)/0.5)] hover:scale-105",
+        hero: "bg-gradient-to-r from-primary to-accent text-primary-foreground hover:from-primary/90 hover:to-accent/90 shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.3)] hover:shadow-[0_25px_70px_-15px_hsl(var(--primary)/0.5)] hover:scale-105",
         glass: "bg-background/60 backdrop-blur-sm border border-border hover:bg-background/80",
       },
       size: {
