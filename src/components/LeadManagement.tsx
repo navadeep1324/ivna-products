@@ -108,7 +108,7 @@ export const LeadManagement = () => {
                 <div className="bg-background rounded-xl shadow-lg border border-border">
                   {/* Dashboard Header */}
                   <div className="flex items-center justify-between p-4 border-b border-border">
-                    <h3 className="font-semibold text-foreground">VOIPro Business Dashboard</h3>
+                    <h3 className="font-semibold text-foreground">CallMonAI Business Dashboard</h3>
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 rounded-full bg-green-500"></div>
                       <span className="text-xs text-muted-foreground">Live</span>

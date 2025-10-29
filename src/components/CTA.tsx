@@ -3,10 +3,14 @@ import { ArrowRight, Clock, CreditCard, Calendar } from "lucide-react";
 
 export const CTA = () => {
   return (
-    <section className="py-16 lg:py-24 relative overflow-hidden" style={{ background: 'linear-gradient(122deg, #40a1f1 0%, #796cef 100%)' }}>
+    <section className="py-16 lg:py-24 relative overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10" 
+             style={{ backgroundImage: "url('/dashboard/Rectangle 19.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
       {/* Background elements */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.3),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.2),transparent_50%)]"></div>
+      
+      {/* Stronger background elements for better highlighting */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-background to-accent/15 -z-10" />
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
@@ -14,7 +18,7 @@ export const CTA = () => {
             Ready to Transform Your Business Communications?
           </h2>
           <p className="text-lg text-white/95 mb-6 max-w-2xl mx-auto drop-shadow-md text-white font-medium">
-            Join 500,000+ businesses already using VOIPro for professional communications. 
+            Join 500,000+ businesses already using CallMonAI for professional communications. 
             Start your free trial today—no credit card required.
           </p>
           

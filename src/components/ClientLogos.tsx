@@ -27,7 +27,7 @@ export const ClientLogos = () => {
             </span>
           </h2>
           <p className="text-foreground max-w-2xl mx-auto">
-            From startups to enterprises — VOiPro keeps teams connected and efficient. 
+            From startups to enterprises — CallMonAI keeps teams connected and efficient. 
           </p>
         </div>
         

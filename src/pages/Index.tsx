@@ -10,6 +10,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 import { ClientLogos } from "@/components/ClientLogos";
+import { GameChangerSection } from "@/components/GameChangerSection";
 
 const Index = () => {
   return (
@@ -20,6 +21,9 @@ const Index = () => {
         <div className="bg-background">
           <Hero />
         </div>
+        
+        {/* What Makes CallMonAI a Game Changer Section */}
+        <GameChangerSection />
         
         {/* Features Section */}
         <div className="bg-muted/30">

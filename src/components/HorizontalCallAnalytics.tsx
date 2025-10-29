@@ -66,14 +66,15 @@ export const HorizontalCallAnalytics = () => {
   return (
     <div className="bg-card rounded-xl border border-border p-5 shadow-lg w-full">
       <div className="flex flex-col gap-4">
-        {/* Header with VoIPro Dashboard title */}
+        {/* Header with CallMonAI Dashboard title */}
         <div className="flex justify-between items-center">
-          <h3 className="text-xl font-bold text-foreground">
+          <div className="flex-1"></div> {/* Empty flex space */}
+          <h3 className="text-xl font-bold text-foreground mx-4">
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              VoIPro Dashboard
+              CallMonAI Dashboard
             </span>
           </h3>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-1 justify-end">
             <div className={`w-3 h-3 rounded-full ${
               callStatus === "connecting" ? "bg-yellow-500 animate-pulse" :
               callStatus === "ringing" ? "bg-blue-500 animate-pulse" :

@@ -118,7 +118,11 @@ export const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-8 lg:py-12 bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden">
+    <section id="contact" className="py-8 lg:py-12 bg-gradient-to-br from-primary/10 via-background to-accent/10 relative overflow-hidden"
+             style={{ backgroundImage: "url('/dashboard/Rectangle 19.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+      {/* Stronger background elements for better highlighting */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-background to-accent/15 -z-10" />
+      
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-6">

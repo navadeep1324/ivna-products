@@ -11,7 +11,7 @@ export const Footer = () => {
   };
 
   const handleWatchDemoClick = () => {
-    // Scroll to Product Showcase section (VOIPro Professional Suite)
+    // Scroll to Product Showcase section (CallMonAI Professional Suite)
     const productShowcase = document.getElementById("suite");
     if (productShowcase) {
       productShowcase.scrollIntoView({ behavior: "smooth" });
@@ -30,7 +30,7 @@ export const Footer = () => {
               </span>
             </div>
             <p className="text-muted-foreground mb-4 text-base max-w-xs">
-              Transforming business communications with professional VOIP solutions.
+              Transforming business communications with professional CallMonAI solutions.
             </p>
           </div>
           
@@ -87,7 +87,7 @@ export const Footer = () => {
         
         <div className="pt-8 border-t border-border/30 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2">
-            <span className="text-muted-foreground text-base">© 2025 VOIPro. All rights reserved.</span>
+            <span className="text-muted-foreground text-base">© 2025 CallMonAI. All rights reserved.</span>
           </div>
           
           <div className="flex flex-wrap justify-center gap-6">

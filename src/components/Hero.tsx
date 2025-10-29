@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Phone, Headphones, Zap, Shield, Star, CheckCircle, TrendingUp, Users, Clock, Award, BarChart3, Headset, Mic, Volume2 } from "lucide-react";
+import { ArrowRight, Play, Phone, Headphones, Zap, Shield, Star, CheckCircle, TrendingUp, Users, Clock, Award, BarChart3, Headset, Mic, Volume2, Brain, Bot } from "lucide-react";
 import { TrendingDown, Clock as ClockIcon, Award as AwardIcon, HeartHandshake } from "lucide-react";
 import { HorizontalCallAnalytics } from "@/components/HorizontalCallAnalytics";
 
@@ -48,8 +48,9 @@ export const Hero = () => {
   };
 
   return (
-    // Enhanced section with stronger background color
-    <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
+    // Enhanced section with stronger background color and added background image
+    <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10" 
+             style={{ backgroundImage: "url('/dashboard/Rectangle 19.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
       {/* Stronger background elements for better highlighting */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-background to-accent/15 -z-10" />
       
@@ -60,6 +61,13 @@ export const Hero = () => {
       {/* Additional decorative elements for enhanced highlighting */}
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-primary/15 to-accent/15 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-accent/15 to-primary/15 rounded-full blur-3xl -z-10"></div>
+      
+      {/* AI-themed floating elements */}
+      <div className="absolute top-20 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-md animate-bounce"></div>
+      <div className="absolute top-40 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full blur-sm animate-pulse"></div>
+      <div className="absolute bottom-32 left-1/2 w-10 h-10 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full blur-lg animate-ping"></div>
+      <div className="absolute top-1/3 right-1/3 w-7 h-7 bg-gradient-to-r from-green-400 to-teal-500 rounded-full blur-md animate-pulse delay-1000"></div>
+      <div className="absolute bottom-1/4 left-1/4 w-5 h-5 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full blur-sm animate-bounce delay-1500"></div>
       
       {/* Floating animated icons */}
       <Phone className="absolute top-20 right-20 h-6 w-6 text-primary/20 animate-bounce delay-1000" />
@@ -81,14 +89,14 @@ export const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
           <div className="animate-fade-in">
-            {/* Hidden Enterprise VOIP Solutions tag */}
+            {/* Hidden Enterprise CallMonAI Solutions tag */}
             <div className="hidden">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/15 to-accent/15 text-primary text-sm font-medium mb-4 border border-primary/30 shadow-sm">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                 </span>
-                Enterprise VOIP Solutions
+                Enterprise CallMonAI Solutions
               </div>
             </div>
             
@@ -102,27 +110,13 @@ export const Hero = () => {
               Turn every interaction into measurable growth with AI-powered insights and smart automation — because at CallMonAI, we don't just make communication work, we make it work for you. 
             </p>
             
-            {/* Hidden trust indicators with 5 stars and 500+ reviews */}
-            <div className="hidden">
-              <div className="flex items-center gap-2 mb-6">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
-                  ))}
-                </div>
-                <div className="text-sm">
-                  <span className="font-semibold text-foreground">5.0</span> from <span className="text-foreground/80">500+ reviews</span>
-                </div>
-              </div>
-            </div>
-            
-            {/* Feature highlight badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-6">
+            {/* AI-Powered badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-600 dark:text-cyan-400 text-xs font-medium mb-6 border border-cyan-500/30">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
               </span>
-              New: Real-time Call Analytics
+              AI-Powered Intelligence
             </div>
             
             {/* New key features list */}
@@ -142,6 +136,14 @@ export const Hero = () => {
               <div className="flex items-center gap-2">
                 <Zap className="h-5 w-5 text-primary flex-shrink-0" />
                 <span className="text-sm text-foreground">Real-time Insights</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Brain className="h-5 w-5 text-cyan-500 flex-shrink-0" />
+                <span className="text-sm text-foreground">Predictive Analytics</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Bot className="h-5 w-5 text-cyan-500 flex-shrink-0" />
+                <span className="text-sm text-foreground">AI Assistant</span>
               </div>
             </div>
             
@@ -237,39 +239,7 @@ export const Hero = () => {
         </div>
       </div>
       
-      {/* Enhanced Key Business Benefits section with stronger background */}
-      <div className="container mx-auto px-4 lg:px-8 mt-16 bg-gradient-to-br from-primary/10 via-muted/20 to-accent/10 p-8 rounded-2xl border border-primary/20 shadow-xl backdrop-blur-sm">
-        {/* Added missing heading for Key Business Benefits */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-3">
-           What Makes  {" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              CallMonAI a Game Changer
-            </span>
-          </h2>
-          <p className="text-lg text-foreground/80">
-           AI that helps your team communicate smarter and drive better ROI. 
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {stats.map((stat, index) => (
-            <div 
-              key={index}
-              className="text-center group bg-card/90 p-5 rounded-lg border border-primary/20 hover:border-primary/40 hover:shadow-lg transition-all backdrop-blur-sm hover:-translate-y-2 duration-300"
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                <stat.icon className="h-8 w-8 md:h-12 md:w-12 text-primary" />
-              </div>
-              <div className="text-2xl lg:text-3xl font-bold mb-1 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                {stat.value}
-              </div>
-              <div className="text-base font-semibold mb-1 text-foreground">{stat.label}</div>
-              <p className="text-sm md:text-base text-foreground/80">{stat.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* Enhanced Key Business Benefits section removed and moved to separate component */}
     </section>
   );
 };
