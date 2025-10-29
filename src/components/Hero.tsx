@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Phone, Headphones, Zap, Shield, Star, CheckCircle, TrendingUp, Users, Clock, Award, BarChart3, Headset } from "lucide-react";
+import { ArrowRight, Play, Phone, Headphones, Zap, Shield, Star, CheckCircle, TrendingUp, Users, Clock, Award, BarChart3, Headset, Mic, Volume2 } from "lucide-react";
 import { TrendingDown, Clock as ClockIcon, Award as AwardIcon, HeartHandshake } from "lucide-react";
 import { HorizontalCallAnalytics } from "@/components/HorizontalCallAnalytics";
 
@@ -128,19 +128,19 @@ export const Hero = () => {
             {/* New key features list */}
             <div className="grid grid-cols-2 gap-3 mb-6">
               <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                <Mic className="h-5 w-5 text-primary flex-shrink-0" />
                 <span className="text-sm text-foreground">Call Recording</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                <Volume2 className="h-5 w-5 text-primary flex-shrink-0" />
                 <span className="text-sm text-foreground">AI Transcription</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                <BarChart3 className="h-5 w-5 text-primary flex-shrink-0" />
                 <span className="text-sm text-foreground">Sentiment Analysis</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                <Zap className="h-5 w-5 text-primary flex-shrink-0" />
                 <span className="text-sm text-foreground">Real-time Insights</span>
               </div>
             </div>

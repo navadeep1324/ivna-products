@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Package, Zap, Mail, Shield, FileText } from "lucide-react";
 
 export const Footer = () => {
   const handleBookDemoClick = () => {
@@ -37,11 +38,26 @@ export const Footer = () => {
           <div>
             <h3 className="font-semibold text-foreground mb-4 text-lg border-b border-primary/20 pb-2">Quick Links</h3>
             <ul className="space-y-3">
-              <li><a href="#suite" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center text-base">Product Showcase</a></li>
-              <li><a href="#features" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center text-base">Features</a></li>
-              <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center text-base">Contact</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center text-base">Privacy Policy</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center text-base">Terms and Conditions</a></li>
+              <li><a href="#suite" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-base">
+                <Package className="h-4 w-4" />
+                Product Showcase
+              </a></li>
+              <li><a href="#features" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-base">
+                <Zap className="h-4 w-4" />
+                Features
+              </a></li>
+              <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-base">
+                <Mail className="h-4 w-4" />
+                Contact
+              </a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-base">
+                <Shield className="h-4 w-4" />
+                Privacy Policy
+              </a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-base">
+                <FileText className="h-4 w-4" />
+                Terms and Conditions
+              </a></li>
             </ul>
           </div>
           
@@ -75,10 +91,22 @@ export const Footer = () => {
           </div>
           
           <div className="flex flex-wrap justify-center gap-6">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-base">Status</a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-base">Privacy Policy</a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-base">Terms of Service</a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-base">Cookie Policy</a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-base flex items-center gap-1">
+              <Zap className="h-4 w-4" />
+              Status
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-base flex items-center gap-1">
+              <Shield className="h-4 w-4" />
+              Privacy Policy
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-base flex items-center gap-1">
+              <FileText className="h-4 w-4" />
+              Terms of Service
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-base flex items-center gap-1">
+              <FileText className="h-4 w-4" />
+              Cookie Policy
+            </a>
           </div>
         </div>
       </div>

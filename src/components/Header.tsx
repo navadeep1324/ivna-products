@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Zap, Package, Mail } from "lucide-react";
 import { useState } from "react";
 
 export const Header = () => {
@@ -37,23 +37,26 @@ export const Header = () => {
           <div className="hidden md:flex items-center gap-6 ml-auto">
             <a 
               href="#features" 
-              className="text-base font-medium text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105"
+              className="text-base font-medium text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105 flex items-center gap-1"
               onClick={(e) => handleNavClick(e, "features")}
             >
+              <Zap className="h-4 w-4" />
               Features
             </a>
             <a 
               href="#suite" 
-              className="text-base font-medium text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105"
+              className="text-base font-medium text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105 flex items-center gap-1"
               onClick={(e) => handleNavClick(e, "suite")}
             >
+              <Package className="h-4 w-4" />
               Product
             </a>
             <a 
               href="#contact" 
-              className="text-base font-medium text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105"
+              className="text-base font-medium text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105 flex items-center gap-1"
               onClick={(e) => handleNavClick(e, "contact")}
             >
+              <Mail className="h-4 w-4" />
               Contact
             </a>
             <Button 
@@ -82,32 +85,35 @@ export const Header = () => {
             <div className="flex flex-col gap-3">
               <a 
                 href="#features" 
-                className="text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-secondary"
+                className="text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-secondary flex items-center gap-2"
                 onClick={(e) => {
                   handleNavClick(e, "features");
                   setIsMenuOpen(false);
                 }}
               >
+                <Zap className="h-4 w-4" />
                 Features
               </a>
               <a 
                 href="#suite" 
-                className="text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-secondary"
+                className="text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-secondary flex items-center gap-2"
                 onClick={(e) => {
                   handleNavClick(e, "suite");
                   setIsMenuOpen(false);
                 }}
               >
+                <Package className="h-4 w-4" />
                 Product
               </a>
               <a 
                 href="#contact" 
-                className="text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-secondary"
+                className="text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-secondary flex items-center gap-2"
                 onClick={(e) => {
                   handleNavClick(e, "contact");
                   setIsMenuOpen(false);
                 }}
               >
+                <Mail className="h-4 w-4" />
                 Contact
               </a>
               <div className="flex flex-col gap-2 pt-4 border-t border-border px-4">

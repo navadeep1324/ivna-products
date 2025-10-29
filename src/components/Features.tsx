@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Phone, Wifi, Shield, Zap, Users, Globe } from "lucide-react";
+import { Phone, Wifi, Shield, Zap, Users, Globe, User, Headphones, BarChart3, Clock, CheckCircle, TrendingUp } from "lucide-react";
 
 const features = [
   {
@@ -85,48 +85,36 @@ export const Features = () => {
             <p className="text-foreground mb-4">
               Stay in control with a unified view of all your business communications — track, analyze, and improve every conversation effortlessly. 
             </p>
-            <ul className="space-y-2 mb-6">
-              <li className="flex items-start">
-                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                </div>
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-start gap-3">
+                <User className="h-5 w-5 text-primary mt-0.5" />
                 <span className="text-foreground">Caller details and communication history. </span>
               </li>
-              <li className="flex items-start">
-                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                </div>
+              <li className="flex items-start gap-3">
+                <BarChart3 className="h-5 w-5 text-primary mt-0.5" />
                 <span className="text-foreground">Call quality indicators and performance scores. </span>
               </li>
-              <li className="flex items-start">
-                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                </div>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
                 <span className="text-foreground">Follow-up status and assigned team member. </span>
               </li>
-              <li className="flex items-start">
-                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                </div>
+              <li className="flex items-start gap-3">
+                <Zap className="h-5 w-5 text-primary mt-0.5" />
                 <span className="text-foreground">Real-time AI insights and feedback. </span>
               </li>
-              <li className="flex items-start">
-                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                </div>
+              <li className="flex items-start gap-3">
+                <Clock className="h-5 w-5 text-primary mt-0.5" />
                 <span className="text-foreground">Quick filters to sort by date, client, or call type.   </span>
               </li>
-              <li className="flex items-start">
-                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                </div>
+              <li className="flex items-start gap-3">
+                <Headphones className="h-5 w-5 text-primary mt-0.5" />
                 <span className="text-foreground">One-click access to transcripts and summaries. </span>
               </li>
             </ul>
           </div>
           <div className="order-1 lg:order-2 relative z-10">
             <img 
-              src="/dashboard/Call History.png" 
+              src="/dashboard/Dashboard1.png" 
               alt="CallMonAI Call Management Dashboard" 
               className="rounded-xl shadow-2xl border border-border w-full"
             />
@@ -141,7 +129,7 @@ export const Features = () => {
           
           <div className="relative z-10">
             <img 
-              src="/dashboard/Dashboard Screen 2 version 0.0.1.png" 
+              src="/dashboard/Dashboard2.png" 
               alt="CallMonAI Analytics Dashboard" 
               className="rounded-xl shadow-2xl border border-border w-full"
             />
@@ -153,47 +141,33 @@ export const Features = () => {
             <p className="text-foreground mb-4">
               Gain a 360° view of your calls, enquiries, and team performance — all powered by real-time AI analytics that help you make faster, smarter business decisions. 
             </p>
-            <ul className="space-y-2 mb-6">
-              <li className="flex items-start">
-                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                </div>
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-start gap-3">
+                <BarChart3 className="h-5 w-5 text-primary mt-0.5" />
                 <span className="text-foreground">Call Summary Snapshot. </span>
               </li>
-              <li className="flex items-start">
-                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                </div>
+              <li className="flex items-start gap-3">
+                <Phone className="h-5 w-5 text-primary mt-0.5" />
                 <span className="text-foreground">Call Type Analysis. </span>
               </li>
-              <li className="flex items-start">
-                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                </div>
+              <li className="flex items-start gap-3">
+                <Headphones className="h-5 w-5 text-primary mt-0.5" />
                 <span className="text-foreground">Recordings & Transcriptions. </span>
               </li>
-              <li className="flex items-start">
-                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                </div>
-                <span className="text-foreground">RLead Enquiry Tracking. </span>
+              <li className="flex items-start gap-3">
+                <User className="h-5 w-5 text-primary mt-0.5" />
+                <span className="text-foreground">Lead Enquiry Tracking. </span>
               </li>
-              <li className="flex items-start">
-                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                </div>
+              <li className="flex items-start gap-3">
+                <Zap className="h-5 w-5 text-primary mt-0.5" />
                 <span className="text-foreground">Quality Call Insights. </span>
               </li>
-              <li className="flex items-start">
-                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                </div>
+              <li className="flex items-start gap-3">
+                <BarChart3 className="h-5 w-5 text-primary mt-0.5" />
                 <span className="text-foreground">Team Performance Dashboard. </span>
               </li>
-              <li className="flex items-start">
-                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                </div>
+              <li className="flex items-start gap-3">
+                <TrendingUp className="h-5 w-5 text-primary mt-0.5" />
                 <span className="text-foreground">Strategic Analytics & Trends. </span>
               </li>
             </ul>

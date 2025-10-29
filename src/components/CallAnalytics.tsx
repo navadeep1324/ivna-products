@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Phone, Volume2, Mic, TrendingUp, BarChart3, PieChart } from "lucide-react";
+import { Phone, Volume2, Mic, TrendingUp, BarChart3, PieChart, CheckCircle, DollarSign, Network, Clock } from "lucide-react";
 
 export const CallAnalytics = () => {
   return (
@@ -75,9 +75,18 @@ export const CallAnalytics = () => {
                 <div>
                   <h4 className="font-medium text-foreground">Cost Optimization</h4>
                   <ul className="mt-1 space-y-1 text-sm text-muted-foreground">
-                    <li>• International calls reduced by 65%</li>
-                    <li>• Infrastructure costs cut by 40%</li>
-                    <li>• Maintenance expenses down 70%</li>
+                    <li className="flex items-center gap-1">
+                      <Network className="h-3 w-3 text-primary" />
+                      International calls reduced by 65%
+                    </li>
+                    <li className="flex items-center gap-1">
+                      <DollarSign className="h-3 w-3 text-primary" />
+                      Infrastructure costs cut by 40%
+                    </li>
+                    <li className="flex items-center gap-1">
+                      <CheckCircle className="h-3 w-3 text-primary" />
+                      Maintenance expenses down 70%
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -88,15 +97,24 @@ export const CallAnalytics = () => {
                   <h4 className="font-medium text-foreground">Communication Patterns</h4>
                   <div className="mt-2 space-y-2">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs text-muted-foreground">Peak Usage Hours</span>
+                      <div className="flex items-center gap-1">
+                        <Clock className="h-3 w-3 text-primary" />
+                        <span className="text-xs text-muted-foreground">Peak Usage Hours</span>
+                      </div>
                       <span className="text-xs font-medium">9AM-5PM</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-xs text-muted-foreground">Average Call Duration</span>
+                      <div className="flex items-center gap-1">
+                        <Phone className="h-3 w-3 text-primary" />
+                        <span className="text-xs text-muted-foreground">Average Call Duration</span>
+                      </div>
                       <span className="text-xs font-medium">4.2 min</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-xs text-muted-foreground">Monthly Growth</span>
+                      <div className="flex items-center gap-1">
+                        <TrendingUp className="h-3 w-3 text-primary" />
+                        <span className="text-xs text-muted-foreground">Monthly Growth</span>
+                      </div>
                       <span className="text-xs font-medium">12%</span>
                     </div>
                   </div>

@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { Star, Building } from "lucide-react";
 
 const testimonials = [
   {
@@ -72,11 +72,22 @@ export const Testimonials = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-            {["TechCorp", "InnovateCo", "Global Solutions", "Future Enterprises", "Digital Dynamics", "Nexus Group"].map((client, index) => (
-              <Card key={index} className="p-6 flex items-center justify-center border-border bg-card hover:shadow-md transition-shadow h-24">
-                <div className="text-xl font-bold text-foreground/80">{client}</div>
-              </Card>
-            ))}
+            {[
+              { name: "TechCorp", icon: Building },
+              { name: "InnovateCo", icon: Building },
+              { name: "Global Solutions", icon: Building },
+              { name: "Future Enterprises", icon: Building },
+              { name: "Digital Dynamics", icon: Building },
+              { name: "Nexus Group", icon: Building }
+            ].map((client, index) => {
+              const IconComponent = client.icon;
+              return (
+                <Card key={index} className="p-6 flex flex-col items-center justify-center border-border bg-card hover:shadow-md transition-shadow h-24">
+                  <IconComponent className="h-6 w-6 text-primary mb-2" />
+                  <div className="text-sm font-bold text-foreground/80 text-center">{client.name}</div>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </div>

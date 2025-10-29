@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Users, Phone, TrendingUp, Target, CheckCircle, Clock } from "lucide-react";
+import { Users, Phone, TrendingUp, Target, CheckCircle, Clock, BarChart3, Signal } from "lucide-react";
 
 export const LeadManagement = () => {
   const leadMetrics = [
@@ -66,7 +66,10 @@ export const LeadManagement = () => {
               <h3 className="font-semibold text-foreground mb-3">Communication Quality Assessment</h3>
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-muted-foreground">High Quality Calls</span>
+                  <div className="flex items-center gap-1">
+                    <Signal className="h-4 w-4 text-green-500" />
+                    <span className="text-sm text-muted-foreground">High Quality Calls</span>
+                  </div>
                   <span className="text-sm font-medium">92%</span>
                 </div>
                 <div className="w-full bg-secondary rounded-full h-2">
@@ -74,7 +77,10 @@ export const LeadManagement = () => {
                 </div>
                 
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-muted-foreground">Medium Quality</span>
+                  <div className="flex items-center gap-1">
+                    <Signal className="h-4 w-4 text-yellow-500" />
+                    <span className="text-sm text-muted-foreground">Medium Quality</span>
+                  </div>
                   <span className="text-sm font-medium">6%</span>
                 </div>
                 <div className="w-full bg-secondary rounded-full h-2">
@@ -82,7 +88,10 @@ export const LeadManagement = () => {
                 </div>
                 
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-muted-foreground">Low Quality</span>
+                  <div className="flex items-center gap-1">
+                    <Signal className="h-4 w-4 text-red-500" />
+                    <span className="text-sm text-muted-foreground">Low Quality</span>
+                  </div>
                   <span className="text-sm font-medium">2%</span>
                 </div>
                 <div className="w-full bg-secondary rounded-full h-2">
@@ -164,14 +173,14 @@ export const LeadManagement = () => {
                       <h4 className="font-medium text-foreground text-sm mb-2">Recent Activity</h4>
                       <div className="space-y-2">
                         <div className="flex items-start gap-2">
-                          <Clock className="h-4 w-4 text-muted-foreground mt-0.5" />
+                          <Users className="h-4 w-4 text-muted-foreground mt-0.5" />
                           <div className="text-xs">
                             <span className="text-foreground">New client</span> 
                             <span className="text-muted-foreground"> connected from New York</span>
                           </div>
                         </div>
                         <div className="flex items-start gap-2">
-                          <Clock className="h-4 w-4 text-muted-foreground mt-0.5" />
+                          <BarChart3 className="h-4 w-4 text-muted-foreground mt-0.5" />
                           <div className="text-xs">
                             <span className="text-foreground">System update</span> 
                             <span className="text-muted-foreground"> completed successfully</span>

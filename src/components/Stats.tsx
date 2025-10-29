@@ -1,14 +1,14 @@
-import { TrendingUp, Clock, Award, HeartHandshake, Users, DollarSign } from "lucide-react";
+import { TrendingUp, Clock, Award, HeartHandshake, Users, DollarSign, Building, Target } from "lucide-react";
 
 const stats = [
   {
-    icon: Users,
+    icon: Building,
     value: "500K+",
     label: "Businesses",
     description: "Trusted by companies worldwide",
   },
   {
-    icon: TrendingUp,
+    icon: Target,
     value: "300%",
     label: "Average ROI",
     description: "Clients see triple their investment within 12 months",

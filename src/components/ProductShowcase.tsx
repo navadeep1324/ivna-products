@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Play, Phone, Wifi, Users, Settings, Monitor, Pause, SkipBack, SkipForward } from "lucide-react";
+import { Play, Phone, Wifi, Users, Settings, Monitor, Pause, SkipBack, SkipForward, Video, Image } from "lucide-react";
 // import heroDashboard from "@/assets/hero-dashboard.jpg";
 import { useState, useEffect, useRef } from "react";
 
@@ -13,10 +13,10 @@ export const ProductShowcase = () => {
 
   // Dashboard screenshots for slideshow
   const dashboardScreenshots = [
-    { src: "/dashboard/Dashboard Screen 2 version 0.0.1.png", alt: "CallMonAI Dashboard Overview" },
-    { src: "/dashboard/Call History.png", alt: "Call History Interface" },
-    { src: "/dashboard/Call Details_3_Modified.png", alt: "Call Analytics Dashboard" },
-    { src: "/dashboard/eCommerce Dashboard (1).png", alt: "Reporting and Analytics" },
+    { src: "/dashboard/Dashboard1.png", alt: "CallMonAI Dashboard Overview" },
+    { src: "/dashboard/Dashboard2.png", alt: "Call History Interface" },
+    { src: "/dashboard/Dashboard3.png", alt: "Call Analytics Dashboard" },
+    { src: "/dashboard/Dashboard4.png", alt: "Reporting and Analytics" },
     // { src: heroDashboard, alt: "CallMonAI Main Dashboard" }
   ];
 
@@ -92,7 +92,7 @@ export const ProductShowcase = () => {
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-accent/5 rounded-full blur-xl animate-ping delay-300"></div>
             
             <h3 className="text-2xl font-bold text-foreground flex items-center gap-2 relative z-10">
-              <Play className="h-6 w-6 text-primary" />
+              <Video className="h-6 w-6 text-primary" />
               Platform Demo
             </h3>
             
@@ -169,7 +169,10 @@ export const ProductShowcase = () => {
             {/* Animated background elements */}
             <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-primary/5 rounded-full blur-xl animate-ping delay-700"></div>
             
-            <h3 className="text-2xl font-bold text-foreground relative z-10">Platform Screenshots</h3>
+            <h3 className="text-2xl font-bold text-foreground flex items-center gap-2 relative z-10">
+              <Image className="h-6 w-6 text-primary" />
+              Platform Screenshots
+            </h3>
             <p className="text-foreground relative z-10">
               Explore our intuitive dashboard and feature-rich interface designed for seamless communication management.
             </p>
@@ -177,40 +180,40 @@ export const ProductShowcase = () => {
             <div className="grid grid-cols-2 gap-4 relative z-10">
               <div 
                 className="rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                onClick={() => openModal("/dashboard/Dashboard Screen 2 version 0.0.1.png", "CallMonAI Dashboard Overview")}
+                onClick={() => openModal("/dashboard/Dashboard1.png", "CallMonAI Dashboard Overview")}
               >
                 <img 
-                  src="/dashboard/Dashboard Screen 2 version 0.0.1.png" 
+                  src="/dashboard/Dashboard1.png" 
                   alt="CallMonAI Dashboard Overview" 
                   className="w-full h-auto object-cover"
                 />
               </div>
               <div 
                 className="rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                onClick={() => openModal("/dashboard/Call History.png", "Call History Interface")}
+                onClick={() => openModal("/dashboard/Dashboard2.png", "Call History Interface")}
               >
                 <img 
-                  src="/dashboard/Call History.png" 
+                  src="/dashboard/Dashboard2.png" 
                   alt="Call History Interface" 
                   className="w-full h-auto object-cover"
                 />
               </div>
               <div 
                 className="rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                onClick={() => openModal("/dashboard/Call Details_3_Modified.png", "Call Analytics Dashboard")}
+                onClick={() => openModal("/dashboard/Dashboard3.png", "Call Analytics Dashboard")}
               >
                 <img 
-                  src="/dashboard/Call Details_3_Modified.png" 
+                  src="/dashboard/Dashboard3.png" 
                   alt="Call Analytics Dashboard" 
                   className="w-full h-auto object-cover"
                 />
               </div>
               <div 
                 className="rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                onClick={() => openModal("/dashboard/eCommerce Dashboard (1).png", "Reporting and Analytics")}
+                onClick={() => openModal("/dashboard/Dashboard4.png", "Reporting and Analytics")}
               >
                 <img 
-                  src="/dashboard/eCommerce Dashboard (1).png" 
+                  src="/dashboard/Dashboard4.png" 
                   alt="Reporting and Analytics" 
                   className="w-full h-auto object-cover"
                 />
