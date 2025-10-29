@@ -29,19 +29,19 @@ const stats = [
 
 export const GameChangerSection = () => {
   return (
-    <section className="py-16 bg-background">
+    <section className="py-16">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Enhanced Key Business Benefits section with white background */}
-        <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-xl">
+        <div className="bg-[#fbfbfc] p-8 rounded-2xl shadow-xl">
           {/* Added missing heading for Key Business Benefits */}
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-3">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-3 leading-relaxed">
               What Makes {" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                CallMonAI a Game Changer
+                VOiPro a Game Changer
               </span>
             </h2>
-            <p className="text-lg text-foreground/80">
+            <p className="text-base text-foreground/80 leading-relaxed">
               AI that helps your team communicate smarter and drive better ROI. 
             </p>
           </div>
@@ -50,16 +50,16 @@ export const GameChangerSection = () => {
             {stats.map((stat, index) => (
               <div 
                 key={index}
-                className="text-center group bg-card/90 p-5 rounded-lg border border-gray-200 hover:border-primary/40 hover:shadow-lg transition-all backdrop-blur-sm hover:-translate-y-2 duration-300"
+                className="text-center group bg-card/90 p-5 rounded-lg border border-gray-200 hover:border-primary/40 hover:shadow-lg transition-all backdrop-blur-sm hover:-translate-y-2 duration-300 leading-relaxed"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <stat.icon className="h-8 w-8 md:h-12 md:w-12 text-primary" />
+                <div className="inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-xl mb-3 group-hover:scale-110 transition-transform duration-300 bg-gradient-to-br from-primary/10 to-accent/10">
+                  <stat.icon className="h-6 w-6 md:h-8 md:w-8 text-primary" />
                 </div>
-                <div className="text-2xl lg:text-3xl font-bold mb-1 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                <div className="text-xl lg:text-2xl font-bold mb-1 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   {stat.value}
                 </div>
-                <div className="text-base font-semibold mb-1 text-foreground">{stat.label}</div>
-                <p className="text-sm md:text-base text-foreground/80">{stat.description}</p>
+                <div className="text-sm font-semibold mb-1 text-foreground">{stat.label}</div>
+                <p className="text-xs md:text-sm text-foreground/80 leading-relaxed">{stat.description}</p>
               </div>
             ))}
           </div>
