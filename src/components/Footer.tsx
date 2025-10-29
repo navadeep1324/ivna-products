@@ -25,7 +25,7 @@ export const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                VOIPro
+                CallMonAI
               </span>
             </div>
             <p className="text-muted-foreground mb-4 text-base max-w-xs">

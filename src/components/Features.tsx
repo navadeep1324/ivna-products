@@ -47,7 +47,7 @@ export const Features = () => {
           <h2 className="text-3xl lg:text-4xl font-bold mb-3">
             Power Features That{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Drive VOiPro 
+              Drive CallMonAI 
             </span>
           </h2>
           <p className="text-lg text-foreground">
@@ -127,7 +127,7 @@ export const Features = () => {
           <div className="order-1 lg:order-2 relative z-10">
             <img 
               src="/dashboard/Call History.png" 
-              alt="VOIPro Call Management Dashboard" 
+              alt="CallMonAI Call Management Dashboard" 
               className="rounded-xl shadow-2xl border border-border w-full"
             />
           </div>
@@ -142,7 +142,7 @@ export const Features = () => {
           <div className="relative z-10">
             <img 
               src="/dashboard/Dashboard Screen 2 version 0.0.1.png" 
-              alt="VOIPro Analytics Dashboard" 
+              alt="CallMonAI Analytics Dashboard" 
               className="rounded-xl shadow-2xl border border-border w-full"
             />
           </div>

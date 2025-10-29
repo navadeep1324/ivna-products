@@ -40,7 +40,7 @@ export const Hero = () => {
   };
 
   const handleWatchDemoClick = () => {
-    // Scroll to Product Showcase section (VOIPro Professional Suite)
+    // Scroll to Product Showcase section (CallMonAI Professional Suite)
     const productShowcase = document.getElementById("suite");
     if (productShowcase) {
       productShowcase.scrollIntoView({ behavior: "smooth" });
@@ -99,7 +99,7 @@ export const Hero = () => {
             </h1>
             
             <p className="text-lg text-foreground mb-6 max-w-xl">
-              Turn every interaction into measurable growth with AI-powered insights and smart automation — because at VOiPro, we don't just make communication work, we make it work for you. 
+              Turn every interaction into measurable growth with AI-powered insights and smart automation — because at CallMonAI, we don't just make communication work, we make it work for you. 
             </p>
             
             {/* Hidden trust indicators with 5 stars and 500+ reviews */}
@@ -244,7 +244,7 @@ export const Hero = () => {
           <h2 className="text-3xl lg:text-4xl font-bold mb-3">
            What Makes  {" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              VOiPro a Game Changer
+              CallMonAI a Game Changer
             </span>
           </h2>
           <p className="text-lg text-foreground/80">

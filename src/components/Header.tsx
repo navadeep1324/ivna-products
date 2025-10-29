@@ -29,7 +29,7 @@ export const Header = () => {
           }
           <div className="flex items-center">
             <a href="/" className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              VOIPro
+              CallMonAI
             </a>
           </div>
 

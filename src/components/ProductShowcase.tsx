@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Play, Phone, Wifi, Users, Settings, Monitor, Pause, SkipBack, SkipForward } from "lucide-react";
-import heroDashboard from "@/assets/hero-dashboard.jpg";
+// import heroDashboard from "@/assets/hero-dashboard.jpg";
 import { useState, useEffect, useRef } from "react";
 
 export const ProductShowcase = () => {
@@ -13,11 +13,11 @@ export const ProductShowcase = () => {
 
   // Dashboard screenshots for slideshow
   const dashboardScreenshots = [
-    { src: "/dashboard/Dashboard Screen 2 version 0.0.1.png", alt: "VOIPro Dashboard Overview" },
+    { src: "/dashboard/Dashboard Screen 2 version 0.0.1.png", alt: "CallMonAI Dashboard Overview" },
     { src: "/dashboard/Call History.png", alt: "Call History Interface" },
     { src: "/dashboard/Call Details_3_Modified.png", alt: "Call Analytics Dashboard" },
     { src: "/dashboard/eCommerce Dashboard (1).png", alt: "Reporting and Analytics" },
-    { src: heroDashboard, alt: "VOIPro Main Dashboard" }
+    // { src: heroDashboard, alt: "CallMonAI Main Dashboard" }
   ];
 
   // Auto-advance slideshow
@@ -75,7 +75,7 @@ export const ProductShowcase = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            VoiPro {" "}
+            CallMonAI {" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Overview 
             </span>
@@ -177,11 +177,11 @@ export const ProductShowcase = () => {
             <div className="grid grid-cols-2 gap-4 relative z-10">
               <div 
                 className="rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                onClick={() => openModal("/dashboard/Dashboard Screen 2 version 0.0.1.png", "VOIPro Dashboard Overview")}
+                onClick={() => openModal("/dashboard/Dashboard Screen 2 version 0.0.1.png", "CallMonAI Dashboard Overview")}
               >
                 <img 
                   src="/dashboard/Dashboard Screen 2 version 0.0.1.png" 
-                  alt="VOIPro Dashboard Overview" 
+                  alt="CallMonAI Dashboard Overview" 
                   className="w-full h-auto object-cover"
                 />
               </div>
