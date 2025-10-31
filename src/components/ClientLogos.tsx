@@ -42,7 +42,7 @@ export const ClientLogos = () => {
               <img 
                 src={client.logo} 
                 alt={client.name} 
-                className="h-8 sm:h-10 object-contain group-hover:brightness-125 transition-all relative z-10"
+                className={index >= 2 ? "h-16 sm:h-16 object-contain group-hover:brightness-125 transition-all relative z-10" : "h-12 sm:h-14 object-contain group-hover:brightness-125 transition-all relative z-10"}
               />
             </Card>
           ))}

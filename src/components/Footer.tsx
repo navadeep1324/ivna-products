@@ -20,23 +20,9 @@ export const Footer = () => {
 
   return (
     <footer className="border-t border-border bg-gradient-to-b from-primary/5 via-secondary/5 to-accent/5 relative overflow-hidden">
-      {/* Left side image */}
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1/4 hidden lg:block">
-        <img 
-          src="/dashboard/Untitled design (10) 1.png" 
-          alt="Decoration" 
-          className="w-full h-auto object-contain opacity-80"
-        />
-      </div>
+      {/* Left side image removed as per user request */}
       
-      {/* Right side image */}
-      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-1/4 hidden lg:block">
-        <img 
-          src="/dashboard/Untitled design (10) 2.png" 
-          alt="Decoration" 
-          className="w-full h-auto object-contain opacity-80"
-        />
-      </div>
+      {/* Right side image removed as per user request */}
       
       <div className="container mx-auto px-4 lg:px-8 py-6 sm:py-8 lg:py-10 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
@@ -84,11 +70,11 @@ export const Footer = () => {
           {/* Demo Buttons */}
           <div>
             <h3 className="font-semibold text-foreground mb-3 sm:mb-4 text-lg sm:text-xl border-b border-primary/20 pb-2">Product Demos</h3>
-            <div className="flex flex-col gap-2 sm:gap-3">
+            <div className="flex flex-col gap-2 sm:gap-3 w-full max-w-[200px]">
               <Button 
                 variant="default" 
                 size="lg" 
-                className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white shadow-lg text-sm sm:text-base py-2 sm:py-3"
+                className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white shadow-lg text-sm sm:text-base py-2 sm:py-3 w-full"
                 onClick={handleBookDemoClick}
               >
                 Book a Demo
@@ -96,7 +82,7 @@ export const Footer = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-primary bg-background hover:bg-primary/10 text-primary group border-2 text-sm sm:text-base py-2 sm:py-3"
+                className="border-primary bg-background hover:bg-primary/10 text-primary group border-2 text-sm sm:text-base py-2 sm:py-3 w-full"
                 onClick={handleWatchDemoClick}
               >
                 Watch Demo

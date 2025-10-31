@@ -49,45 +49,67 @@ export const Hero = () => {
 
   return (
     // Enhanced section with stronger background color and added background image
-    <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10" style={{ backgroundImage: 'url(/dashboard/section-paints.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
       {/* Stronger background elements for better highlighting */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-background to-accent/15 -z-10" style={{ zIndex: -1 }} />
       
+      {/* Small related icons in banner background with better visibility */}
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/3 left-1/3 opacity-30">
+        <Mic className="h-8 w-8" style={{ color: '#36c0ed' }} />
+      </div>
+      <div className="absolute top-1/2 left-1/5 opacity-30">
+        <Brain className="h-6 w-6" style={{ color: '#36c0ed' }} />
+      </div>
+      <div className="absolute bottom-1/3 right-1/4 opacity-30">
+        <BarChart3 className="h-7 w-7" style={{ color: '#36c0ed' }} />
+      </div>
+      <div className="absolute bottom-1/2 right-1/3 opacity-30">
+        <Zap className="h-5 w-5" style={{ color: '#36c0ed' }} />
+      </div>
+      {/* Additional background icons for better visibility */}
+      <div className="absolute top-1/4 right-1/3 opacity-25">
+        <Volume2 className="h-6 w-6" style={{ color: '#36c0ed' }} />
+      </div>
+      <div className="absolute top-2/3 left-1/3 opacity-25">
+        <Bot className="h-5 w-5" style={{ color: '#36c0ed' }} />
+      </div>
+      <div className="absolute bottom-1/4 left-2/3 opacity-25">
+        <Headset className="h-6 w-6" style={{ color: '#36c0ed' }} />
+      </div>
+      <div className="absolute top-1/5 right-1/5 opacity-25">
+        <Shield className="h-5 w-5" style={{ color: '#36c0ed' }} />
+      </div>
+      {/* More background icons */}
+      <div className="absolute top-1/6 left-2/3 opacity-20">
+        <TrendingUp className="h-6 w-6" style={{ color: '#36c0ed' }} />
+      </div>
+      <div className="absolute bottom-1/3 left-1/4 opacity-20">
+        <Users className="h-5 w-5" style={{ color: '#36c0ed' }} />
+      </div>
+      <div className="absolute top-2/3 right-1/4 opacity-20">
+        <Clock className="h-5 w-5" style={{ color: '#36c0ed' }} />
+      </div>
+      <div className="absolute bottom-1/5 right-2/3 opacity-20">
+        <Award className="h-6 w-6" style={{ color: '#36c0ed' }} />
+      </div>
+      
       {/* More prominent decorative elements */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-1/3 right-1/3 w-48 h-48 bg-gradient-to-r from-accent/20 to-primary/20 rounded-full blur-3xl animate-ping delay-1000"></div>
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/3 right-1/3 w-48 h-48 bg-gradient-to-r from-accent/20 to-primary/20 rounded-full blur-3xl"></div>
       
       {/* Additional decorative elements for enhanced highlighting */}
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-primary/15 to-accent/15 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-accent/15 to-primary/15 rounded-full blur-3xl -z-10"></div>
       
-      {/* AI-themed floating elements */}
-      <div className="absolute top-20 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-md animate-bounce"></div>
-      <div className="absolute top-40 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full blur-sm animate-pulse"></div>
-      <div className="absolute bottom-32 left-1/2 w-10 h-10 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full blur-lg animate-ping"></div>
-      <div className="absolute top-1/3 right-1/3 w-7 h-7 bg-gradient-to-r from-green-400 to-teal-500 rounded-full blur-md animate-pulse delay-1000"></div>
-      <div className="absolute bottom-1/4 left-1/4 w-5 h-5 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full blur-sm animate-bounce delay-1500"></div>
+      {/* Left side icons removed as per user request */}
       
-      {/* Floating animated icons */}
-      <Phone className="absolute top-20 right-20 h-6 w-6 animate-bounce delay-1000" style={{ color: '#36c0ed' }} />
-      <Headphones className="absolute top-40 left-20 h-6 w-6 animate-bounce delay-1500" style={{ color: '#36c0ed' }} />
-      <Zap className="absolute bottom-40 right-32 h-6 w-6 animate-bounce delay-2000" style={{ color: '#36c0ed' }} />
-      <Shield className="absolute bottom-20 left-32 h-6 w-6 animate-bounce delay-2500" style={{ color: '#36c0ed' }} />
-      
-      {/* New floating elements */}
-      <TrendingUp className="absolute top-1/3 right-10 h-5 w-5 animate-pulse delay-700" style={{ color: '#36c0ed' }} />
-      <Users className="absolute top-1/2 left-10 h-5 w-5 animate-pulse delay-1200" style={{ color: '#36c0ed' }} />
-      <Clock className="absolute bottom-1/3 right-1/4 h-5 w-5 animate-pulse delay-1700" style={{ color: '#36c0ed' }} />
-      
-      {/* Additional decorative floating elements */}
-      <Award className="absolute top-1/4 left-1/3 h-4 w-4 animate-ping delay-3000" style={{ color: '#36c0ed' }} />
-      <BarChart3 className="absolute bottom-1/4 left-1/4 h-4 w-4 animate-ping delay-3500" style={{ color: '#36c0ed' }} />
-      <Headset className="absolute top-3/4 right-1/3 h-4 w-4 animate-ping delay-4000" style={{ color: '#36c0ed' }} />
+
       
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
-          <div className="animate-fade-in">
+          <div className="">
             {/* Hidden Enterprise CallMonAI Solutions tag */}
             <div className="hidden">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/15 to-accent/15 text-primary text-sm font-medium mb-4 border border-primary/30 shadow-sm">
@@ -113,17 +135,13 @@ export const Hero = () => {
             {/* AI-Powered badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-600 dark:text-cyan-400 text-xs font-medium mb-4 border border-cyan-500/30">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                <span className="absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
               </span>
               AI-Powered Intelligence
             </div>
             
-            {/* Analytics badge - moved to be below AI-Powered */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/20 to-indigo-500/20 text-purple-600 dark:text-purple-400 text-xs font-medium mb-6 border border-purple-500/30 ml-0 sm:ml-2">
-              <BarChart3 className="h-3 w-3" />
-              <span>Advanced Analytics</span>
-            </div>
+
             
             {/* New key features list */}
             <div className="grid grid-cols-2 gap-3 mb-6">
@@ -205,23 +223,17 @@ export const Hero = () => {
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 -z-10 transform rotate-3 scale-105 blur-xl hidden sm:block"></div>
             
             {/* Floating badges - repositioned as requested */}
-            <div className="absolute top-4 left-0 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg animate-pulse hidden sm:block">
+            <div className="absolute top-4 left-0 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg hidden sm:block">
               <div className="flex items-center gap-1">
                 <CheckCircle className="h-5 w-5" style={{ color: '#36c0ed' }} />
                 <span className="text-xs font-semibold text-foreground">AI-Powered</span>
               </div>
             </div>
             
-            {/* Analytics badge - moved to middle-left */}
-            <div className="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-accent/20 shadow-lg animate-pulse delay-300 hidden sm:block">
-              <div className="flex items-center gap-1">
-                <BarChart3 className="h-5 w-5" style={{ color: '#36c0ed' }} />
-                <span className="text-xs font-semibold text-foreground">Analytics</span>
-              </div>
-            </div>
+
             
             {/* 24/7 Support badge - moved to right side, similar to Live Data badge */}
-            <div className="absolute top-1/4 right-0 transform translate-x-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg animate-pulse delay-700 hidden sm:block">
+            <div className="absolute top-1/4 right-0 transform translate-x-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg hidden sm:block">
               <div className="flex items-center gap-1">
                 <Headset className="h-5 w-5" style={{ color: '#36c0ed' }} />
                 <span className="text-xs font-semibold text-foreground">24/7 Support</span>
@@ -229,7 +241,7 @@ export const Hero = () => {
             </div>
             
             {/* Secure badge - moved to bottom right corner, similar to Live Data badge */}
-            <div className="absolute bottom-4 right-0 transform translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-accent/20 shadow-lg animate-pulse delay-1000 hidden sm:block">
+            <div className="absolute bottom-4 right-0 transform translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-accent/20 shadow-lg hidden sm:block">
               <div className="flex items-center gap-1">
                 <Shield className="h-5 w-5" style={{ color: '#36c0ed' }} />
                 <span className="text-xs font-semibold text-foreground">Secure</span>
@@ -237,20 +249,14 @@ export const Hero = () => {
             </div>
             
             {/* New badge - added to bottom left corner, mirroring Secure badge */}
-            <div className="absolute bottom-4 left-0 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg animate-pulse delay-500 hidden sm:block">
+            <div className="absolute bottom-4 left-0 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg hidden sm:block">
               <div className="flex items-center gap-1">
                 <Star className="h-5 w-5" style={{ color: '#36c0ed' }} />
                 <span className="text-xs font-semibold text-foreground">Trusted</span>
               </div>
             </div>
             
-            {/* Live Data badge - changed to match other badges style */}
-            <div className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-accent/20 shadow-lg animate-pulse delay-100 hidden sm:block">
-              <div className="flex items-center gap-1">
-                <TrendingUp className="h-5 w-5" style={{ color: '#36c0ed' }} />
-                <span className="text-xs font-semibold text-foreground">LIVE DATA</span>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
+import { PowerFeatures } from "@/components/PowerFeatures";
 import { Stats } from "@/components/Stats";
 import { ProductShowcase } from "@/components/ProductShowcase";
 // import { LeadManagement } from "@/components/LeadManagement";
@@ -25,7 +26,12 @@ const Index = () => {
         {/* What Makes CallMonAI a Game Changer Section */}
         <GameChangerSection />
         
-        {/* Features Section */}
+        {/* Power Features Section */}
+        <div className="bg-background">
+          <PowerFeatures />
+        </div>
+        
+        {/* Additional Features Section */}
         <div className="bg-muted/30">
           <Features />
         </div>

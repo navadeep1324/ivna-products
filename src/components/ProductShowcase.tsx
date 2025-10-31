@@ -67,16 +67,7 @@ export const ProductShowcase = () => {
 
   return (
     <section id="suite" className="py-12 sm:py-16 lg:py-24 bg-muted/30 relative overflow-hidden">
-      {/* Left side image */}
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1/4 hidden lg:block">
-        <img 
-          src="/dashboard/Untitled design (10) 1.png" 
-          alt="Decoration" 
-          className="w-full h-auto object-contain opacity-80"
-        />
-      </div>
-      
-      {/* Right side image */}
+      {/* Right side image - keeping this one */}
       <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-1/4 hidden lg:block">
         <img 
           src="/dashboard/Untitled design (10) 2.png" 

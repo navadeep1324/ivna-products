@@ -38,14 +38,7 @@ export const GameChangerSection = () => {
         />
       </div>
       
-      {/* Right side image */}
-      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-1/4 hidden lg:block">
-        <img 
-          src="/dashboard/Untitled design (10) 2.png" 
-          alt="Decoration" 
-          className="w-full h-auto object-contain opacity-80"
-        />
-      </div>
+      {/* Right side image - REMOVED as per request */}
       
       <div className="container mx-auto px-4 lg:px-8">
         {/* Enhanced Key Business Benefits section with gradient background */}
@@ -58,8 +51,12 @@ export const GameChangerSection = () => {
                 CallMonAI a Game Changer
               </span>
             </h2>
+          </div>
+          
+          {/* Middle descriptive paragraph */}
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
             <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-              AI that helps your team communicate smarter and drive better ROI. 
+              AI that helps your team communicate smarter and drive better ROI.
             </p>
           </div>
           
@@ -67,18 +64,24 @@ export const GameChangerSection = () => {
             {stats.map((stat, index) => (
               <div 
                 key={index}
-                className="group bg-card/90 p-4 sm:p-5 rounded-lg border border-gray-200 hover:border-primary/40 hover:shadow-lg transition-all backdrop-blur-sm hover:-translate-y-2 duration-300 leading-relaxed flex"
+                className="group bg-card/90 p-4 sm:p-5 rounded-lg border border-gray-200 hover:border-primary/40 hover:shadow-lg transition-all backdrop-blur-sm hover:-translate-y-2 duration-300 leading-relaxed"
               >
-                <div className="flex items-start justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-300 flex-shrink-0 mt-1">
-                  <img src={stat.icon} alt={`${stat.label} icon`} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" style={{ color: '#36c0ed' }} />
-                </div>
-                <div className="flex flex-col justify-start">
-                  <div className="text-xl lg:text-2xl font-bold mb-1" style={{ color: '#36c0ed' }}>
-                    {stat.value}
+                {/* Icon and description aligned together */}
+                <div className="flex">
+                  <div className="flex items-start justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mr-2 sm:mr-2 group-hover:scale-110 transition-transform duration-300 flex-shrink-0 mt-1">
+                    <img src={stat.icon} alt={`${stat.label} icon`} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" style={{ color: '#36c0ed' }} />
                   </div>
-                  <div className="text-sm font-semibold mb-1" style={{ color: '#36c0ed' }}>{stat.label}</div>
-                  <p className="text-xs sm:text-sm text-foreground leading-relaxed">{stat.description}</p>
+                  <div className="flex flex-col justify-start">
+                    <div className="text-xl lg:text-2xl font-bold mb-1" style={{ color: '#36c0ed' }}>
+                      {stat.value}
+                    </div>
+                    <div className="text-sm font-semibold mb-1" style={{ color: '#36c0ed' }}>{stat.label}</div>
+                  </div>
                 </div>
+                {/* Description aligned with icon - center aligned */}
+                <p className="text-xs sm:text-sm text-foreground leading-relaxed mt-2 text-center">
+                  {stat.description}
+                </p>
               </div>
             ))}
           </div>
