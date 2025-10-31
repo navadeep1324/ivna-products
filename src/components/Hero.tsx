@@ -275,11 +275,28 @@ export const Hero = () => {
               </div>
             </div>
             
-            {/* New badge - added to bottom left corner, mirroring Secure badge */}
-            <div className="absolute bottom-4 left-0 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg hidden sm:block">
+            {/* Analytics badge - replacing the Trusted badge */}
+            <div 
+              className="absolute bottom-4 left-0 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg hidden sm:block cursor-pointer"
+              onClick={() => {
+                // Analytics tracking for Analytics badge click
+                if (typeof window !== 'undefined' && (window as any).gtag) {
+                  (window as any).gtag('event', 'click', {
+                    event_category: 'Badge',
+                    event_label: 'Analytics',
+                    value: 1
+                  });
+                }
+                // Scroll to analytics section when clicked
+                const analyticsSection = document.getElementById('analytics');
+                if (analyticsSection) {
+                  analyticsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               <div className="flex items-center gap-1">
-                <Star className="h-5 w-5" style={{ color: '#36c0ed' }} />
-                <span className="text-xs font-semibold text-foreground">Trusted</span>
+                <BarChart3 className="h-5 w-5" style={{ color: '#36c0ed' }} />
+                <span className="text-xs font-semibold text-foreground">Analytics</span>
               </div>
             </div>
             
