@@ -25,11 +25,14 @@ export const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border/50 shadow-sm">
       <nav className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16">
-          {/* Logo */
-          }
+          {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              CallMonAI
+            <a href="/" className="flex items-center">
+              <img 
+                src="/logo/Call Monitor AI_logo-06.svg" 
+                alt="CallMonAI Logo" 
+                className="h-8 sm:h-16 w-auto"
+              />
             </a>
           </div>
 

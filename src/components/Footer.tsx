@@ -43,9 +43,11 @@ export const Footer = () => {
           {/* Brand - Removed social media links */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-3 sm:mb-4">
-              <span className="text-xl sm:text-2xl font-bold text-custom-blue">
-                CallMonAI
-              </span>
+              <img 
+                src="/logo/Call Monitor AI_logo-06.svg" 
+                alt="CallMonAI Logo" 
+                className="h-8 sm:h-16 w-auto"
+              />
             </div>
             <p className="text-muted-foreground text-sm sm:text-base mb-3 sm:mb-4 max-w-xs">
               Transforming business communications with professional CallMonAI solutions.
