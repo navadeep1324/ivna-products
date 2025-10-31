@@ -118,25 +118,25 @@ export const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-8 lg:py-12 bg-gradient-to-br from-primary/10 via-background to-accent/10 relative overflow-hidden"
+    <section id="contact" className="py-8 sm:py-12 bg-gradient-to-br from-primary/10 via-background to-accent/10 relative overflow-hidden"
              style={{ backgroundImage: "url('/dashboard/Rectangle 19.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
       {/* Stronger background elements for better highlighting */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-background to-accent/15 -z-10" />
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-6">
-            <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">Ready to Transform Your Communication?</h2>
-            <p className="text-base text-foreground/80">
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 text-foreground">Ready to Transform Your Communication?</h2>
+            <p className="text-base sm:text-lg text-foreground/80">
               We're here to answer your questions and guide you toward smarter, seamless communication. Book your demo now!
             </p>
           </div>
           
-          <div className="bg-white rounded-xl shadow-md p-4 md:p-6 border border-border relative overflow-hidden">
+          <div className="bg-white rounded-xl shadow-md p-4 sm:p-6 border border-border relative overflow-hidden">
             <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <Label htmlFor="name" className="text-xs font-medium">Name</Label>
+                  <Label htmlFor="name" className="text-xs sm:text-sm font-medium">Name</Label>
                   <Input
                     id="name"
                     name="name"
@@ -144,12 +144,12 @@ export const ContactForm = () => {
                     onChange={handleChange}
                     placeholder="Your name"
                     required
-                    className="h-9 text-sm"
+                    className="h-9 sm:h-10 text-sm"
                   />
                 </div>
                 
                 <div className="space-y-1.5">
-                  <Label htmlFor="email" className="text-xs font-medium">Email</Label>
+                  <Label htmlFor="email" className="text-xs sm:text-sm font-medium">Email</Label>
                   <Input
                     id="email"
                     name="email"
@@ -158,14 +158,14 @@ export const ContactForm = () => {
                     onChange={handleChange}
                     placeholder="your.email@example.com"
                     required
-                    className="h-9 text-sm"
+                    className="h-9 sm:h-10 text-sm"
                   />
                 </div>
                 
                 <div className="space-y-1.5">
-                  <Label htmlFor="phone" className="text-xs font-medium">Phone Number</Label>
+                  <Label htmlFor="phone" className="text-xs sm:text-sm font-medium">Phone Number</Label>
                   <div className="relative">
-                    <Phone className="absolute left-2.5 top-1/2 transform -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground" />
+                    <Phone className="absolute left-2.5 top-1/2 transform -translate-y-1/2 h-3.5 w-3.5 sm:h-4 sm:w-4 text-muted-foreground" />
                     <Input
                       id="phone"
                       name="phone"
@@ -173,33 +173,33 @@ export const ContactForm = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="Your phone number"
-                      className="pl-7 h-9 text-sm"
+                      className="pl-7 h-9 sm:h-10 text-sm"
                     />
                   </div>
                 </div>
                 
                 <div className="space-y-1.5">
-                  <Label htmlFor="company" className="text-xs font-medium">Company</Label>
+                  <Label htmlFor="company" className="text-xs sm:text-sm font-medium">Company</Label>
                   <Input
                     id="company"
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
                     placeholder="Your company name"
-                    className="h-9 text-sm"
+                    className="h-9 sm:h-10 text-sm"
                   />
                 </div>
                 
                 <div className="space-y-1.5">
-                  <Label className="text-xs font-medium">Schedule Demo Date</Label>
+                  <Label className="text-xs sm:text-sm font-medium">Schedule Demo Date</Label>
                   <Popover>
                     <PopoverTrigger asChild>
                       <div className="relative">
-                        <CalendarIcon className="absolute left-2.5 top-1/2 transform -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground pointer-events-none" />
+                        <CalendarIcon className="absolute left-2.5 top-1/2 transform -translate-y-1/2 h-3.5 w-3.5 sm:h-4 sm:w-4 text-muted-foreground pointer-events-none" />
                         <Input
                           value={formData.scheduleDemoDate}
                           placeholder="Select date"
-                          className="pl-7 h-9 text-sm cursor-pointer"
+                          className="pl-7 h-9 sm:h-10 text-sm cursor-pointer"
                           readOnly
                         />
                       </div>
@@ -217,13 +217,13 @@ export const ContactForm = () => {
                 </div>
                 
                 <div className="space-y-1.5">
-                  <Label className="text-xs font-medium">Schedule Demo Time</Label>
+                  <Label className="text-xs sm:text-sm font-medium">Schedule Demo Time</Label>
                   <Select 
                     value={formData.scheduleDemoTime} 
                     onValueChange={handleTimeChange}
                     disabled={!isTimePickerEnabled}
                   >
-                    <SelectTrigger className="h-9 text-sm">
+                    <SelectTrigger className="h-9 sm:h-10 text-sm">
                       <SelectValue placeholder="Select time" />
                     </SelectTrigger>
                     <SelectContent>
@@ -237,7 +237,7 @@ export const ContactForm = () => {
                 </div>
                 
                 <div className="space-y-1.5 md:col-span-2">
-                  <Label htmlFor="message" className="text-xs font-medium">Message</Label>
+                  <Label htmlFor="message" className="text-xs sm:text-sm font-medium">Message</Label>
                   <Textarea
                     id="message"
                     name="message"
@@ -255,7 +255,7 @@ export const ContactForm = () => {
                 <Button 
                   type="submit" 
                   size="sm" 
-                  className="w-full md:w-auto bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-bold py-2 px-4 rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md text-sm"
+                  className="w-full md:w-auto bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-bold py-2 px-4 rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md text-sm sm:text-base"
                 >
                   Send Message
                 </Button>

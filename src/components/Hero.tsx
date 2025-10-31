@@ -99,24 +99,30 @@ export const Hero = () => {
               </div>
             </div>
             
-            <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-loose">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-relaxed">
               AI That Simplifies, Analyzes,<br />
               and Strengthens <span className="text-custom-blue">
                 Your Communication
               </span>
             </h1>
             
-            <p className="text-lg text-foreground mb-6 max-w-xl">
+            <p className="text-base sm:text-lg text-foreground mb-6 max-w-xl">
               Turn every interaction into measurable growth with AI-powered insights and smart automation — because at CallMonAI, we don't just make communication work, we make it work for you. 
             </p>
             
             {/* AI-Powered badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-600 dark:text-cyan-400 text-xs font-medium mb-6 border border-cyan-500/30">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-600 dark:text-cyan-400 text-xs font-medium mb-4 border border-cyan-500/30">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
               </span>
               AI-Powered Intelligence
+            </div>
+            
+            {/* Analytics badge - moved to be below AI-Powered */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/20 to-indigo-500/20 text-purple-600 dark:text-purple-400 text-xs font-medium mb-6 border border-purple-500/30 ml-0 sm:ml-2">
+              <BarChart3 className="h-3 w-3" />
+              <span>Advanced Analytics</span>
             </div>
             
             {/* New key features list */}
@@ -192,47 +198,57 @@ export const Hero = () => {
             <HorizontalCallAnalytics />
             
             {/* Enhanced decorative Elements for better highlighting */}
-            <div className="absolute -top-8 -right-8 w-56 h-56 bg-gradient-to-r from-primary/25 to-accent/25 rounded-full blur-2xl -z-10 animate-pulse" />
-            <div className="absolute -bottom-8 -left-8 w-56 h-56 bg-gradient-to-r from-accent/25 to-primary/25 rounded-full blur-2xl -z-10 animate-pulse" />
+            <div className="absolute -top-8 -right-8 w-56 h-56 bg-gradient-to-r from-primary/25 to-accent/25 rounded-full blur-2xl -z-10 animate-pulse hidden sm:block" />
+            <div className="absolute -bottom-8 -left-8 w-56 h-56 bg-gradient-to-r from-accent/25 to-primary/25 rounded-full blur-2xl -z-10 animate-pulse hidden sm:block" />
             
             {/* Additional highlighting element */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 -z-10 transform rotate-3 scale-105 blur-xl"></div>
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 -z-10 transform rotate-3 scale-105 blur-xl hidden sm:block"></div>
             
-            {/* Floating badges */}
-            <div className="absolute -top-4 -left-4 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg">
+            {/* Floating badges - repositioned as requested */}
+            <div className="absolute top-4 left-0 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg animate-pulse hidden sm:block">
               <div className="flex items-center gap-1">
                 <CheckCircle className="h-5 w-5" style={{ color: '#36c0ed' }} />
                 <span className="text-xs font-semibold text-foreground">AI-Powered</span>
               </div>
             </div>
             
-            <div className="absolute -bottom-4 -right-4 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-accent/20 shadow-lg">
+            {/* Analytics badge - moved to middle-left */}
+            <div className="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-accent/20 shadow-lg animate-pulse delay-300 hidden sm:block">
+              <div className="flex items-center gap-1">
+                <BarChart3 className="h-5 w-5" style={{ color: '#36c0ed' }} />
+                <span className="text-xs font-semibold text-foreground">Analytics</span>
+              </div>
+            </div>
+            
+            {/* 24/7 Support badge - moved to right side, similar to Live Data badge */}
+            <div className="absolute top-1/4 right-0 transform translate-x-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg animate-pulse delay-700 hidden sm:block">
+              <div className="flex items-center gap-1">
+                <Headset className="h-5 w-5" style={{ color: '#36c0ed' }} />
+                <span className="text-xs font-semibold text-foreground">24/7 Support</span>
+              </div>
+            </div>
+            
+            {/* Secure badge - moved to bottom right corner, similar to Live Data badge */}
+            <div className="absolute bottom-4 right-0 transform translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-accent/20 shadow-lg animate-pulse delay-1000 hidden sm:block">
               <div className="flex items-center gap-1">
                 <Shield className="h-5 w-5" style={{ color: '#36c0ed' }} />
                 <span className="text-xs font-semibold text-foreground">Secure</span>
               </div>
             </div>
             
-            {/* New feature badge - moved from left side to right side */}
-            <div className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 bg-background/90 backdrop-blur-sm rounded-full p-3 border border-accent/30 shadow-xl">
-              <div className="flex flex-col items-center">
-                <TrendingUp className="h-5 w-5 mb-1" style={{ color: '#36c0ed' }} />
-                <span className="text-[10px] font-bold text-foreground whitespace-nowrap">LIVE DATA</span>
+            {/* New badge - added to bottom left corner, mirroring Secure badge */}
+            <div className="absolute bottom-4 left-0 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg animate-pulse delay-500 hidden sm:block">
+              <div className="flex items-center gap-1">
+                <Star className="h-5 w-5" style={{ color: '#36c0ed' }} />
+                <span className="text-xs font-semibold text-foreground">Trusted</span>
               </div>
             </div>
             
-            {/* New floating elements around visualization */}
-            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-lg p-2 border border-primary/20 shadow-md">
+            {/* Live Data badge - changed to match other badges style */}
+            <div className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-accent/20 shadow-lg animate-pulse delay-100 hidden sm:block">
               <div className="flex items-center gap-1">
-                <BarChart3 className="h-4 w-4" style={{ color: '#36c0ed' }} />
-                <span className="text-xs font-semibold text-foreground">Analytics</span>
-              </div>
-            </div>
-            
-            <div className="absolute -bottom-6 right-1/2 transform translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-lg p-2 border border-accent/20 shadow-md">
-              <div className="flex items-center gap-1">
-                <Headset className="h-4 w-4" style={{ color: '#36c0ed' }} />
-                <span className="text-xs font-semibold text-foreground">24/7 Support</span>
+                <TrendingUp className="h-5 w-5" style={{ color: '#36c0ed' }} />
+                <span className="text-xs font-semibold text-foreground">LIVE DATA</span>
               </div>
             </div>
           </div>

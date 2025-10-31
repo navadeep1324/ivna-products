@@ -1,26 +1,25 @@
-import { TrendingDown, Clock as ClockIcon, Award as AwardIcon, HeartHandshake } from "lucide-react";
-
+// Updated stats array to use image paths instead of Lucide icons
 const stats = [
   {
-    icon: TrendingDown,
+    icon: "/icons/fast icon.png",
     value: "40%",
     label: "Faster",
     description: "Faster client responses through real-time call tracking and alerts.",
   },
   {
-    icon: ClockIcon,
+    icon: "/icons/Overlay.png",
     value: "Up to 60%",
     label: "Better Team",
     description: "Performance with AI-driven insights and feedback",
   },
   {
-    icon: AwardIcon,
+    icon: "/icons/Overlay (1).png",
     value: "6+ hours",
     label: "Saves Time ",
     description: " Weekly by eliminating manual note-taking and follow-ups. ",
   },
   {
-    icon: HeartHandshake,
+    icon: "/icons/Overlay (2).png",
     value: "100% ",
     label: "Visibility ",
     description: "Visibility into every call, transcript, and action item.",
@@ -29,7 +28,7 @@ const stats = [
 
 export const GameChangerSection = () => {
   return (
-    <section className="py-16 relative overflow-hidden">
+    <section className="py-12 sm:py-16 relative overflow-hidden">
       {/* Left side image */}
       <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1/4 hidden lg:block">
         <img 
@@ -50,34 +49,36 @@ export const GameChangerSection = () => {
       
       <div className="container mx-auto px-4 lg:px-8">
         {/* Enhanced Key Business Benefits section with gradient background */}
-        <div className="bg-gradient-to-r from-[#C4EFEA] to-[#EFF9FD] p-8 rounded-2xl shadow-xl">
+        <div className="bg-gradient-to-r from-[#C4EFEA] to-[#EFF9FD] p-6 sm:p-8 rounded-2xl shadow-xl">
           {/* Added missing heading for Key Business Benefits */}
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-2xl lg:text-3xl font-bold mb-3 leading-relaxed">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 leading-relaxed">
               What Makes {" "}
               <span className="text-custom-blue">
                 CallMonAI a Game Changer
               </span>
             </h2>
-            <p className="text-base text-foreground/80 leading-relaxed">
+            <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
               AI that helps your team communicate smarter and drive better ROI. 
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {stats.map((stat, index) => (
               <div 
                 key={index}
-                className="text-center group bg-card/90 p-5 rounded-lg border border-gray-200 hover:border-primary/40 hover:shadow-lg transition-all backdrop-blur-sm hover:-translate-y-2 duration-300 leading-relaxed"
+                className="group bg-card/90 p-4 sm:p-5 rounded-lg border border-gray-200 hover:border-primary/40 hover:shadow-lg transition-all backdrop-blur-sm hover:-translate-y-2 duration-300 leading-relaxed flex"
               >
-                <div className="inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-xl mb-3 group-hover:scale-110 transition-transform duration-300 bg-gradient-to-br from-primary/10 to-accent/10">
-                  <stat.icon className="h-6 w-6 md:h-8 md:w-8" style={{ color: '#36c0ed' }} />
+                <div className="flex items-start justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-300 flex-shrink-0 mt-1">
+                  <img src={stat.icon} alt={`${stat.label} icon`} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" style={{ color: '#36c0ed' }} />
                 </div>
-                <div className="text-xl lg:text-2xl font-bold mb-1 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  {stat.value}
+                <div className="flex flex-col justify-start">
+                  <div className="text-xl lg:text-2xl font-bold mb-1" style={{ color: '#36c0ed' }}>
+                    {stat.value}
+                  </div>
+                  <div className="text-sm font-semibold mb-1" style={{ color: '#36c0ed' }}>{stat.label}</div>
+                  <p className="text-xs sm:text-sm text-foreground leading-relaxed">{stat.description}</p>
                 </div>
-                <div className="text-sm font-semibold mb-1 text-foreground">{stat.label}</div>
-                <p className="text-xs md:text-sm text-foreground/80 leading-relaxed">{stat.description}</p>
               </div>
             ))}
           </div>
