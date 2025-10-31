@@ -102,6 +102,33 @@ export const Hero = () => {
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-primary/15 to-accent/15 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-accent/15 to-primary/15 rounded-full blur-3xl -z-10"></div>
       
+      {/* Right side background image in banner */}
+      <div className="absolute right-0 bottom-0 w-1/4 hidden lg:block opacity-100 transform translate-y-1/4 translate-x-1/4">
+        <img 
+          src="/dashboard/wave-green.png" 
+          alt="Decoration" 
+          className="w-full h-auto object-contain"
+        />
+      </div>
+      
+      {/* Section paints background image */}
+      <div className="absolute inset-0 w-full h-full hidden lg:block opacity-30 -z-10">
+        <img 
+          src="/dashboard/section-paints.png" 
+          alt="Background decoration" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      
+      {/* Left side background image in banner */}
+      <div className="absolute left-0 bottom-0 w-1/4 hidden lg:block opacity-100 transform translate-y-1/3">
+        <img 
+          src="/dashboard/wave-green.png" 
+          alt="Decoration" 
+          className="w-full h-auto object-contain"
+        />
+      </div>
+      
       {/* Left side icons removed as per user request */}
       
 
