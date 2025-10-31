@@ -22,7 +22,7 @@ export const ClientLogos = () => {
         <div className="text-center mb-12">
           <h2 className="text-2xl lg:text-3xl font-bold mb-3">
             Our{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="text-custom-blue">
               Clients
             </span>
           </h2>

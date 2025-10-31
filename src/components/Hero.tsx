@@ -49,9 +49,9 @@ export const Hero = () => {
 
   return (
     // Enhanced section with stronger background color and added background image
-    <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
+    <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10" style={{ backgroundImage: 'url(/dashboard/section-paints.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       {/* Stronger background elements for better highlighting */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-background to-accent/15 -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-background to-accent/15 -z-10" style={{ zIndex: -1 }} />
       
       {/* More prominent decorative elements */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl animate-pulse"></div>
@@ -69,20 +69,20 @@ export const Hero = () => {
       <div className="absolute bottom-1/4 left-1/4 w-5 h-5 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full blur-sm animate-bounce delay-1500"></div>
       
       {/* Floating animated icons */}
-      <Phone className="absolute top-20 right-20 h-6 w-6 text-primary/20 animate-bounce delay-1000" />
-      <Headphones className="absolute top-40 left-20 h-6 w-6 text-accent/20 animate-bounce delay-1500" />
-      <Zap className="absolute bottom-40 right-32 h-6 w-6 text-primary/20 animate-bounce delay-2000" />
-      <Shield className="absolute bottom-20 left-32 h-6 w-6 text-accent/20 animate-bounce delay-2500" />
+      <Phone className="absolute top-20 right-20 h-6 w-6 animate-bounce delay-1000" style={{ color: '#36c0ed' }} />
+      <Headphones className="absolute top-40 left-20 h-6 w-6 animate-bounce delay-1500" style={{ color: '#36c0ed' }} />
+      <Zap className="absolute bottom-40 right-32 h-6 w-6 animate-bounce delay-2000" style={{ color: '#36c0ed' }} />
+      <Shield className="absolute bottom-20 left-32 h-6 w-6 animate-bounce delay-2500" style={{ color: '#36c0ed' }} />
       
       {/* New floating elements */}
-      <TrendingUp className="absolute top-1/3 right-10 h-5 w-5 text-primary/30 animate-pulse delay-700" />
-      <Users className="absolute top-1/2 left-10 h-5 w-5 text-accent/30 animate-pulse delay-1200" />
-      <Clock className="absolute bottom-1/3 right-1/4 h-5 w-5 text-primary/30 animate-pulse delay-1700" />
+      <TrendingUp className="absolute top-1/3 right-10 h-5 w-5 animate-pulse delay-700" style={{ color: '#36c0ed' }} />
+      <Users className="absolute top-1/2 left-10 h-5 w-5 animate-pulse delay-1200" style={{ color: '#36c0ed' }} />
+      <Clock className="absolute bottom-1/3 right-1/4 h-5 w-5 animate-pulse delay-1700" style={{ color: '#36c0ed' }} />
       
       {/* Additional decorative floating elements */}
-      <Award className="absolute top-1/4 left-1/3 h-4 w-4 text-accent/25 animate-ping delay-3000" />
-      <BarChart3 className="absolute bottom-1/4 left-1/4 h-4 w-4 text-primary/25 animate-ping delay-3500" />
-      <Headset className="absolute top-3/4 right-1/3 h-4 w-4 text-accent/25 animate-ping delay-4000" />
+      <Award className="absolute top-1/4 left-1/3 h-4 w-4 animate-ping delay-3000" style={{ color: '#36c0ed' }} />
+      <BarChart3 className="absolute bottom-1/4 left-1/4 h-4 w-4 animate-ping delay-3500" style={{ color: '#36c0ed' }} />
+      <Headset className="absolute top-3/4 right-1/3 h-4 w-4 animate-ping delay-4000" style={{ color: '#36c0ed' }} />
       
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -100,7 +100,8 @@ export const Hero = () => {
             </div>
             
             <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-loose">
-              AI That Simplifies, Analyzes, and Strengthens <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              AI That Simplifies, Analyzes,<br />
+              and Strengthens <span className="text-custom-blue">
                 Your Communication
               </span>
             </h1>
@@ -121,19 +122,19 @@ export const Hero = () => {
             {/* New key features list */}
             <div className="grid grid-cols-2 gap-3 mb-6">
               <div className="flex items-center gap-2">
-                <Mic className="h-5 w-5 text-primary flex-shrink-0" />
+                <Mic className="h-5 w-5 flex-shrink-0" style={{ color: '#36c0ed' }} />
                 <span className="text-sm text-foreground">Call Recording</span>
               </div>
               <div className="flex items-center gap-2">
-                <Volume2 className="h-5 w-5 text-primary flex-shrink-0" />
+                <Volume2 className="h-5 w-5 flex-shrink-0" style={{ color: '#36c0ed' }} />
                 <span className="text-sm text-foreground">AI Transcription</span>
               </div>
               <div className="flex items-center gap-2">
-                <BarChart3 className="h-5 w-5 text-primary flex-shrink-0" />
+                <BarChart3 className="h-5 w-5 flex-shrink-0" style={{ color: '#36c0ed' }} />
                 <span className="text-sm text-foreground">Sentiment Analysis</span>
               </div>
               <div className="flex items-center gap-2">
-                <Zap className="h-5 w-5 text-primary flex-shrink-0" />
+                <Zap className="h-5 w-5 flex-shrink-0" style={{ color: '#36c0ed' }} />
                 <span className="text-sm text-foreground">Real-time Insights</span>
               </div>
               <div className="flex items-center gap-2">
@@ -200,22 +201,22 @@ export const Hero = () => {
             {/* Floating badges */}
             <div className="absolute -top-4 -left-4 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg">
               <div className="flex items-center gap-1">
-                <CheckCircle className="h-5 w-5 text-primary" />
+                <CheckCircle className="h-5 w-5" style={{ color: '#36c0ed' }} />
                 <span className="text-xs font-semibold text-foreground">AI-Powered</span>
               </div>
             </div>
             
             <div className="absolute -bottom-4 -right-4 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-accent/20 shadow-lg">
               <div className="flex items-center gap-1">
-                <Shield className="h-5 w-5 text-accent" />
+                <Shield className="h-5 w-5" style={{ color: '#36c0ed' }} />
                 <span className="text-xs font-semibold text-foreground">Secure</span>
               </div>
             </div>
             
-            {/* New feature badge */}
-            <div className="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-background/90 backdrop-blur-sm rounded-full p-3 border border-accent/30 shadow-xl">
+            {/* New feature badge - moved from left side to right side */}
+            <div className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 bg-background/90 backdrop-blur-sm rounded-full p-3 border border-accent/30 shadow-xl">
               <div className="flex flex-col items-center">
-                <TrendingUp className="h-5 w-5 text-accent mb-1" />
+                <TrendingUp className="h-5 w-5 mb-1" style={{ color: '#36c0ed' }} />
                 <span className="text-[10px] font-bold text-foreground whitespace-nowrap">LIVE DATA</span>
               </div>
             </div>
@@ -223,14 +224,14 @@ export const Hero = () => {
             {/* New floating elements around visualization */}
             <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-lg p-2 border border-primary/20 shadow-md">
               <div className="flex items-center gap-1">
-                <BarChart3 className="h-4 w-4 text-primary" />
+                <BarChart3 className="h-4 w-4" style={{ color: '#36c0ed' }} />
                 <span className="text-xs font-semibold text-foreground">Analytics</span>
               </div>
             </div>
             
             <div className="absolute -bottom-6 right-1/2 transform translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-lg p-2 border border-accent/20 shadow-md">
               <div className="flex items-center gap-1">
-                <Headset className="h-4 w-4 text-accent" />
+                <Headset className="h-4 w-4" style={{ color: '#36c0ed' }} />
                 <span className="text-xs font-semibold text-foreground">24/7 Support</span>
               </div>
             </div>

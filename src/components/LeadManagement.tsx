@@ -37,7 +37,7 @@ export const LeadManagement = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             Intelligent{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="text-custom-blue">
               Business Solutions
             </span>
           </h2>
@@ -53,7 +53,7 @@ export const LeadManagement = () => {
               {leadMetrics.map((metric, index) => (
                 <Card key={index} className="p-5 border-border bg-card hover:shadow-md transition-all hover:border-primary/30">
                   <div className="w-11 h-11 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-3">
-                    <metric.icon className="h-5 w-5 text-primary" />
+                    <metric.icon className="h-5 w-5" style={{ color: '#36c0ed' }} />
                   </div>
                   <div className="text-2xl font-bold text-foreground mb-1">{metric.value}</div>
                   <h3 className="font-semibold text-foreground mb-1">{metric.title}</h3>
@@ -121,7 +121,7 @@ export const LeadManagement = () => {
                     <div className="flex items-center justify-between p-3 bg-muted rounded-lg hover:bg-primary/5 transition-colors">
                       <div className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                          <Phone className="h-4 w-4 text-primary" />
+                          <Phone className="h-4 w-4" style={{ color: '#36c0ed' }} />
                         </div>
                         <div>
                           <div className="font-medium text-sm">Active Call</div>
@@ -138,7 +138,7 @@ export const LeadManagement = () => {
                     <div className="flex items-center justify-between p-3 bg-muted rounded-lg hover:bg-primary/5 transition-colors">
                       <div className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                          <Users className="h-4 w-4 text-primary" />
+                          <Users className="h-4 w-4" style={{ color: '#36c0ed' }} />
                         </div>
                         <div>
                           <div className="font-medium text-sm">System Status</div>
@@ -155,7 +155,7 @@ export const LeadManagement = () => {
                     <div className="flex items-center justify-between p-3 bg-muted rounded-lg hover:bg-primary/5 transition-colors">
                       <div className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                          <TrendingUp className="h-4 w-4 text-primary" />
+                          <TrendingUp className="h-4 w-4" style={{ color: '#36c0ed' }} />
                         </div>
                         <div>
                           <div className="font-medium text-sm">Monthly Savings</div>

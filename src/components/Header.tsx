@@ -40,7 +40,7 @@ export const Header = () => {
               className="text-base font-medium text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105 flex items-center gap-1"
               onClick={(e) => handleNavClick(e, "features")}
             >
-              <Zap className="h-4 w-4" />
+              <Zap className="h-4 w-4" style={{ color: '#36c0ed' }} />
               Features
             </a>
             <a 
@@ -48,7 +48,7 @@ export const Header = () => {
               className="text-base font-medium text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105 flex items-center gap-1"
               onClick={(e) => handleNavClick(e, "suite")}
             >
-              <Package className="h-4 w-4" />
+              <Package className="h-4 w-4" style={{ color: '#36c0ed' }} />
               Product
             </a>
             <a 
@@ -56,7 +56,7 @@ export const Header = () => {
               className="text-base font-medium text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105 flex items-center gap-1"
               onClick={(e) => handleNavClick(e, "contact")}
             >
-              <Mail className="h-4 w-4" />
+              <Mail className="h-4 w-4" style={{ color: '#36c0ed' }} />
               Contact
             </a>
             <Button 
@@ -91,7 +91,7 @@ export const Header = () => {
                   setIsMenuOpen(false);
                 }}
               >
-                <Zap className="h-4 w-4" />
+                <Zap className="h-4 w-4" style={{ color: '#36c0ed' }} />
                 Features
               </a>
               <a 
@@ -102,7 +102,7 @@ export const Header = () => {
                   setIsMenuOpen(false);
                 }}
               >
-                <Package className="h-4 w-4" />
+                <Package className="h-4 w-4" style={{ color: '#36c0ed' }} />
                 Product
               </a>
               <a 
@@ -113,7 +113,7 @@ export const Header = () => {
                   setIsMenuOpen(false);
                 }}
               >
-                <Mail className="h-4 w-4" />
+                <Mail className="h-4 w-4" style={{ color: '#36c0ed' }} />
                 Contact
               </a>
               <div className="flex flex-col gap-2 pt-4 border-t border-border px-4">

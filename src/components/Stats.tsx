@@ -34,7 +34,7 @@ export const Stats = () => {
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
           <h2 className="text-3xl lg:text-5xl font-bold mb-4">
             Proven Results,{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="text-custom-blue">
               Real Impact
             </span>
           </h2>
@@ -51,7 +51,7 @@ export const Stats = () => {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-4 group-hover:scale-110 transition-transform duration-300">
-                <stat.icon className="h-8 w-8 text-primary" />
+                <stat.icon className="h-8 w-8" style={{ color: '#36c0ed' }} />
               </div>
               <div className="text-4xl lg:text-5xl font-bold mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 {stat.value}

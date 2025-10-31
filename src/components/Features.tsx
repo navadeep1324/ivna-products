@@ -46,7 +46,7 @@ export const Features = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-3">
             Power Features That{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="text-custom-blue">
               Drive CallMonAI 
             </span>
           </h2>
@@ -64,7 +64,7 @@ export const Features = () => {
               {/* Animated icon background */}
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-primary/5 rounded-full blur-xl"></div>
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-3 relative">
-                <feature.icon className="h-6 w-6 md:h-8 md:w-8 text-primary" />
+                <feature.icon className="h-6 w-6 md:h-8 md:w-8" style={{ color: '#36c0ed' }} />
               </div>
               <h3 className="text-lg font-semibold mb-2 text-foreground">{feature.title}</h3>
               <p className="text-foreground text-sm md:text-base">{feature.description}</p>
@@ -80,34 +80,34 @@ export const Features = () => {
           
           <div className="order-2 lg:order-1 relative z-10">
             <h3 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-           Know <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">What’s Happening</span> in Every Conversation 
+           Know <span className="text-custom-blue">What’s Happening</span> in Every Conversation 
             </h3>
             <p className="text-foreground mb-4">
               Stay in control with a unified view of all your business communications — track, analyze, and improve every conversation effortlessly. 
             </p>
             <ul className="space-y-3 mb-6">
               <li className="flex items-start gap-3">
-                <User className="h-5 w-5 text-primary mt-0.5" />
+                <User className="h-5 w-5 mt-0.5" style={{ color: '#36c0ed' }} />
                 <span className="text-foreground">Caller details and communication history. </span>
               </li>
               <li className="flex items-start gap-3">
-                <BarChart3 className="h-5 w-5 text-primary mt-0.5" />
+                <BarChart3 className="h-5 w-5 mt-0.5" style={{ color: '#36c0ed' }} />
                 <span className="text-foreground">Call quality indicators and performance scores. </span>
               </li>
               <li className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
+                <CheckCircle className="h-5 w-5 mt-0.5" style={{ color: '#36c0ed' }} />
                 <span className="text-foreground">Follow-up status and assigned team member. </span>
               </li>
               <li className="flex items-start gap-3">
-                <Zap className="h-5 w-5 text-primary mt-0.5" />
+                <Zap className="h-5 w-5 mt-0.5" style={{ color: '#36c0ed' }} />
                 <span className="text-foreground">Real-time AI insights and feedback. </span>
               </li>
               <li className="flex items-start gap-3">
-                <Clock className="h-5 w-5 text-primary mt-0.5" />
+                <Clock className="h-5 w-5 mt-0.5" style={{ color: '#36c0ed' }} />
                 <span className="text-foreground">Quick filters to sort by date, client, or call type.   </span>
               </li>
               <li className="flex items-start gap-3">
-                <Headphones className="h-5 w-5 text-primary mt-0.5" />
+                <Headphones className="h-5 w-5 mt-0.5" style={{ color: '#36c0ed' }} />
                 <span className="text-foreground">One-click access to transcripts and summaries. </span>
               </li>
             </ul>
@@ -136,38 +136,38 @@ export const Features = () => {
           </div>
           <div className="relative z-10">
             <h3 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              Track  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Your Communication</span> With our AI Dashboard
+              Track  <span className="text-custom-blue">Your Communication</span> With our AI Dashboard
             </h3>
             <p className="text-foreground mb-4">
               Gain a 360° view of your calls, enquiries, and team performance — all powered by real-time AI analytics that help you make faster, smarter business decisions. 
             </p>
             <ul className="space-y-3 mb-6">
               <li className="flex items-start gap-3">
-                <BarChart3 className="h-5 w-5 text-primary mt-0.5" />
+                <BarChart3 className="h-5 w-5 mt-0.5" style={{ color: '#36c0ed' }} />
                 <span className="text-foreground">Call Summary Snapshot. </span>
               </li>
               <li className="flex items-start gap-3">
-                <Phone className="h-5 w-5 text-primary mt-0.5" />
+                <Phone className="h-5 w-5 mt-0.5" style={{ color: '#36c0ed' }} />
                 <span className="text-foreground">Call Type Analysis. </span>
               </li>
               <li className="flex items-start gap-3">
-                <Headphones className="h-5 w-5 text-primary mt-0.5" />
+                <Headphones className="h-5 w-5 mt-0.5" style={{ color: '#36c0ed' }} />
                 <span className="text-foreground">Recordings & Transcriptions. </span>
               </li>
               <li className="flex items-start gap-3">
-                <User className="h-5 w-5 text-primary mt-0.5" />
+                <User className="h-5 w-5 mt-0.5" style={{ color: '#36c0ed' }} />
                 <span className="text-foreground">Lead Enquiry Tracking. </span>
               </li>
               <li className="flex items-start gap-3">
-                <Zap className="h-5 w-5 text-primary mt-0.5" />
+                <Zap className="h-5 w-5 mt-0.5" style={{ color: '#36c0ed' }} />
                 <span className="text-foreground">Quality Call Insights. </span>
               </li>
               <li className="flex items-start gap-3">
-                <BarChart3 className="h-5 w-5 text-primary mt-0.5" />
+                <BarChart3 className="h-5 w-5 mt-0.5" style={{ color: '#36c0ed' }} />
                 <span className="text-foreground">Team Performance Dashboard. </span>
               </li>
               <li className="flex items-start gap-3">
-                <TrendingUp className="h-5 w-5 text-primary mt-0.5" />
+                <TrendingUp className="h-5 w-5 mt-0.5" style={{ color: '#36c0ed' }} />
                 <span className="text-foreground">Strategic Analytics & Trends. </span>
               </li>
             </ul>

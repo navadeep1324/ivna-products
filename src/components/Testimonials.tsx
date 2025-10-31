@@ -32,7 +32,7 @@ export const Testimonials = () => {
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
           <h2 className="text-3xl lg:text-5xl font-bold mb-4">
             Loved by{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="text-custom-blue">
               Thousands
             </span>
           </h2>

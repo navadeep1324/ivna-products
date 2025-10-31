@@ -8,7 +8,7 @@ export const CallAnalytics = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             Call{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="text-custom-blue">
               Analytics & Insights
             </span>
           </h2>
@@ -22,7 +22,7 @@ export const CallAnalytics = () => {
           <Card className="p-6 border-border bg-card hover:border-primary/30 transition-all">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                <Mic className="h-5 w-5 text-primary" />
+                <Mic className="h-5 w-5" style={{ color: '#36c0ed' }} />
               </div>
               <h3 className="text-lg font-semibold text-foreground">Call Quality Metrics</h3>
             </div>
@@ -64,7 +64,7 @@ export const CallAnalytics = () => {
           <Card className="p-6 border-border bg-card hover:border-primary/30 transition-all">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                <TrendingUp className="h-5 w-5 text-primary" />
+                <TrendingUp className="h-5 w-5" style={{ color: '#36c0ed' }} />
               </div>
               <h3 className="text-lg font-semibold text-foreground">Business Insights</h3>
             </div>
@@ -127,7 +127,7 @@ export const CallAnalytics = () => {
           <Card className="p-6 border-border bg-card hover:border-primary/30 transition-all">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                <Phone className="h-5 w-5 text-primary" />
+                <Phone className="h-5 w-5" style={{ color: '#36c0ed' }} />
               </div>
               <h3 className="text-lg font-semibold text-foreground">System Performance</h3>
             </div>
@@ -169,7 +169,7 @@ export const CallAnalytics = () => {
             <div className="mt-4 pt-4 border-t border-border">
               <div className="flex items-center justify-between">
                 <span className="text-sm text-muted-foreground">System Efficiency</span>
-                <span className="text-sm font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">98%</span>
+                <span className="text-sm font-bold text-custom-blue">98%</span>
               </div>
             </div>
           </Card>

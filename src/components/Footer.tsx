@@ -25,7 +25,7 @@ export const Footer = () => {
           {/* Brand - Removed social media links */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <span className="text-2xl font-bold text-custom-blue">
                 CallMonAI
               </span>
             </div>
@@ -39,23 +39,23 @@ export const Footer = () => {
             <h3 className="font-semibold text-foreground mb-4 text-lg border-b border-primary/20 pb-2">Quick Links</h3>
             <ul className="space-y-3">
               <li><a href="#suite" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-base">
-                <Package className="h-4 w-4" />
+                <Package className="h-4 w-4" style={{ color: '#36c0ed' }} />
                 Product Showcase
               </a></li>
               <li><a href="#features" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-base">
-                <Zap className="h-4 w-4" />
+                <Zap className="h-4 w-4" style={{ color: '#36c0ed' }} />
                 Features
               </a></li>
               <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-base">
-                <Mail className="h-4 w-4" />
+                <Mail className="h-4 w-4" style={{ color: '#36c0ed' }} />
                 Contact
               </a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-base">
-                <Shield className="h-4 w-4" />
+                <Shield className="h-4 w-4" style={{ color: '#36c0ed' }} />
                 Privacy Policy
               </a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-base">
-                <FileText className="h-4 w-4" />
+                <FileText className="h-4 w-4" style={{ color: '#36c0ed' }} />
                 Terms and Conditions
               </a></li>
             </ul>
@@ -92,19 +92,19 @@ export const Footer = () => {
           
           <div className="flex flex-wrap justify-center gap-6">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-base flex items-center gap-1">
-              <Zap className="h-4 w-4" />
+              <Zap className="h-4 w-4" style={{ color: '#36c0ed' }} />
               Status
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-base flex items-center gap-1">
-              <Shield className="h-4 w-4" />
+              <Shield className="h-4 w-4" style={{ color: '#36c0ed' }} />
               Privacy Policy
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-base flex items-center gap-1">
-              <FileText className="h-4 w-4" />
+              <FileText className="h-4 w-4" style={{ color: '#36c0ed' }} />
               Terms of Service
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-base flex items-center gap-1">
-              <FileText className="h-4 w-4" />
+              <FileText className="h-4 w-4" style={{ color: '#36c0ed' }} />
               Cookie Policy
             </a>
           </div>

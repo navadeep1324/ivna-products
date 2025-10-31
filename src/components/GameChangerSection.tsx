@@ -29,16 +29,34 @@ const stats = [
 
 export const GameChangerSection = () => {
   return (
-    <section className="py-16">
+    <section className="py-16 relative overflow-hidden">
+      {/* Left side image */}
+      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1/4 hidden lg:block">
+        <img 
+          src="/dashboard/Untitled design (10) 1.png" 
+          alt="Decoration" 
+          className="w-full h-auto object-contain opacity-80"
+        />
+      </div>
+      
+      {/* Right side image */}
+      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-1/4 hidden lg:block">
+        <img 
+          src="/dashboard/Untitled design (10) 2.png" 
+          alt="Decoration" 
+          className="w-full h-auto object-contain opacity-80"
+        />
+      </div>
+      
       <div className="container mx-auto px-4 lg:px-8">
-        {/* Enhanced Key Business Benefits section with white background */}
-        <div className="bg-[#fbfbfc] p-8 rounded-2xl shadow-xl">
+        {/* Enhanced Key Business Benefits section with gradient background */}
+        <div className="bg-gradient-to-r from-[#C4EFEA] to-[#EFF9FD] p-8 rounded-2xl shadow-xl">
           {/* Added missing heading for Key Business Benefits */}
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-2xl lg:text-3xl font-bold mb-3 leading-relaxed">
               What Makes {" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                VOiPro a Game Changer
+              <span className="text-custom-blue">
+                CallMonAI a Game Changer
               </span>
             </h2>
             <p className="text-base text-foreground/80 leading-relaxed">
@@ -53,7 +71,7 @@ export const GameChangerSection = () => {
                 className="text-center group bg-card/90 p-5 rounded-lg border border-gray-200 hover:border-primary/40 hover:shadow-lg transition-all backdrop-blur-sm hover:-translate-y-2 duration-300 leading-relaxed"
               >
                 <div className="inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-xl mb-3 group-hover:scale-110 transition-transform duration-300 bg-gradient-to-br from-primary/10 to-accent/10">
-                  <stat.icon className="h-6 w-6 md:h-8 md:w-8 text-primary" />
+                  <stat.icon className="h-6 w-6 md:h-8 md:w-8" style={{ color: '#36c0ed' }} />
                 </div>
                 <div className="text-xl lg:text-2xl font-bold mb-1 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   {stat.value}

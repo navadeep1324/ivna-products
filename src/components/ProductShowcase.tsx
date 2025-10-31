@@ -67,6 +67,24 @@ export const ProductShowcase = () => {
 
   return (
     <section id="suite" className="py-16 lg:py-24 bg-muted/30 relative overflow-hidden">
+      {/* Left side image */}
+      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1/4 hidden lg:block">
+        <img 
+          src="/dashboard/Untitled design (10) 1.png" 
+          alt="Decoration" 
+          className="w-full h-auto object-contain opacity-80"
+        />
+      </div>
+      
+      {/* Right side image */}
+      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-1/4 hidden lg:block">
+        <img 
+          src="/dashboard/Untitled design (10) 2.png" 
+          alt="Decoration" 
+          className="w-full h-auto object-contain opacity-80"
+        />
+      </div>
+      
       {/* Animated background elements */}
       <div className="absolute top-10 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-10 right-10 w-48 h-48 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -76,7 +94,7 @@ export const ProductShowcase = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             CallMonAI {" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="text-custom-blue">
               Overview 
             </span>
           </h2>
@@ -92,7 +110,7 @@ export const ProductShowcase = () => {
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-accent/5 rounded-full blur-xl animate-ping delay-300"></div>
             
             <h3 className="text-2xl font-bold text-foreground flex items-center gap-2 relative z-10">
-              <Video className="h-6 w-6 text-primary" />
+              <Video className="h-6 w-6" style={{ color: '#36c0ed' }} />
               Platform Demo
             </h3>
             
@@ -170,7 +188,7 @@ export const ProductShowcase = () => {
             <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-primary/5 rounded-full blur-xl animate-ping delay-700"></div>
             
             <h3 className="text-2xl font-bold text-foreground flex items-center gap-2 relative z-10">
-              <Image className="h-6 w-6 text-primary" />
+              <Image className="h-6 w-6" style={{ color: '#36c0ed' }} />
               Platform Screenshots
             </h3>
             <p className="text-foreground relative z-10">

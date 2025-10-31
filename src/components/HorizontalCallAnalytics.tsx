@@ -70,7 +70,7 @@ export const HorizontalCallAnalytics = () => {
         <div className="flex justify-between items-center">
           <div className="flex-1"></div> {/* Empty flex space */}
           <h3 className="text-xl font-bold text-foreground mx-4">
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="text-custom-blue">
               CallMonAI Dashboard
             </span>
           </h3>
