@@ -40,7 +40,7 @@ export const Hero = () => {
   };
 
   const handleWatchDemoClick = () => {
-    // Scroll to Product Showcase section (CallMonAI Professional Suite)
+    // Scroll to Product Showcase section (VoicaAI Professional Suite)
     const productShowcase = document.getElementById("suite");
     if (productShowcase) {
       productShowcase.scrollIntoView({ behavior: "smooth" });
@@ -144,7 +144,7 @@ export const Hero = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                 </span>
-                Enterprise CallMonAI Solutions
+                Enterprise VoicaAI Solutions
               </div>
             </div>
             
@@ -156,7 +156,7 @@ export const Hero = () => {
             </h1>
             
             <p className="text-base sm:text-lg text-foreground mb-6 max-w-xl">
-              Turn every interaction into measurable growth with AI-powered insights and smart automation — because at CallMonAI, we don't just make communication work, we make it work for you. 
+              Turn every interaction into measurable growth with AI-powered insights and smart automation — because at VoicaAI, we don't just make communication work, we make it work for you. 
             </p>
             
             {/* AI-Powered badge */}

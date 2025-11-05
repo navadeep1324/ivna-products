@@ -48,7 +48,7 @@ export const GameChangerSection = () => {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 leading-relaxed">
               What Makes {" "}
               <span className="text-custom-blue">
-                CallMonAI a Game Changer
+                VoicaAI a Game Changer
               </span>
             </h2>
           </div>

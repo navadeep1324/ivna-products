@@ -11,7 +11,7 @@ export const Footer = () => {
   };
 
   const handleWatchDemoClick = () => {
-    // Scroll to Product Showcase section (CallMonAI Professional Suite)
+    // Scroll to Product Showcase section (VoicaAI Professional Suite)
     const productShowcase = document.getElementById("suite");
     if (productShowcase) {
       productShowcase.scrollIntoView({ behavior: "smooth" });
@@ -30,13 +30,13 @@ export const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-3 sm:mb-4">
               <img 
-                src="/logo/Call Monitor AI_logo-06.svg" 
-                alt="CallMonAI Logo" 
-                className="h-8 sm:h-16 w-auto"
+                src="/logo/Voica AI-01.svg" 
+                alt="VoicaAI Logo" 
+                className="h-8 sm:h-18 w-auto"
               />
             </div>
             <p className="text-muted-foreground text-sm sm:text-base mb-3 sm:mb-4 max-w-xs">
-              Transforming business communications with professional CallMonAI solutions.
+              Transforming business communications with professional VoicaAI solutions.
             </p>
           </div>
           
@@ -93,7 +93,7 @@ export const Footer = () => {
         
         <div className="pt-6 sm:pt-8 border-t border-border/30 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
           <div className="flex items-center gap-2">
-            <span className="text-muted-foreground text-sm sm:text-base">© 2025 CallMonAI. All rights reserved.</span>
+            <span className="text-muted-foreground text-sm sm:text-base">© 2025 VoicaAI. All rights reserved.</span>
           </div>
           
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">

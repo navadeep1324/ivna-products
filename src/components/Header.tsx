@@ -29,9 +29,9 @@ export const Header = () => {
           <div className="flex items-center">
             <a href="/" className="flex items-center">
               <img 
-                src="/logo/Call Monitor AI_logo-06.svg" 
-                alt="CallMonAI Logo" 
-                className="h-8 sm:h-16 w-auto"
+                src="/logo/Voica AI-01.svg" 
+                alt="VoicaAI Logo" 
+                className="h-8 sm:h-18 w-auto"
               />
             </a>
           </div>

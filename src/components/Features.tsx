@@ -61,7 +61,7 @@ export const Features = () => {
           <div className="order-1 lg:order-2 relative z-10">
             <img 
               src="/dashboard/Dashboard2.png" 
-              alt="CallMonAI Analytics Dashboard" 
+              alt="VoicaAI Analytics Dashboard" 
               className="rounded-xl shadow-2xl border border-border w-full"
             />
           </div>
@@ -76,7 +76,7 @@ export const Features = () => {
           <div className="relative z-10">
             <img 
               src="/dashboard/Dashboard1.png" 
-              alt="CallMonAI Call Management Dashboard" 
+              alt="VoicaAI Call Management Dashboard" 
               className="rounded-xl shadow-2xl border border-border w-full"
             />
           </div>

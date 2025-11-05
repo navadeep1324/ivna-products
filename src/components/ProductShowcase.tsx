@@ -13,11 +13,11 @@ export const ProductShowcase = () => {
 
   // Dashboard screenshots for slideshow
   const dashboardScreenshots = [
-    { src: "/dashboard/Dashboard1.png", alt: "CallMonAI Dashboard Overview" },
+    { src: "/dashboard/Dashboard1.png", alt: "VoicaAI Dashboard Overview" },
     { src: "/dashboard/Dashboard2.png", alt: "Call History Interface" },
     { src: "/dashboard/Dashboard3.png", alt: "Call Analytics Dashboard" },
     { src: "/dashboard/Dashboard4.png", alt: "Reporting and Analytics" },
-    // { src: heroDashboard, alt: "CallMonAI Main Dashboard" }
+    // { src: heroDashboard, alt: "VoicaAI Main Dashboard" }
   ];
 
   // Auto-advance slideshow
@@ -84,7 +84,7 @@ export const ProductShowcase = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-12">
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-3 lg:mb-4">
-            CallMonAI {" "}
+            VoicaAI {" "}
             <span className="text-custom-blue">
               Overview 
             </span>
@@ -189,11 +189,11 @@ export const ProductShowcase = () => {
             <div className="grid grid-cols-2 gap-2 sm:gap-3 relative z-10">
               <div 
                 className="rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                onClick={() => openModal("/dashboard/Dashboard1.png", "CallMonAI Dashboard Overview")}
+                onClick={() => openModal("/dashboard/Dashboard1.png", "VoicaAI Dashboard Overview")}
               >
                 <img 
                   src="/dashboard/Dashboard1.png" 
-                  alt="CallMonAI Dashboard Overview" 
+                  alt="VoicaAI Dashboard Overview" 
                   className="w-full h-auto object-cover"
                 />
               </div>

@@ -66,12 +66,12 @@ export const HorizontalCallAnalytics = () => {
   return (
     <div className="bg-card rounded-xl border border-border p-4 sm:p-5 shadow-lg w-full">
       <div className="flex flex-col gap-4">
-        {/* Header with CallMonAI Dashboard title */}
+        {/* Header with VoicaAI Dashboard title */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex-1"></div> {/* Empty flex space */}
           <h3 className="text-lg sm:text-xl font-bold text-foreground mx-2 sm:mx-4 text-center">
             <span className="text-custom-blue">
-              CallMonAI Dashboard
+              VoicaAI Dashboard
             </span>
           </h3>
           <div className="flex items-center gap-2 flex-1 justify-end">

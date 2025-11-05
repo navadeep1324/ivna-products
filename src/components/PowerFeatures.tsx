@@ -55,7 +55,7 @@ export const PowerFeatures = () => {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3">
             Power Features That{" "}
             <span className="text-custom-blue">
-              Drive CallMonAI 
+              Drive VoicaAI 
             </span>
           </h2>
           <p className="text-base sm:text-lg text-foreground">

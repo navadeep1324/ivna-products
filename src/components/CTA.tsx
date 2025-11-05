@@ -18,7 +18,7 @@ export const CTA = () => {
             Ready to Transform Your Business Communications?
           </h2>
           <p className="text-lg text-white/95 mb-6 max-w-2xl mx-auto drop-shadow-md text-white font-medium">
-            Join 500,000+ businesses already using CallMonAI for professional communications. 
+            Join 500,000+ businesses already using VoicaAI for professional communications. 
             Start your free trial today—no credit card required.
           </p>
           
