@@ -60,6 +60,15 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## Email Functionality
+
+This project includes email functionality for the contact form using EmailJS. To enable this feature:
+
+1. Create an account at [EmailJS](https://www.emailjs.com/)
+2. Set up your email service and template
+3. Update the credentials in `src/components/ContactForm.tsx`
+4. Follow the detailed instructions in `EMAIL_SETUP_GUIDE.md`
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/a0642830-bd7a-4705-b296-26ea52b8a4b7) and click on Share -> Publish.

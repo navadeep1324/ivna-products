@@ -64,72 +64,72 @@ export const HorizontalCallAnalytics = () => {
   };
 
   return (
-    <div className="bg-card rounded-xl border border-border p-5 shadow-lg w-full">
+    <div className="bg-card rounded-xl border border-border p-4 sm:p-5 shadow-lg w-full">
       <div className="flex flex-col gap-4">
         {/* Header with CallMonAI Dashboard title */}
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex-1"></div> {/* Empty flex space */}
-          <h3 className="text-xl font-bold text-foreground mx-4">
+          <h3 className="text-lg sm:text-xl font-bold text-foreground mx-2 sm:mx-4 text-center">
             <span className="text-custom-blue">
               CallMonAI Dashboard
             </span>
           </h3>
           <div className="flex items-center gap-2 flex-1 justify-end">
-            <div className={`w-3 h-3 rounded-full ${
+            <div className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${
               callStatus === "connecting" ? "bg-yellow-500 animate-pulse" :
               callStatus === "ringing" ? "bg-blue-500 animate-pulse" :
               "bg-green-500"
             }`}></div>
-            <span className="text-sm font-medium capitalize text-muted-foreground">{callStatus.replace("-", " ")}</span>
+            <span className="text-xs sm:text-sm font-medium capitalize text-muted-foreground">{callStatus.replace("-", " ")}</span>
           </div>
         </div>
 
         {/* Call - Agent - Status line with animations */}
-        <div className="flex items-center justify-between bg-muted/50 rounded-lg p-3 animate-pulse">
-          <div className="flex items-center gap-2">
-            <Phone className="h-5 w-5 text-primary" />
-            <span className="font-medium">Call in progress</span>
+        <div className="flex flex-col sm:flex-row items-center justify-between bg-muted/50 rounded-lg p-2 sm:p-3 gap-2">
+          <div className="flex items-center gap-1 sm:gap-2">
+            <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+            <span className="text-xs sm:text-sm font-medium">Call in progress</span>
           </div>
-          <div className="flex items-center gap-2">
-            <User className="h-5 w-5 text-accent" />
-            <span className="font-medium">{agentStatus.name}</span>
+          <div className="flex items-center gap-1 sm:gap-2">
+            <User className="h-4 w-4 sm:h-5 sm:w-5 text-accent" />
+            <span className="text-xs sm:text-sm font-medium">{agentStatus.name}</span>
           </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="h-5 w-5 text-green-500" />
-            <span className="font-medium">Status updated</span>
+          <div className="flex items-center gap-1 sm:gap-2">
+            <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500" />
+            <span className="text-xs sm:text-sm font-medium">Status updated</span>
           </div>
         </div>
 
         {/* Additional Elements: Call Recording, Transcript, Lead Info */}
-        <div className="grid grid-cols-3 gap-3">
-          <div className="bg-primary/5 rounded-lg p-3 border border-primary/10 flex items-center gap-2">
-            <Headphones className="h-5 w-5 text-primary flex-shrink-0" />
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
+          <div className="bg-primary/5 rounded-lg p-2 sm:p-3 border border-primary/10 flex items-center gap-2">
+            <Headphones className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
             <div>
               <div className="text-xs text-muted-foreground">Recording</div>
-              <div className="text-sm font-medium">Active</div>
+              <div className="text-xs sm:text-sm font-medium">Active</div>
             </div>
           </div>
-          <div className="bg-accent/5 rounded-lg p-3 border border-accent/10 flex items-center gap-2">
-            <FileText className="h-5 w-5 text-accent flex-shrink-0" />
+          <div className="bg-accent/5 rounded-lg p-2 sm:p-3 border border-accent/10 flex items-center gap-2">
+            <FileText className="h-4 w-4 sm:h-5 sm:w-5 text-accent flex-shrink-0" />
             <div>
               <div className="text-xs text-muted-foreground">Transcript</div>
-              <div className="text-sm font-medium">Generating</div>
+              <div className="text-xs sm:text-sm font-medium">Generating</div>
             </div>
           </div>
-          <div className="bg-green-50 rounded-lg p-3 border border-green-100 flex items-center gap-2">
-            <Target className="h-5 w-5 text-green-600 flex-shrink-0" />
+          <div className="bg-green-50 rounded-lg p-2 sm:p-3 border border-green-100 flex items-center gap-2">
+            <Target className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 flex-shrink-0" />
             <div>
               <div className="text-xs text-muted-foreground">Lead Status</div>
-              <div className="text-sm font-medium">Qualified</div>
+              <div className="text-xs sm:text-sm font-medium">Qualified</div>
             </div>
           </div>
         </div>
 
         {/* Enhanced Wave Visualization with More Animations */}
         <div className="relative">
-          <div className="flex justify-between items-center mb-2">
-            <h4 className="font-medium text-foreground flex items-center gap-2">
-              <Volume2 className="h-4 w-4 text-primary" />
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-2">
+            <h4 className="font-medium text-foreground flex items-center gap-2 text-sm sm:text-base">
+              <Volume2 className="h-3 w-3 sm:h-4 sm:w-4 text-primary" />
               Audio Waveform
             </h4>
             <div className="flex items-center gap-2">
@@ -146,7 +146,7 @@ export const HorizontalCallAnalytics = () => {
               </div>
             </div>
           </div>
-          <div className="h-20 bg-muted rounded-lg p-3 relative overflow-hidden border border-border">
+          <div className="h-16 sm:h-20 bg-muted rounded-lg p-2 sm:p-3 relative overflow-hidden border border-border">
             {/* Background grid pattern for dashboard feel */}
             <div className="absolute inset-0 opacity-10">
               {Array.from({ length: 20 }).map((_, i) => (
@@ -202,7 +202,7 @@ export const HorizontalCallAnalytics = () => {
                 {Array.from({ length: 5 }).map((_, i) => (
                   <div
                     key={i}
-                    className="absolute w-1.5 h-1.5 bg-primary rounded-full animate-ping"
+                    className="absolute w-1 h-1 sm:w-1.5 sm:h-1.5 bg-primary rounded-full animate-ping"
                     style={{
                       left: `${20 + i * 15}%`,
                       top: `${30 + (i % 3) * 20}%`,
@@ -218,7 +218,7 @@ export const HorizontalCallAnalytics = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-pulse"></div>
             
             {/* Call status indicator on waveform */}
-            <div className={`absolute top-2 right-2 text-xs px-2 py-1 rounded-full ${
+            <div className={`absolute top-1 sm:top-2 right-1 sm:right-2 text-xs px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-full ${
               callStatus === "connecting" ? "bg-yellow-100 text-yellow-800" :
               callStatus === "ringing" ? "bg-blue-100 text-blue-800" :
               "bg-green-100 text-green-800"
@@ -228,7 +228,7 @@ export const HorizontalCallAnalytics = () => {
           </div>
           
           {/* Audio metrics inspired by dashboard */}
-          <div className="flex justify-between mt-2 text-xs text-muted-foreground">
+          <div className="flex flex-wrap justify-between mt-2 text-xs text-muted-foreground gap-1">
             <div className="flex items-center gap-1">
               <Mic className="h-3 w-3" />
               <span>Input: 85%</span>
@@ -247,15 +247,15 @@ export const HorizontalCallAnalytics = () => {
         {/* Quality Rating */}
         <div>
           <div className="flex justify-between items-center mb-2">
-            <h4 className="font-medium text-foreground flex items-center gap-2">
-              <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
+            <h4 className="font-medium text-foreground flex items-center gap-2 text-sm sm:text-base">
+              <Star className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-500 fill-yellow-500" />
               Call Quality
             </h4>
             <div className="flex items-center gap-1">
-              <span className="font-semibold text-sm">{qualityRating}%</span>
+              <span className="font-semibold text-xs sm:text-sm">{qualityRating}%</span>
             </div>
           </div>
-          <div className="h-3 bg-muted rounded-full overflow-hidden">
+          <div className="h-2 sm:h-3 bg-muted rounded-full overflow-hidden">
             <div 
               className="h-full bg-gradient-to-r from-green-500 via-yellow-500 to-red-500 rounded-full transition-all duration-300 ease-out"
               style={{ width: `${qualityRating}%` }}
@@ -264,21 +264,21 @@ export const HorizontalCallAnalytics = () => {
         </div>
 
         {/* Reordered Elements: Sentiment, Next Action, Keywords */}
-        <div className="grid grid-cols-3 gap-3">
-          <div className="bg-blue-50 rounded-lg p-3 border border-blue-100 text-center">
-            <TrendingUp className="h-5 w-5 text-blue-600 mx-auto mb-1" />
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
+          <div className="bg-blue-50 rounded-lg p-2 sm:p-3 border border-blue-100 text-center">
+            <TrendingUp className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 mx-auto mb-1" />
             <div className="text-xs text-muted-foreground">Sentiment</div>
-            <div className="text-sm font-medium">Positive</div>
+            <div className="text-xs sm:text-sm font-medium">Positive</div>
           </div>
-          <div className="bg-amber-50 rounded-lg p-3 border border-amber-100 text-center">
-            <Calendar className="h-5 w-5 text-amber-600 mx-auto mb-1" />
+          <div className="bg-amber-50 rounded-lg p-2 sm:p-3 border border-amber-100 text-center">
+            <Calendar className="h-4 w-4 sm:h-5 sm:w-5 text-amber-600 mx-auto mb-1" />
             <div className="text-xs text-muted-foreground">Next Action</div>
-            <div className="text-sm font-medium">Follow-up</div>
+            <div className="text-xs sm:text-sm font-medium">Follow-up</div>
           </div>
-          <div className="bg-purple-50 rounded-lg p-3 border border-purple-100 text-center">
-            <Hash className="h-5 w-5 text-purple-600 mx-auto mb-1" />
+          <div className="bg-purple-50 rounded-lg p-2 sm:p-3 border border-purple-100 text-center">
+            <Hash className="h-4 w-4 sm:h-5 sm:w-5 text-purple-600 mx-auto mb-1" />
             <div className="text-xs text-muted-foreground">Keywords</div>
-            <div className="text-sm font-medium">5 detected</div>
+            <div className="text-xs sm:text-sm font-medium">5 detected</div>
           </div>
         </div>
       </div>

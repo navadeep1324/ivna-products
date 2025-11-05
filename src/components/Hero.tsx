@@ -49,7 +49,7 @@ export const Hero = () => {
 
   return (
     // Enhanced section with stronger background color and added background image
-    <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
+    <section className="relative pt-16 pb-12 sm:pt-24 sm:pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
       {/* Stronger background elements for better highlighting */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-background to-accent/15 -z-10" style={{ zIndex: -1 }} />
       
@@ -102,7 +102,7 @@ export const Hero = () => {
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-primary/15 to-accent/15 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-accent/15 to-primary/15 rounded-full blur-3xl -z-10"></div>
       
-      {/* Right side background image in banner */}
+      {/* Right side background image in banner - hidden on mobile */}
       <div className="absolute right-0 bottom-0 w-1/4 hidden lg:block opacity-100 transform translate-y-1/4 translate-x-1/4">
         <img 
           src="/dashboard/wave-green.png" 
@@ -111,7 +111,7 @@ export const Hero = () => {
         />
       </div>
       
-      {/* Section paints background image */}
+      {/* Section paints background image - hidden on mobile */}
       <div className="absolute inset-0 w-full h-full hidden lg:block opacity-30 -z-10">
         <img 
           src="/dashboard/section-paints.png" 
@@ -120,7 +120,7 @@ export const Hero = () => {
         />
       </div>
       
-      {/* Left side background image in banner */}
+      {/* Left side background image in banner - hidden on mobile */}
       <div className="absolute left-0 bottom-0 w-1/4 hidden lg:block opacity-100 transform translate-y-1/3">
         <img 
           src="/dashboard/wave-green.png" 
@@ -133,8 +133,8 @@ export const Hero = () => {
       
 
       
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
           <div className="">
             {/* Hidden Enterprise CallMonAI Solutions tag */}
@@ -170,8 +170,8 @@ export const Hero = () => {
             
 
             
-            {/* New key features list */}
-            <div className="grid grid-cols-2 gap-3 mb-6">
+            {/* New key features list - responsive grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
               <div className="flex items-center gap-2">
                 <Mic className="h-5 w-5 flex-shrink-0" style={{ color: '#36c0ed' }} />
                 <span className="text-sm text-foreground">Call Recording</span>
@@ -242,14 +242,14 @@ export const Hero = () => {
           <div className="relative">
             <HorizontalCallAnalytics />
             
-            {/* Enhanced decorative Elements for better highlighting */}
+            {/* Enhanced decorative Elements for better highlighting - hidden on mobile */}
             <div className="absolute -top-8 -right-8 w-56 h-56 bg-gradient-to-r from-primary/25 to-accent/25 rounded-full blur-2xl -z-10 animate-pulse hidden sm:block" />
             <div className="absolute -bottom-8 -left-8 w-56 h-56 bg-gradient-to-r from-accent/25 to-primary/25 rounded-full blur-2xl -z-10 animate-pulse hidden sm:block" />
             
-            {/* Additional highlighting element */}
+            {/* Additional highlighting element - hidden on mobile */}
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 -z-10 transform rotate-3 scale-105 blur-xl hidden sm:block"></div>
             
-            {/* Floating badges - repositioned as requested */}
+            {/* Floating badges - hidden on mobile */}
             <div className="absolute top-4 left-0 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg hidden sm:block">
               <div className="flex items-center gap-1">
                 <CheckCircle className="h-5 w-5" style={{ color: '#36c0ed' }} />
@@ -259,7 +259,7 @@ export const Hero = () => {
             
 
             
-            {/* 24/7 Support badge - moved to right side, similar to Live Data badge */}
+            {/* 24/7 Support badge - moved to right side, similar to Live Data badge - hidden on mobile */}
             <div className="absolute top-1/4 right-0 transform translate-x-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg hidden sm:block">
               <div className="flex items-center gap-1">
                 <Headset className="h-5 w-5" style={{ color: '#36c0ed' }} />
@@ -267,7 +267,7 @@ export const Hero = () => {
               </div>
             </div>
             
-            {/* Secure badge - moved to bottom right corner, similar to Live Data badge */}
+            {/* Secure badge - moved to bottom right corner, similar to Live Data badge - hidden on mobile */}
             <div className="absolute bottom-4 right-0 transform translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-accent/20 shadow-lg hidden sm:block">
               <div className="flex items-center gap-1">
                 <Shield className="h-5 w-5" style={{ color: '#36c0ed' }} />
@@ -275,7 +275,7 @@ export const Hero = () => {
               </div>
             </div>
             
-            {/* Analytics badge - replacing the Trusted badge */}
+            {/* Analytics badge - replacing the Trusted badge - hidden on mobile */}
             <div 
               className="absolute bottom-4 left-0 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg hidden sm:block cursor-pointer"
               onClick={() => {
