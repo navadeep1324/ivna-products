@@ -3,13 +3,22 @@ import { User, Headphones, BarChart3, Clock, CheckCircle, TrendingUp, Phone } fr
 export const Features = () => {
   return (
     <section className="py-8 sm:py-12 bg-background relative overflow-hidden">
+      {/* Background image positioned behind the container */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/dashboard/section-paints.png" 
+          alt="Background Paint" 
+          className="w-full h-full object-cover opacity-5 pointer-events-none"
+        />
+      </div>
+      
       {/* Animated background elements - hidden on mobile */}
       <div className="absolute top-10 left-10 w-48 h-48 sm:w-64 sm:h-64 bg-primary/5 rounded-full blur-3xl animate-pulse hidden sm:block"></div>
       <div className="absolute bottom-10 right-10 w-32 h-32 sm:w-48 sm:h-48 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000 hidden sm:block"></div>
       <div className="absolute top-1/3 right-1/4 w-24 h-24 sm:w-32 sm:h-32 bg-primary/10 rounded-full blur-2xl animate-ping delay-2000 hidden sm:block"></div>
       
       {/* Left side background image from GameChangerSection - moved to section level - hidden on mobile */}
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1/4 hidden lg:block">
+      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1/4 hidden lg:block z-0">
         <img 
           src="/dashboard/Untitled design (10) 1.png" 
           alt="Decoration" 
@@ -17,7 +26,7 @@ export const Features = () => {
         />
       </div>
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         {/* New Section 1: Text on left, Image on right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mt-8 sm:mt-12 lg:mt-20 items-center bg-muted/30 p-4 sm:p-6 lg:p-8 rounded-2xl relative overflow-hidden">
           {/* Animated background elements - hidden on mobile */}

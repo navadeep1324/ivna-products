@@ -138,3 +138,8 @@ All colors MUST be HSL.
     line-height: 1.2 !important;
   }
 }
+
+/* Custom CSS rule for left positioning */
+.left-1\/4 {
+  left: -17%;
+}

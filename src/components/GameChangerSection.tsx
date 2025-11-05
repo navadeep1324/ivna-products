@@ -29,8 +29,17 @@ const stats = [
 export const GameChangerSection = () => {
   return (
     <section className="py-12 sm:py-16 relative overflow-hidden">
+      {/* Background image positioned behind the container */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/dashboard/wave-green.png" 
+          alt="Background Wave" 
+          className="w-full h-full object-cover opacity-10 pointer-events-none"
+        />
+      </div>
+      
       {/* Left side image */}
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1/4 hidden lg:block">
+      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1/4 hidden lg:block z-10">
         <img 
           src="/dashboard/Untitled design (10) 1.png" 
           alt="Decoration" 
@@ -40,7 +49,7 @@ export const GameChangerSection = () => {
       
       {/* Right side image - REMOVED as per request */}
       
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Enhanced Key Business Benefits section with gradient background */}
         <div className="bg-gradient-to-r from-[#C4EFEA] to-[#EFF9FD] p-6 sm:p-8 rounded-2xl shadow-xl">
           {/* Added missing heading for Key Business Benefits */}

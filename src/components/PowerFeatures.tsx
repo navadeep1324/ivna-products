@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Phone, Wifi, Shield, Zap, Users, Globe } from "lucide-react";
+import { Phone, Wifi, Shield, Zap, Users, Globe, Headphones, BarChart3, Clock } from "lucide-react";
 
 const features = [
   {
@@ -31,6 +31,21 @@ const features = [
     icon: Globe,
     title: "Continuous Learning Engine",
     description: "Gets smarter with every call for sharper insights and evaluations.",
+  },
+  {
+    icon: Headphones,
+    title: "Enquiry Call Tracking",
+    description: "Monitors and categorizes enquiry calls to prevent missed leads and boost conversions.",
+  },
+  {
+    icon: BarChart3,
+    title: "Communication Gap Detection",
+    description: "Identifies unclear or ineffective communication and flags them for improvement.",
+  },
+  {
+    icon: Clock,
+    title: "Integration & Scalability",
+    description: "Seamlessly integrates with communication tools, and marketing platforms.",
   },
 ];
 

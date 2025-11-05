@@ -54,7 +54,7 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-background to-accent/15 -z-10" style={{ zIndex: -1 }} />
       
       {/* Small related icons in banner background with better visibility */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 left-[45%] w-64 h-64 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl"></div>
       <div className="absolute top-1/3 left-1/3 opacity-30">
         <Mic className="h-8 w-8" style={{ color: '#36c0ed' }} />
       </div>
@@ -101,6 +101,9 @@ export const Hero = () => {
       {/* Additional decorative elements for enhanced highlighting */}
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-primary/15 to-accent/15 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-accent/15 to-primary/15 rounded-full blur-3xl -z-10"></div>
+      
+      {/* New blur-3xl element on the right side in the left corner */}
+      <div className="absolute right-0 top-0 w-48 h-48 bg-gradient-to-r from-[#9BEAA6]/30 to-[#36C0ED]/30 rounded-full blur-3xl -z-10"></div>
       
       {/* Right side background image in banner - hidden on mobile */}
       <div className="absolute right-0 bottom-0 w-1/4 hidden lg:block opacity-100 transform translate-y-1/4 translate-x-1/4">
@@ -160,10 +163,10 @@ export const Hero = () => {
             </p>
             
             {/* AI-Powered badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-600 dark:text-cyan-400 text-xs font-medium mb-4 border border-cyan-500/30">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-[#9BEAA6] to-[#36C0ED] text-[#06102E] text-xs font-medium mb-4 border border-[#36C0ED]/30">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                <span className="absolute inline-flex h-full w-full rounded-full bg-[#06102E] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#06102E]"></span>
               </span>
               AI-Powered Intelligence
             </div>
@@ -250,10 +253,10 @@ export const Hero = () => {
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 -z-10 transform rotate-3 scale-105 blur-xl hidden sm:block"></div>
             
             {/* Floating badges - hidden on mobile */}
-            <div className="absolute top-4 left-0 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg hidden sm:block">
+            <div className="absolute top-4 left-0 transform -translate-x-1/2 bg-gradient-to-r from-[#9BEAA6] to-[#36C0ED] rounded-full p-2 border border-[#36C0ED]/20 shadow-lg hidden sm:block">
               <div className="flex items-center gap-1">
-                <CheckCircle className="h-5 w-5" style={{ color: '#36c0ed' }} />
-                <span className="text-xs font-semibold text-foreground">AI-Powered</span>
+                <CheckCircle className="h-5 w-5" style={{ color: '#06102E' }} />
+                <span className="text-xs font-semibold" style={{ color: '#06102E' }}>AI-Powered</span>
               </div>
             </div>
             
