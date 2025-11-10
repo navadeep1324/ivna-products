@@ -18,6 +18,14 @@ export const Footer = () => {
     }
   };
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="border-t border-border bg-gradient-to-b from-primary/5 via-secondary/5 to-accent/5 relative overflow-hidden">
       {/* Left side image removed as per user request */}
@@ -44,15 +52,15 @@ export const Footer = () => {
           <div>
             <h3 className="font-semibold text-foreground mb-3 sm:mb-4 text-lg sm:text-xl border-b border-primary/20 pb-2">Quick Links</h3>
             <ul className="space-y-2 sm:space-y-3">
-              <li><a href="#suite" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-sm sm:text-base">
+              <li><a href="#suite" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-sm sm:text-base" onClick={(e) => handleNavClick(e, "suite")}>
                 <Package className="h-4 w-4" style={{ color: '#36c0ed' }} />
                 Product Showcase
               </a></li>
-              <li><a href="#features" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-sm sm:text-base">
+              <li><a href="#power-features" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-sm sm:text-base" onClick={(e) => handleNavClick(e, "power-features")}>
                 <Zap className="h-4 w-4" style={{ color: '#36c0ed' }} />
                 Features
               </a></li>
-              <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-sm sm:text-base">
+              <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-sm sm:text-base" onClick={(e) => handleNavClick(e, "contact")}>
                 <Mail className="h-4 w-4" style={{ color: '#36c0ed' }} />
                 Contact
               </a></li>
@@ -96,7 +104,8 @@ export const Footer = () => {
             <span className="text-muted-foreground text-sm sm:text-base">© 2025 VoicaAI. All rights reserved.</span>
           </div>
           
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+          {/* Hidden elements as per user request */}
+          <div className="hidden">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm sm:text-base flex items-center gap-1">
               <Zap className="h-4 w-4" style={{ color: '#36c0ed' }} />
               Status

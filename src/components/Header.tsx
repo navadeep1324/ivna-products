@@ -11,6 +11,8 @@ export const Header = () => {
     if (contactForm) {
       contactForm.scrollIntoView({ behavior: "smooth" });
     }
+    // Close mobile menu if open
+    setIsMenuOpen(false);
   };
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
@@ -19,6 +21,8 @@ export const Header = () => {
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: "smooth" });
     }
+    // Close mobile menu if open
+    setIsMenuOpen(false);
   };
 
   return (
@@ -39,9 +43,9 @@ export const Header = () => {
           {/* Desktop Navigation - Right aligned */}
           <div className="hidden md:flex items-center gap-4 lg:gap-6 ml-auto">
             <a 
-              href="#features" 
+              href="#power-features" 
               className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105 flex items-center gap-1"
-              onClick={(e) => handleNavClick(e, "features")}
+              onClick={(e) => handleNavClick(e, "power-features")}
             >
               <Zap className="h-4 w-4" style={{ color: '#36c0ed' }} />
               Features
@@ -66,6 +70,7 @@ export const Header = () => {
               variant="default" 
               size="sm" 
               className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground shadow-lg text-sm sm:text-base py-1.5 sm:py-2 px-3 sm:px-4"
+              onClick={handleBookDemoClick}
             >
               Book Demo
             </Button>
@@ -86,10 +91,10 @@ export const Header = () => {
           <div className="md:hidden py-3 sm:py-4 animate-fade-in bg-background/95 backdrop-blur-lg rounded-xl mt-2 border border-border/50 shadow-lg">
             <div className="flex flex-col gap-2 sm:gap-3">
               <a 
-                href="#features" 
+                href="#power-features" 
                 className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-secondary flex items-center gap-2"
                 onClick={(e) => {
-                  handleNavClick(e, "features");
+                  handleNavClick(e, "power-features");
                   setIsMenuOpen(false);
                 }}
               >
@@ -123,10 +128,7 @@ export const Header = () => {
                   variant="default" 
                   size="sm" 
                   className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground shadow-lg text-sm sm:text-base py-2"
-                  onClick={() => {
-                    handleBookDemoClick();
-                    setIsMenuOpen(false);
-                  }}
+                  onClick={handleBookDemoClick}
                 >
                   Book Demo
                 </Button>

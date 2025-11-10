@@ -2,7 +2,7 @@ import { User, Headphones, BarChart3, Clock, CheckCircle, TrendingUp, Phone } fr
 
 export const Features = () => {
   return (
-    <section className="py-8 sm:py-12 bg-background relative overflow-hidden">
+    <section id="features" className="py-8 sm:py-12 bg-background relative overflow-hidden">
       {/* Background image positioned behind the container */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -26,7 +26,7 @@ export const Features = () => {
         />
       </div>
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* New Section 1: Text on left, Image on right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mt-8 sm:mt-12 lg:mt-20 items-center bg-muted/30 p-4 sm:p-6 lg:p-8 rounded-2xl relative overflow-hidden">
           {/* Animated background elements - hidden on mobile */}
