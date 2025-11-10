@@ -24,6 +24,18 @@ const stats = [
     label: "Visibility ",
     description: "Visibility into every call, transcript, and action item.",
   },
+  {
+    icon: "/icons/lead conversion .png",
+    value: "25%",
+    label: "Lead Conversion",
+    description: "Improves prospect lead conversion rates by 25% through prompt follow-ups.",
+  },
+  {
+    icon: "/icons/workflow.png",
+    value: "Up to 50%",
+    label: "Workflow Efficiency",
+    description: "Boosts workflow efficiency by up to 50% through platform integration.",
+  },
 ];
 
 export const GameChangerSection = () => {
@@ -55,9 +67,9 @@ export const GameChangerSection = () => {
           {/* Added missing heading for Key Business Benefits */}
           <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 leading-relaxed">
-              What Makes {" "}
+              How Voica Redefines the Way  {" "}
               <span className="text-custom-blue">
-                VoicaAI a Game Changer
+                Businesses Communicate
               </span>
             </h2>
           </div>
@@ -65,11 +77,11 @@ export const GameChangerSection = () => {
           {/* Middle descriptive paragraph */}
           <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
             <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-              AI that helps your team communicate smarter and drive better ROI.
+             Experience the measurable edge that AI-powered communication brings.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {stats.map((stat, index) => (
               <div 
                 key={index}

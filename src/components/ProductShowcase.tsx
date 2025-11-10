@@ -94,138 +94,84 @@ export const ProductShowcase = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-          {/* Video Demo Section with Dashboard Images Only */}
-          <div className="space-y-4 sm:space-y-5 relative">
-            {/* Animated background elements - hidden on mobile */}
-            <div className="absolute -top-4 -left-4 w-16 h-16 sm:w-24 sm:h-24 bg-accent/5 rounded-full blur-xl animate-ping delay-300 hidden sm:block"></div>
-            
-            <h3 className="text-lg sm:text-xl font-bold text-foreground flex items-center gap-2 relative z-10">
-              <Video className="h-4 w-4 sm:h-5 sm:w-5" style={{ color: '#36c0ed' }} />
-              Platform Demo
-            </h3>
-            
-            {/* Slideshow Carousel with Controls - Dashboard Images Only */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-gradient-to-br from-primary/10 to-accent/10">
-              {/* Animated elements - hidden on mobile */}
-              <div className="absolute top-2 right-2 w-6 h-6 sm:w-8 sm:h-8 bg-white/20 rounded-full blur-sm animate-pulse hidden sm:block"></div>
-              <div className="absolute bottom-2 left-2 w-4 h-4 sm:w-6 sm:h-6 bg-white/20 rounded-full blur-sm animate-ping delay-500 hidden sm:block"></div>
+        {/* Center the Platform Demo section - removed grid layout */}
+        <div className="flex justify-center">
+          <div className="w-full max-w-4xl">
+            {/* Video Demo Section with Dashboard Images Only */}
+            <div className="space-y-4 sm:space-y-5 relative">
+              {/* Animated background elements - hidden on mobile */}
+              <div className="absolute -top-4 -left-4 w-16 h-16 sm:w-24 sm:h-24 bg-accent/5 rounded-full blur-xl animate-ping delay-300 hidden sm:block"></div>
               
-              <div className="aspect-video flex items-center justify-center relative">
-                {dashboardScreenshots.map((screenshot, index) => (
-                  <img 
-                    key={index}
-                    src={screenshot.src} 
-                    alt={screenshot.alt} 
-                    className={`w-full h-auto object-cover absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
-                  />
-                ))}
+              <h3 className="text-lg sm:text-xl font-bold text-foreground flex items-center gap-2 relative z-10">
+                <Video className="h-4 w-4 sm:h-5 sm:w-5" style={{ color: '#36c0ed' }} />
+                Platform Demo
+              </h3>
+              
+              {/* Slideshow Carousel with Controls - Dashboard Images Only */}
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-gradient-to-br from-primary/10 to-accent/10">
+                {/* Animated elements - hidden on mobile */}
+                <div className="absolute top-2 right-2 w-6 h-6 sm:w-8 sm:h-8 bg-white/20 rounded-full blur-sm animate-pulse hidden sm:block"></div>
+                <div className="absolute bottom-2 left-2 w-4 h-4 sm:w-6 sm:h-6 bg-white/20 rounded-full blur-sm animate-ping delay-500 hidden sm:block"></div>
                 
-                {/* Overlay with Controls */}
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                  <div className="flex items-center gap-2 sm:gap-3">
-                    <button 
-                      onClick={goToPreviousSlide}
-                      className="bg-white/20 hover:bg-white/30 rounded-full p-1.5 sm:p-2 transition-colors"
-                      aria-label="Previous slide"
-                    >
-                      <SkipBack className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-                    </button>
-                    
-                    <button 
-                      onClick={togglePlayPause}
-                      className="bg-gradient-to-br from-primary/80 to-accent/80 backdrop-blur-sm rounded-full p-2 sm:p-3 cursor-pointer hover:from-primary/90 hover:to-accent/90 transition-all duration-300"
-                      aria-label={isPlaying ? "Pause" : "Play"}
-                    >
-                      {isPlaying ? (
-                        <Pause className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-                      ) : (
-                        <Play className="h-4 w-4 sm:h-5 sm:w-5 text-white ml-0.5" />
-                      )}
-                    </button>
-                    
-                    <button 
-                      onClick={goToNextSlide}
-                      className="bg-white/20 hover:bg-white/30 rounded-full p-1.5 sm:p-2 transition-colors"
-                      aria-label="Next slide"
-                    >
-                      <SkipForward className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-                    </button>
-                  </div>
-                </div>
-                
-                <div className="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 bg-black/70 text-white px-1.5 py-1 sm:px-2 sm:py-1 rounded-full text-xs">
-                  Platform Demo
-                </div>
-                
-                {/* Slide indicators */}
-                <div className="absolute bottom-2 sm:bottom-3 right-2 sm:right-3 flex gap-1">
-                  {dashboardScreenshots.map((_, index) => (
-                    <button
+                <div className="aspect-video flex items-center justify-center relative">
+                  {dashboardScreenshots.map((screenshot, index) => (
+                    <img 
                       key={index}
-                      onClick={() => goToSlide(index)}
-                      className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-colors ${index === currentSlide ? 'bg-white' : 'bg-white/50'}`}
-                      aria-label={`Go to slide ${index + 1}`}
+                      src={screenshot.src} 
+                      alt={screenshot.alt} 
+                      className={`w-full h-auto object-cover absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
                     />
                   ))}
+                  
+                  {/* Overlay with Controls */}
+                  <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      <button 
+                        onClick={goToPreviousSlide}
+                        className="bg-white/20 hover:bg-white/30 rounded-full p-1.5 sm:p-2 transition-colors"
+                        aria-label="Previous slide"
+                      >
+                        <SkipBack className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+                      </button>
+                      
+                      <button 
+                        onClick={togglePlayPause}
+                        className="bg-gradient-to-br from-primary/80 to-accent/80 backdrop-blur-sm rounded-full p-2 sm:p-3 cursor-pointer hover:from-primary/90 hover:to-accent/90 transition-all duration-300"
+                        aria-label={isPlaying ? "Pause" : "Play"}
+                      >
+                        {isPlaying ? (
+                          <Pause className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+                        ) : (
+                          <Play className="h-4 w-4 sm:h-5 sm:w-5 text-white ml-0.5" />
+                        )}
+                      </button>
+                      
+                      <button 
+                        onClick={goToNextSlide}
+                        className="bg-white/20 hover:bg-white/30 rounded-full p-1.5 sm:p-2 transition-colors"
+                        aria-label="Next slide"
+                      >
+                        <SkipForward className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div className="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 bg-black/70 text-white px-1.5 py-1 sm:px-2 sm:py-1 rounded-full text-xs">
+                    Platform Demo
+                  </div>
+                  
+                  {/* Slide indicators */}
+                  <div className="absolute bottom-2 sm:bottom-3 right-2 sm:right-3 flex gap-1">
+                    {dashboardScreenshots.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => goToSlide(index)}
+                        className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-colors ${index === currentSlide ? 'bg-white' : 'bg-white/50'}`}
+                        aria-label={`Go to slide ${index + 1}`}
+                      />
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Screenshots Gallery */}
-          <div className="space-y-4 sm:space-y-5 relative">
-            {/* Animated background elements - hidden on mobile */}
-            <div className="absolute -bottom-4 -right-4 w-16 h-16 sm:w-20 sm:h-20 bg-primary/5 rounded-full blur-xl animate-ping delay-700 hidden sm:block"></div>
-            
-            <h3 className="text-lg sm:text-xl font-bold text-foreground flex items-center gap-2 relative z-10">
-              <Image className="h-4 w-4 sm:h-5 sm:w-5" style={{ color: '#36c0ed' }} />
-              Platform Screenshots
-            </h3>
-            <p className="text-foreground text-xs sm:text-sm relative z-10">
-              Explore our intuitive dashboard and feature-rich interface designed for seamless communication management.
-            </p>
-            
-            <div className="grid grid-cols-2 gap-2 sm:gap-3 relative z-10">
-              <div 
-                className="rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                onClick={() => openModal("/dashboard/Dashboard1.png", "VoicaAI Dashboard Overview")}
-              >
-                <img 
-                  src="/dashboard/Dashboard1.png" 
-                  alt="VoicaAI Dashboard Overview" 
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <div 
-                className="rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                onClick={() => openModal("/dashboard/Dashboard2.png", "Call History Interface")}
-              >
-                <img 
-                  src="/dashboard/Dashboard2.png" 
-                  alt="Call History Interface" 
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <div 
-                className="rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                onClick={() => openModal("/dashboard/Dashboard3.png", "Call Analytics Dashboard")}
-              >
-                <img 
-                  src="/dashboard/Dashboard3.png" 
-                  alt="Call Analytics Dashboard" 
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <div 
-                className="rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                onClick={() => openModal("/dashboard/Dashboard4.png", "Reporting and Analytics")}
-              >
-                <img 
-                  src="/dashboard/Dashboard4.png" 
-                  alt="Reporting and Analytics" 
-                  className="w-full h-auto object-cover"
-                />
               </div>
             </div>
           </div>

@@ -104,7 +104,7 @@ export const Footer = () => {
             <span className="text-muted-foreground text-sm sm:text-base">© 2025 VoicaAI. All rights reserved.</span>
           </div>
           
-          {/* Hidden elements as per user request */}
+          {/* Hidden the copyright links on the right side as per user request */}
           <div className="hidden">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm sm:text-base flex items-center gap-1">
               <Zap className="h-4 w-4" style={{ color: '#36c0ed' }} />

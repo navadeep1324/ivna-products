@@ -68,13 +68,13 @@ export const PowerFeatures = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3">
-            Power Features That{" "}
+            Transform Your Voice Data with {" "}
             <span className="text-custom-blue">
-              Drive VoicaAI 
+              Voica’s Smart Capabilities
             </span>
           </h2>
           <p className="text-base sm:text-lg text-foreground">
-            Discover intelligent features designed to enhance every call, every connection. 
+            Turn conversations into insights with AI-driven tools that boost performance.
           </p>
         </div>
         

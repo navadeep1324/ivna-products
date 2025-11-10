@@ -1,0 +1,316 @@
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Play, Phone, Headphones, Zap, Shield, Star, CheckCircle, TrendingUp, Users, Clock, Award, BarChart3, Headset, Mic, Volume2, Brain, Bot } from "lucide-react";
+import { TrendingDown, Clock as ClockIcon, Award as AwardIcon, HeartHandshake } from "lucide-react";
+import { HorizontalCallAnalytics } from "@/components/HorizontalCallAnalytics";
+
+const stats = [
+  {
+    icon: TrendingDown,
+    value: "40%",
+    label: "Faster",
+    description: "Faster client responses through real-time call tracking and alerts.",
+  },
+  {
+    icon: ClockIcon,
+    value: "Up to 60%",
+    label: "Better Team",
+    description: "Performance with AI-driven insights and feedback",
+  },
+  {
+    icon: AwardIcon,
+    value: "6+ hours",
+    label: "Saves Time ",
+    description: " Weekly by eliminating manual note-taking and follow-ups. ",
+  },
+  {
+    icon: HeartHandshake,
+    value: "100% ",
+    label: "Visibility ",
+    description: "Visibility into every call, transcript, and action item.",
+  },
+];
+
+export const Hero = () => {
+  const handleBookDemoClick = () => {
+    // Scroll to contact form
+    const contactForm = document.getElementById("contact");
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleWatchDemoClick = () => {
+    // Scroll to Product Showcase section (VoicaAI Professional Suite)
+    const productShowcase = document.getElementById("suite");
+    if (productShowcase) {
+      productShowcase.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    // Enhanced section with stronger background color and added background image
+    <section className="relative pt-16 pb-12 sm:pt-24 sm:pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
+      {/* Stronger background elements for better highlighting */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-background to-accent/15 -z-10" style={{ zIndex: -1 }} />
+      
+      {/* Small related icons in banner background with better visibility */}
+      <div className="absolute top-1/4 left-[45%] w-64 h-64 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/3 left-1/3 opacity-30">
+        <Mic className="h-8 w-8" style={{ color: '#36c0ed' }} />
+      </div>
+      <div className="absolute top-1/2 left-1/5 opacity-30">
+        <Brain className="h-6 w-6" style={{ color: '#36c0ed' }} />
+      </div>
+      <div className="absolute bottom-1/3 right-1/4 opacity-30">
+        <BarChart3 className="h-7 w-7" style={{ color: '#36c0ed' }} />
+      </div>
+      <div className="absolute bottom-1/2 right-1/3 opacity-30">
+        <Zap className="h-5 w-5" style={{ color: '#36c0ed' }} />
+      </div>
+      {/* Additional background icons for better visibility */}
+      <div className="absolute top-1/4 right-1/3 opacity-25">
+        <Volume2 className="h-6 w-6" style={{ color: '#36c0ed' }} />
+      </div>
+      <div className="absolute top-2/3 left-1/3 opacity-25">
+        <Bot className="h-5 w-5" style={{ color: '#36c0ed' }} />
+      </div>
+      <div className="absolute bottom-1/4 left-2/3 opacity-25">
+        <Headset className="h-6 w-6" style={{ color: '#36c0ed' }} />
+      </div>
+      <div className="absolute top-1/5 right-1/5 opacity-25">
+        <Shield className="h-5 w-5" style={{ color: '#36c0ed' }} />
+      </div>
+      {/* More background icons */}
+      <div className="absolute top-1/6 left-2/3 opacity-20">
+        <TrendingUp className="h-6 w-6" style={{ color: '#36c0ed' }} />
+      </div>
+      <div className="absolute bottom-1/3 left-1/4 opacity-20">
+        <Users className="h-5 w-5" style={{ color: '#36c0ed' }} />
+      </div>
+      <div className="absolute top-2/3 right-1/4 opacity-20">
+        <Clock className="h-5 w-5" style={{ color: '#36c0ed' }} />
+      </div>
+      <div className="absolute bottom-1/5 right-2/3 opacity-20">
+        <Award className="h-6 w-6" style={{ color: '#36c0ed' }} />
+      </div>
+      
+      {/* More prominent decorative elements */}
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/3 right-1/3 w-48 h-48 bg-gradient-to-r from-accent/20 to-primary/20 rounded-full blur-3xl"></div>
+      
+      {/* Additional decorative elements for enhanced highlighting */}
+      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-primary/15 to-accent/15 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-accent/15 to-primary/15 rounded-full blur-3xl -z-10"></div>
+      
+      {/* New blur-3xl element on the right side in the left corner */}
+      <div className="absolute right-0 top-0 w-48 h-48 bg-gradient-to-r from-[#9BEAA6]/30 to-[#36C0ED]/30 rounded-full blur-3xl -z-10"></div>
+      
+      {/* Right side background image in banner - hidden on mobile */}
+      <div className="absolute right-0 bottom-0 w-1/4 hidden lg:block opacity-100 transform translate-y-1/4 translate-x-1/4">
+        <img 
+          src="/dashboard/wave-green.png" 
+          alt="Decoration" 
+          className="w-full h-auto object-contain"
+        />
+      </div>
+      
+      {/* Section paints background image - hidden on mobile */}
+      <div className="absolute inset-0 w-full h-full hidden lg:block opacity-30 -z-10">
+        <img 
+          src="/dashboard/section-paints.png" 
+          alt="Background decoration" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      
+      {/* Left side background image in banner - hidden on mobile */}
+      <div className="absolute left-0 bottom-0 w-1/4 hidden lg:block opacity-100 transform translate-y-1/3">
+        <img 
+          src="/dashboard/wave-green.png" 
+          alt="Decoration" 
+          className="w-full h-auto object-contain"
+        />
+      </div>
+      
+      {/* Left side icons removed as per user request */}
+      
+
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Left Content */}
+          <div className="">
+            {/* Hidden Enterprise CallMonAI Solutions tag */}
+            <div className="hidden">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/15 to-accent/15 text-primary text-sm font-medium mb-4 border border-primary/30 shadow-sm">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </span>
+                Enterprise VoicaAI Solutions
+              </div>
+            </div>
+            
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-relaxed">
+              AI-Powered Voice <br />
+              Call Analyzer, for Smarter <span className="text-custom-blue">
+                Business Communication
+              </span>
+            </h1>
+            
+            <p className="text-base sm:text-lg text-foreground mb-6 max-w-xl">
+              Gain real-time insights, identify communication gaps, and empower your team to perform better — all with Voica’s intelligent Voice Call Analyzer.
+            </p>
+            
+            {/* AI-Powered badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-[#9BEAA6] to-[#36C0ED] text-[#06102E] text-xs font-medium mb-4 border border-[#36C0ED]/30">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-[#06102E] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#06102E]"></span>
+              </span>
+              AI-Powered Intelligence
+            </div>
+            
+
+            
+            {/* New key features list - responsive grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+              <div className="flex items-center gap-2">
+                <Mic className="h-5 w-5 flex-shrink-0" style={{ color: '#36c0ed' }} />
+                <span className="text-sm text-foreground">Call Recording</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Volume2 className="h-5 w-5 flex-shrink-0" style={{ color: '#36c0ed' }} />
+                <span className="text-sm text-foreground">AI Transcription</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <BarChart3 className="h-5 w-5 flex-shrink-0" style={{ color: '#36c0ed' }} />
+                <span className="text-sm text-foreground">Sentiment Analysis</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Zap className="h-5 w-5 flex-shrink-0" style={{ color: '#36c0ed' }} />
+                <span className="text-sm text-foreground">Real-time Insights</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Brain className="h-5 w-5 text-cyan-500 flex-shrink-0" />
+                <span className="text-sm text-foreground">Predictive Analytics</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Bot className="h-5 w-5 text-cyan-500 flex-shrink-0" />
+                <span className="text-sm text-foreground">AI Assistant</span>
+              </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-3 relative z-20">
+              <Button 
+                variant="default" 
+                size="lg" 
+                className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white shadow-lg group transition-all duration-300 hover:shadow-xl hover:scale-105"
+                onClick={handleBookDemoClick}
+              >
+                Book Demo
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-primary bg-background hover:bg-primary/10 text-primary group border-2 transition-all duration-300 hover:shadow-md hover:scale-105"
+                onClick={handleWatchDemoClick}
+              >
+                <Play className="h-4 w-4 mr-2" />
+                Watch Demo
+              </Button>
+            </div>
+            
+            {/* Hidden numbers */}
+            <div className="hidden">
+              <div className="flex items-center gap-6 mt-8 pt-6 border-t border-border">
+                <div>
+                  <div className="text-2xl font-bold text-foreground">99.9%</div>
+                  <div className="text-sm text-foreground/80">Uptime</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-foreground">500K+</div>
+                  <div className="text-sm text-foreground/80">Businesses</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-foreground">100+</div>
+                  <div className="text-sm text-foreground/80">Countries</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Right Content - Horizontal Call Analytics Visualization */}
+          <div className="relative">
+            <HorizontalCallAnalytics />
+            
+            {/* Enhanced decorative Elements for better highlighting - hidden on mobile */}
+            <div className="absolute -top-8 -right-8 w-56 h-56 bg-gradient-to-r from-primary/25 to-accent/25 rounded-full blur-2xl -z-10 animate-pulse hidden sm:block" />
+            <div className="absolute -bottom-8 -left-8 w-56 h-56 bg-gradient-to-r from-accent/25 to-primary/25 rounded-full blur-2xl -z-10 animate-pulse hidden sm:block" />
+            
+            {/* Additional highlighting element - hidden on mobile */}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 -z-10 transform rotate-3 scale-105 blur-xl hidden sm:block"></div>
+            
+            {/* Floating badges - hidden on mobile */}
+            <div className="absolute top-4 left-0 transform -translate-x-1/2 bg-gradient-to-r from-[#9BEAA6] to-[#36C0ED] rounded-full p-2 border border-[#36C0ED]/20 shadow-lg hidden sm:block">
+              <div className="flex items-center gap-1">
+                <CheckCircle className="h-5 w-5" style={{ color: '#06102E' }} />
+                <span className="text-xs font-semibold" style={{ color: '#06102E' }}>AI-Powered</span>
+              </div>
+            </div>
+            
+
+            
+            {/* 24/7 Support badge - moved to right side, similar to Live Data badge - hidden on mobile */}
+            <div className="absolute top-1/4 right-0 transform translate-x-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg hidden sm:block">
+              <div className="flex items-center gap-1">
+                <Headset className="h-5 w-5" style={{ color: '#36c0ed' }} />
+                <span className="text-xs font-semibold text-foreground">24/7 Support</span>
+              </div>
+            </div>
+            
+            {/* Secure badge - moved to bottom right corner, similar to Live Data badge - hidden on mobile */}
+            <div className="absolute bottom-4 right-0 transform translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-accent/20 shadow-lg hidden sm:block">
+              <div className="flex items-center gap-1">
+                <Shield className="h-5 w-5" style={{ color: '#36c0ed' }} />
+                <span className="text-xs font-semibold text-foreground">Secure</span>
+              </div>
+            </div>
+            
+            {/* Analytics badge - replacing the Trusted badge - hidden on mobile */}
+            <div 
+              className="absolute bottom-4 left-0 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-primary/20 shadow-lg hidden sm:block cursor-pointer"
+              onClick={() => {
+                // Analytics tracking for Analytics badge click
+                if (typeof window !== 'undefined' && (window as any).gtag) {
+                  (window as any).gtag('event', 'click', {
+                    event_category: 'Badge',
+                    event_label: 'Analytics',
+                    value: 1
+                  });
+                }
+                // Scroll to analytics section when clicked
+                const analyticsSection = document.getElementById('analytics');
+                if (analyticsSection) {
+                  analyticsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              <div className="flex items-center gap-1">
+                <BarChart3 className="h-5 w-5" style={{ color: '#36c0ed' }} />
+                <span className="text-xs font-semibold text-foreground">Analytics</span>
+              </div>
+            </div>
+            
+
+          </div>
+        </div>
+      </div>
+      
+      {/* Enhanced Key Business Benefits section removed and moved to separate component */}
+    </section>
+  );
+};
+
+export default Hero;
