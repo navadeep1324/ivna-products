@@ -71,7 +71,7 @@ export const HorizontalCallAnalytics = () => {
           <div className="flex-1"></div> {/* Empty flex space */}
           <h3 className="text-lg sm:text-xl font-bold text-foreground mx-2 sm:mx-4 text-center">
             <span className="text-custom-blue">
-              VoicaAI Dashboard
+              VoicaAI
             </span>
           </h3>
           <div className="flex items-center gap-2 flex-1 justify-end">

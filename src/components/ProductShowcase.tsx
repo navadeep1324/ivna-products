@@ -13,10 +13,10 @@ export const ProductShowcase = () => {
 
   // Dashboard screenshots for slideshow
   const dashboardScreenshots = [
-    { src: "/dashboard/Dashboard1.png", alt: "VoicaAI Dashboard Overview" },
-    { src: "/dashboard/Dashboard2.png", alt: "Call History Interface" },
-    { src: "/dashboard/Dashboard3.png", alt: "Call Analytics Dashboard" },
-    { src: "/dashboard/Dashboard4.png", alt: "Reporting and Analytics" },
+    { src: "/dashboard/Dashboard2.png", alt: "VoicaAI Dashboard Overview" },
+    { src: "/dashboard/Voica_Call details_01.png", alt: "Call History Interface" },
+    { src: "/dashboard/Voica_Call records 1.png", alt: "Call Analytics Dashboard" },
+    { src: "/dashboard/Voica_Call details_02.png", alt: "Reporting and Analytics" },
     // { src: heroDashboard, alt: "VoicaAI Main Dashboard" }
   ];
 

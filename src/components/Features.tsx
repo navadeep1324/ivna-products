@@ -69,7 +69,7 @@ export const Features = () => {
           </div>
           <div className="order-1 lg:order-2 relative z-10">
             <img 
-              src="/dashboard/Dashboard2.png" 
+              src="/dashboard/Voica_Call details_01.png" 
               alt="VoicaAI Analytics Dashboard" 
               className="rounded-xl shadow-2xl border border-border w-full"
             />
@@ -84,7 +84,7 @@ export const Features = () => {
           
           <div className="relative z-10">
             <img 
-              src="/dashboard/Dashboard1.png" 
+              src="/dashboard/Dashboard2.png" 
               alt="VoicaAI Call Management Dashboard" 
               className="rounded-xl shadow-2xl border border-border w-full"
             />
