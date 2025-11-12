@@ -1,108 +1,228 @@
-// Updated stats array to use image paths instead of Lucide icons
-const stats = [
+// Benefit-Statistic pairs data - matching reference image order
+const benefitPairs = [
   {
     icon: "/icons/fast icon.png",
-    value: "40%",
     label: "Faster",
     description: "Faster client responses through real-time call tracking and alerts.",
+    value: "40%",
+    valueLabel: null,
   },
   {
     icon: "/icons/Overlay.png",
-    value: "Up to 60%",
     label: "Better Team",
     description: "Performance with AI-driven insights and feedback",
+    value: "60%",
+    valueLabel: "UPTO",
   },
   {
     icon: "/icons/Overlay (1).png",
-    value: "6+ hours",
-    label: "Saves Time ",
-    description: " Weekly by eliminating manual note-taking and follow-ups. ",
+    label: "Saves Time",
+    description: "Weekly by eliminating manual note-taking and follow-ups.",
+    value: "6+",
+    valueLabel: "hours",
   },
   {
     icon: "/icons/Overlay (2).png",
-    value: "100% ",
-    label: "Visibility ",
+    label: "Visibility",
     description: "Visibility into every call, transcript, and action item.",
+    value: "100%",
+    valueLabel: null,
   },
   {
     icon: "/icons/lead conversion .png",
-    value: "25%",
     label: "Lead Conversion",
     description: "Improves prospect lead conversion rates by 25% through prompt follow-ups.",
+    value: "25%",
+    valueLabel: null,
   },
   {
     icon: "/icons/workflow.png",
-    value: "Up to 50%",
     label: "Workflow Efficiency",
     description: "Boosts workflow efficiency by up to 50% through platform integration.",
+    value: "50%",
+    valueLabel: "UP TO",
   },
 ];
 
 export const GameChangerSection = () => {
   return (
-    <section className="py-12 sm:py-16 relative overflow-hidden">
-      {/* Background image positioned behind the container */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="/dashboard/wave-green.png" 
-          alt="Background Wave" 
-          className="w-full h-full object-cover opacity-10 pointer-events-none"
-        />
+    <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-white">
+      {/* Light blue wavy lines on the left - fading */}
+      <div className="absolute left-0 top-0 bottom-0 w-80 opacity-20 -z-10 hidden lg:block pointer-events-none overflow-hidden">
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 320 800"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#36C0ED" stopOpacity="0.8" />
+              <stop offset="100%" stopColor="#36C0ED" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0 100 Q80 80, 160 100 T320 100"
+            stroke="url(#waveGradient)"
+            strokeWidth="3"
+            fill="none"
+          />
+          <path
+            d="M0 200 Q80 180, 160 200 T320 200"
+            stroke="url(#waveGradient)"
+            strokeWidth="3"
+            fill="none"
+          />
+          <path
+            d="M0 300 Q80 280, 160 300 T320 300"
+            stroke="url(#waveGradient)"
+            strokeWidth="2.5"
+            fill="none"
+          />
+          <path
+            d="M0 400 Q80 380, 160 400 T320 400"
+            stroke="url(#waveGradient)"
+            strokeWidth="2"
+            fill="none"
+          />
+          <path
+            d="M0 500 Q80 480, 160 500 T320 500"
+            stroke="url(#waveGradient)"
+            strokeWidth="1.5"
+            fill="none"
+          />
+        </svg>
       </div>
       
-      {/* Left side image */}
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1/4 hidden lg:block z-10">
-        <img 
-          src="/dashboard/Untitled design (10) 1.png" 
-          alt="Decoration" 
-          className="w-full h-auto object-contain opacity-80"
-        />
+      {/* Subtle sound wave icon on top right */}
+      <div className="absolute top-8 right-8 opacity-10 -z-10 hidden lg:block pointer-events-none">
+        <svg
+          width="80"
+          height="40"
+          viewBox="0 0 80 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect x="5" y="20" width="4" height="15" fill="#666" />
+          <rect x="15" y="15" width="4" height="25" fill="#666" />
+          <rect x="25" y="10" width="4" height="30" fill="#666" />
+          <rect x="35" y="15" width="4" height="25" fill="#666" />
+          <rect x="45" y="20" width="4" height="15" fill="#666" />
+        </svg>
       </div>
       
-      {/* Right side image - REMOVED as per request */}
-      
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        {/* Enhanced Key Business Benefits section with gradient background */}
-        <div className="bg-gradient-to-r from-[#C4EFEA] to-[#EFF9FD] p-6 sm:p-8 rounded-2xl shadow-xl">
-          {/* Added missing heading for Key Business Benefits */}
-          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 leading-relaxed">
-              How Voica Redefines the Way  {" "}
-              <span className="text-custom-blue">
-                Businesses Communicate
-              </span>
-            </h2>
-          </div>
-          
-          {/* Middle descriptive paragraph */}
-          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-            <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-             Experience the measurable edge that AI-powered communication brings.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {stats.map((stat, index) => (
-              <div 
-                key={index}
-                className="group bg-card/90 p-4 sm:p-5 rounded-lg border border-gray-200 hover:border-primary/40 hover:shadow-lg transition-all backdrop-blur-sm hover:-translate-y-2 duration-300 leading-relaxed"
-              >
-                {/* Icon and description aligned together */}
-                <div className="flex">
-                  <div className="flex items-start justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mr-2 sm:mr-2 group-hover:scale-110 transition-transform duration-300 flex-shrink-0 mt-1">
-                    <img src={stat.icon} alt={`${stat.label} icon`} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" style={{ color: '#36c0ed' }} />
-                  </div>
-                  <div className="flex flex-col justify-start">
-                    <div className="text-xl lg:text-2xl font-bold mb-1" style={{ color: '#36c0ed' }}>
-                      {stat.value}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Headline */}
+        <div className="text-center max-w-4xl mx-auto mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1e3a8a] mb-4 leading-tight">
+            How Voica Redefines the Way{" "}
+            <span className="text-[#2563eb]">
+              Businesses Communicate
+            </span>
+          </h2>
+        </div>
+        
+        {/* Sub-headline */}
+        <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+            Experience the measurable edge that AI-powered communication brings.
+          </p>
+        </div>
+        
+        {/* Benefit-Statistic Pairs Grid - 3 pairs per row, 2 rows total */}
+        <div className="max-w-7xl mx-auto space-y-6">
+          {/* First Row - 3 pairs */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            {benefitPairs.slice(0, 3).map((pair, index) => (
+              <div key={index} className="flex gap-3 sm:gap-4 items-stretch">
+                {/* Benefit Box */}
+                <div className="flex-1 bg-[#E3F2FD] rounded-lg p-4 sm:p-5 border border-[#36C0ED]/30 shadow-sm">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0">
+                      <img
+                        src={pair.icon}
+                        alt={`${pair.label} icon`}
+                        className="w-10 h-10 sm:w-12 sm:h-12"
+                      />
                     </div>
-                    <div className="text-sm font-semibold mb-1" style={{ color: '#36c0ed' }}>{stat.label}</div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base sm:text-lg font-bold text-[#2563eb] mb-2 leading-tight">
+                        {pair.label}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                        {pair.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-                {/* Description aligned with icon - center aligned */}
-                <p className="text-xs sm:text-sm text-foreground leading-relaxed mt-2 text-center">
-                  {stat.description}
-                </p>
+                
+                {/* Statistic Box */}
+                <div className="flex-shrink-0 w-20 sm:w-24 md:w-28 bg-white rounded-lg p-3 sm:p-4 border border-[#36C0ED] flex items-center justify-center min-h-[100px]">
+                  <div className="text-center w-full">
+                    {pair.valueLabel && pair.valueLabel !== "hours" && (
+                      <div className="text-[10px] sm:text-xs text-gray-500 mb-1 uppercase leading-tight font-medium">
+                        {pair.valueLabel}
+                      </div>
+                    )}
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#2563eb] leading-tight">
+                      {pair.value}
+                    </div>
+                    {pair.valueLabel === "hours" && (
+                      <div className="text-[10px] sm:text-xs text-gray-500 mt-1">
+                        {pair.valueLabel}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          {/* Second Row - 3 pairs */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            {benefitPairs.slice(3, 6).map((pair, index) => (
+              <div key={index + 3} className="flex gap-3 sm:gap-4 items-stretch">
+                {/* Benefit Box */}
+                <div className="flex-1 bg-[#E3F2FD] rounded-lg p-4 sm:p-5 border border-[#36C0ED]/30 shadow-sm">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0">
+                      <img
+                        src={pair.icon}
+                        alt={`${pair.label} icon`}
+                        className="w-10 h-10 sm:w-12 sm:h-12"
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base sm:text-lg font-bold text-[#2563eb] mb-2 leading-tight">
+                        {pair.label}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                        {pair.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Statistic Box */}
+                <div className="flex-shrink-0 w-20 sm:w-24 md:w-28 bg-white rounded-lg p-3 sm:p-4 border border-[#36C0ED] flex items-center justify-center min-h-[100px]">
+                  <div className="text-center w-full">
+                    {pair.valueLabel && pair.valueLabel !== "hours" && (
+                      <div className="text-[10px] sm:text-xs text-gray-500 mb-1 uppercase leading-tight font-medium">
+                        {pair.valueLabel}
+                      </div>
+                    )}
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#2563eb] leading-tight">
+                      {pair.value}
+                    </div>
+                    {pair.valueLabel === "hours" && (
+                      <div className="text-[10px] sm:text-xs text-gray-500 mt-1">
+                        {pair.valueLabel}
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
