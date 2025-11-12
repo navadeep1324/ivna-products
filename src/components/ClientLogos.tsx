@@ -13,16 +13,22 @@ const clients = [
 
 export const ClientLogos = () => {
   return (
-    <section className="py-8 sm:py-12 bg-background relative overflow-hidden">
+    <section className="py-8 sm:py-12 bg-background relative overflow-hidden"
+             style={{ 
+               backgroundImage: `url('/dashboard/Untitled design (10) 6.png'), url('/dashboard/Untitled design (10) 7.png')`,
+               backgroundPosition: 'top left, bottom right',
+               backgroundRepeat: 'no-repeat',
+               backgroundSize: '30%'
+             }}>
       {/* Animated background elements */}
       <div className="absolute top-0 left-1/4 w-32 h-32 sm:w-48 sm:h-48 bg-primary/5 rounded-full blur-3xl animate-pulse hidden sm:block"></div>
       <div className="absolute bottom-0 right-1/3 w-24 h-24 sm:w-32 sm:h-32 bg-accent/5 rounded-full blur-2xl animate-ping delay-700 hidden sm:block"></div>
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3">
+          <h2 className="font-bold mb-3" style={{ fontSize: "2.5rem", color: "#003E94" }}>
             Our{" "}
-            <span className="text-custom-blue">
+            <span style={{ color: "#003E94" }}>
               Clients
             </span>
           </h2>
@@ -31,7 +37,7 @@ export const ClientLogos = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" style={{ backgroundColor: "#F6F6F6", padding: "2rem" }}>
           {clients.map((client, index) => (
             <Card 
               key={index}

@@ -286,7 +286,7 @@ export const ContactForm = () => {
             </p>
           </div>
           
-          <div className="rounded-xl shadow-md p-4 sm:p-6 border border-border relative overflow-hidden" style={{ backgroundColor: "#003E94" }}>
+          <div className="rounded-xl shadow-md p-4 sm:p-6 border border-border relative overflow-hidden" style={{ backgroundColor: "#003e94bd" }}>
             <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                 <div className="space-y-1.5">
@@ -410,7 +410,8 @@ export const ContactForm = () => {
                   type="submit" 
                   size="sm" 
                   disabled={isSubmitting}
-                  className="font-bold py-2 px-4 rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md text-xs sm:text-sm"
+                  variant="outline"
+                  className="font-bold py-2 px-8 rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md text-xs sm:text-sm border-0"
                   style={{ backgroundColor: "#00BDE5", color: "#06102E" }}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
