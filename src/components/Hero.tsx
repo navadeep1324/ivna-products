@@ -19,18 +19,28 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[600px] lg:min-h-[700px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1e3a5c] via-[#2563eb] to-[#14b8a6]">
-      {/* Subtle abstract pattern overlay */}
-      <div className="absolute inset-0 opacity-5 -z-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.2),transparent_60%)]"></div>
-      </div>
+    <section className="relative min-h-[600px] lg:min-h-[700px] flex items-center justify-center overflow-hidden">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url('/dashboard/Overlay.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
       
-      {/* Green wavy pattern on the right side - light green, subtle */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[700px] opacity-40 -z-10 hidden lg:block pointer-events-none">
+      {/* Wave pattern overlay on the right side */}
+      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2/5 h-4/5 opacity-100 -z-10 hidden lg:block">
         <img 
-          src="/dashboard/wave-green.png" 
-          alt="Decoration" 
+          src="/dashboard/banner-wave-img.png" 
+          alt="Wave pattern overlay" 
           className="w-full h-full object-contain"
+          onError={(e) => {
+            console.error('Error loading wave image');
+            const imgElement = e.target as EventTarget & HTMLImageElement;
+            imgElement.style.display = 'none';
+          }}
         />
       </div>
       

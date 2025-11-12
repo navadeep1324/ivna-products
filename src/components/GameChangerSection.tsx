@@ -136,22 +136,22 @@ export const GameChangerSection = () => {
           {/* First Row - 3 pairs */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {benefitPairs.slice(0, 3).map((pair, index) => (
-              <div key={index} className="flex gap-3 sm:gap-4 items-stretch">
+              <div key={index} className="flex gap-3 sm:gap-4 items-stretch group">
                 {/* Benefit Box */}
-                <div className="flex-1 bg-[#E3F2FD] rounded-lg p-4 sm:p-5 border border-[#36C0ED]/30 shadow-sm">
-                  <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0">
+                <div className="flex-1 bg-gradient-to-br from-[#E3F2FD] to-[#BBDEFB] rounded-xl p-5 sm:p-6 border border-[#36C0ED]/40 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 bg-white rounded-lg p-2 shadow-sm ring-2 ring-[#36C0ED]/30 transform transition-all duration-300 group-hover:rotate-6">
                       <img
                         src={pair.icon}
                         alt={`${pair.label} icon`}
-                        className="w-10 h-10 sm:w-12 sm:h-12"
+                        className="w-10 h-10 sm:w-12 sm:h-12 transition-transform duration-300 group-hover:scale-110"
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-base sm:text-lg font-bold text-[#2563eb] mb-2 leading-tight">
+                      <h3 className="text-base sm:text-lg font-bold text-[#1e3a8a] mb-2 leading-tight">
                         {pair.label}
                       </h3>
-                      <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                      <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                         {pair.description}
                       </p>
                     </div>
@@ -159,18 +159,18 @@ export const GameChangerSection = () => {
                 </div>
                 
                 {/* Statistic Box */}
-                <div className="flex-shrink-0 w-20 sm:w-24 md:w-28 bg-white rounded-lg p-3 sm:p-4 border border-[#36C0ED] flex items-center justify-center min-h-[100px]">
+                <div className="flex-shrink-0 w-20 sm:w-24 md:w-28 bg-gradient-to-br from-white to-[#F0F8FF] rounded-xl p-4 sm:p-5 border-2 border-[#36C0ED] flex items-center justify-center min-h-[110px] shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                   <div className="text-center w-full">
                     {pair.valueLabel && pair.valueLabel !== "hours" && (
-                      <div className="text-[10px] sm:text-xs text-gray-500 mb-1 uppercase leading-tight font-medium">
+                      <div className="text-[10px] sm:text-xs text-[#2563eb] mb-1 uppercase leading-tight font-bold">
                         {pair.valueLabel}
                       </div>
                     )}
-                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#2563eb] leading-tight">
+                    <div className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#1e3a8a] leading-tight animate-pulse">
                       {pair.value}
                     </div>
                     {pair.valueLabel === "hours" && (
-                      <div className="text-[10px] sm:text-xs text-gray-500 mt-1">
+                      <div className="text-[10px] sm:text-xs text-[#2563eb] mt-1 font-bold">
                         {pair.valueLabel}
                       </div>
                     )}
@@ -183,22 +183,22 @@ export const GameChangerSection = () => {
           {/* Second Row - 3 pairs */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {benefitPairs.slice(3, 6).map((pair, index) => (
-              <div key={index + 3} className="flex gap-3 sm:gap-4 items-stretch">
+              <div key={index + 3} className="flex gap-3 sm:gap-4 items-stretch group">
                 {/* Benefit Box */}
-                <div className="flex-1 bg-[#E3F2FD] rounded-lg p-4 sm:p-5 border border-[#36C0ED]/30 shadow-sm">
-                  <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0">
+                <div className="flex-1 bg-gradient-to-br from-[#E3F2FD] to-[#BBDEFB] rounded-xl p-5 sm:p-6 border border-[#36C0ED]/40 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 bg-white rounded-lg p-2 shadow-sm ring-2 ring-[#36C0ED]/30 transform transition-all duration-300 group-hover:rotate-6">
                       <img
                         src={pair.icon}
                         alt={`${pair.label} icon`}
-                        className="w-10 h-10 sm:w-12 sm:h-12"
+                        className="w-10 h-10 sm:w-12 sm:h-12 transition-transform duration-300 group-hover:scale-110"
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-base sm:text-lg font-bold text-[#2563eb] mb-2 leading-tight">
+                      <h3 className="text-base sm:text-lg font-bold text-[#1e3a8a] mb-2 leading-tight">
                         {pair.label}
                       </h3>
-                      <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                      <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                         {pair.description}
                       </p>
                     </div>
@@ -206,18 +206,18 @@ export const GameChangerSection = () => {
                 </div>
                 
                 {/* Statistic Box */}
-                <div className="flex-shrink-0 w-20 sm:w-24 md:w-28 bg-white rounded-lg p-3 sm:p-4 border border-[#36C0ED] flex items-center justify-center min-h-[100px]">
+                <div className="flex-shrink-0 w-20 sm:w-24 md:w-28 bg-gradient-to-br from-white to-[#F0F8FF] rounded-xl p-4 sm:p-5 border-2 border-[#36C0ED] flex items-center justify-center min-h-[110px] shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                   <div className="text-center w-full">
                     {pair.valueLabel && pair.valueLabel !== "hours" && (
-                      <div className="text-[10px] sm:text-xs text-gray-500 mb-1 uppercase leading-tight font-medium">
+                      <div className="text-[10px] sm:text-xs text-[#2563eb] mb-1 uppercase leading-tight font-bold">
                         {pair.valueLabel}
                       </div>
                     )}
-                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#2563eb] leading-tight">
+                    <div className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#1e3a8a] leading-tight animate-pulse">
                       {pair.value}
                     </div>
                     {pair.valueLabel === "hours" && (
-                      <div className="text-[10px] sm:text-xs text-gray-500 mt-1">
+                      <div className="text-[10px] sm:text-xs text-[#2563eb] mt-1 font-bold">
                         {pair.valueLabel}
                       </div>
                     )}
