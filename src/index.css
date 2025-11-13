@@ -143,3 +143,24 @@ All colors MUST be HSL.
 .left-1\/4 {
   left: -17%;
 }
+.number-main-card{
+top:-10px;
+}
+.number-card{
+/* position: absolute; */
+  right: 30px;
+  width: 100px;
+  height: 90px;
+}
+.heading-card{
+  width:65%;
+}
+.heading-content{
+  padding-bottom:30px ;
+}
+.content-card{
+  border-top-right-radius: 0.75rem;
+}
+.desc-content{
+  padding-top: 10px;
+}

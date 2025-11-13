@@ -79,22 +79,22 @@ export const GameChangerSection = () => {
         {/* Benefit-Statistic Pairs Grid */}
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {benefitPairs.map((pair, index) => (
-            <div key={index} className="relative bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden mx-auto" style={{ maxWidth: '350px' }}>
+            <div key={index} className="relative bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow mx-auto" style={{ maxWidth: '320px', marginTop: '25px' }}>
               {/* L-shaped background element - full width bottom, 50% width top */}
               {/* Horizontal part of L - full width at the bottom */}
-              <div className="absolute bottom-0 left-0 w-full h-1/2 bg-[#E4F0FE] rounded-b-xl z-0"></div>
+              <div className="absolute bottom-0 left-0 w-full h-1/2 bg-[#E4F0FE] rounded-b-xl z-0 content-card"></div>
               {/* Vertical part of L - 50% width at the top */}
-              <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-[#E4F0FE] rounded-tr-xl z-0"></div>
+              <div className="absolute top-0 left-0  h-1/2 bg-[#E4F0FE] rounded-tr-xl z-0 heading-card"></div>
               
               {/* Number box - positioned closer to heading with reduced margin and added padding/margin */}
-              <div className="absolute top-0 right-0 -mt-2 mr-3 bg-white rounded-lg z-10 shadow-sm"
+              <div className="absolute right-0 -mt-2 bg-white rounded-lg z-10 shadow-sm number-main-card"
                    style={{ 
                      border: '2px solid transparent',
                      backgroundImage: 'linear-gradient(white, white), linear-gradient(90deg, #9BEAA6, #36C0ED)',
                      backgroundClip: 'padding-box, border-box',
                      backgroundOrigin: 'border-box'
                    }}>
-                <div className="p-4 text-center min-h-[70px] flex flex-col justify-center">
+                <div className="p-4 text-center min-h-[80px] flex flex-col justify-center number-card">
                   <div className="text-xl font-bold text-gray-900">{pair.value}</div>
                   {pair.valueLabel && (
                     <div className="text-xs font-medium text-gray-600 uppercase mt-1">{pair.valueLabel}</div>
@@ -117,8 +117,8 @@ export const GameChangerSection = () => {
               </div>
               
               {/* Content area - adjusted padding to avoid overlap with numbers and icon/heading */}
-              <div className="p-6 pt-20 pb-6 relative z-10">
-                <p className="mt-1 text-sm text-gray-600">{pair.description}</p>
+              <div className="p-6 pt-20 relative z-10 heading-content">
+                <p className="mt-1 text-sm text-gray-600 desc-content">{pair.description}</p>
               </div>
             </div>
           ))}
