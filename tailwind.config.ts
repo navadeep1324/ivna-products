@@ -43,8 +43,8 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
-        // Custom color #35A9CA
-        'custom-blue': '#35A9CA',
+        // Custom color #00BDE5
+        'custom-blue': '#00BDE5',
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",

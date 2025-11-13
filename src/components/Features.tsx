@@ -41,8 +41,8 @@ export const Features = () => {
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* New Section 1: Text on left, Image on right */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mt-8 sm:mt-12 lg:mt-20 items-center p-4 sm:p-6 lg:p-8 rounded-2xl relative overflow-hidden">
+        {/* New Section 1: Text on left, Image on right - Removed padding and margin */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center rounded-2xl relative overflow-hidden">
           {/* Animated background elements - hidden on mobile */}
           <div className="absolute -top-4 -left-4 w-24 h-24 sm:w-32 sm:h-32 bg-primary/5 rounded-full blur-2xl animate-pulse hidden sm:block"></div>
           <div className="absolute -bottom-4 -right-4 w-16 h-16 sm:w-24 sm:h-24 bg-accent/5 rounded-full blur-xl animate-ping delay-500 hidden sm:block"></div>
@@ -91,7 +91,7 @@ export const Features = () => {
         </div>
 
         {/* New Section 2: Image on left, Content on right */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mt-8 sm:mt-12 lg:mt-20 items-center p-4 sm:p-6 lg:p-8 rounded-2xl relative overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center rounded-2xl relative overflow-hidden">
           {/* Animated background elements - hidden on mobile */}
           <div className="absolute -top-4 -right-4 w-16 h-16 sm:w-24 sm:h-24 bg-accent/5 rounded-full blur-2xl animate-ping delay-700 hidden sm:block"></div>
           <div className="absolute -bottom-4 -left-4 w-24 h-24 sm:w-32 sm:h-32 bg-primary/5 rounded-full blur-xl animate-pulse delay-1000 hidden sm:block"></div>
