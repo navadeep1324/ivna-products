@@ -45,82 +45,27 @@ const benefitPairs = [
 ];
 
 export const GameChangerSection = () => {
+  // Function to format headings with line breaks for two-word labels
+  const formatHeading = (label: string) => {
+    const words = label.split(' ');
+    if (words.length === 2) {
+      return (
+        <>
+          {words[0]} <br /> {words[1]}
+        </>
+      );
+    }
+    return label;
+  };
+
   return (
-    <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-white">
-      {/* Light blue wavy lines on the left - fading */}
-      <div className="absolute left-0 top-0 bottom-0 w-80 opacity-20 -z-10 hidden lg:block pointer-events-none overflow-hidden">
-        <svg
-          width="100%"
-          height="100%"
-          viewBox="0 0 320 800"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-        >
-          <defs>
-            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#36C0ED" stopOpacity="0.8" />
-              <stop offset="100%" stopColor="#36C0ED" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-          <path
-            d="M0 100 Q80 80, 160 100 T320 100"
-            stroke="url(#waveGradient)"
-            strokeWidth="3"
-            fill="none"
-          />
-          <path
-            d="M0 200 Q80 180, 160 200 T320 200"
-            stroke="url(#waveGradient)"
-            strokeWidth="3"
-            fill="none"
-          />
-          <path
-            d="M0 300 Q80 280, 160 300 T320 300"
-            stroke="url(#waveGradient)"
-            strokeWidth="2.5"
-            fill="none"
-          />
-          <path
-            d="M0 400 Q80 380, 160 400 T320 400"
-            stroke="url(#waveGradient)"
-            strokeWidth="2"
-            fill="none"
-          />
-          <path
-            d="M0 500 Q80 480, 160 500 T320 500"
-            stroke="url(#waveGradient)"
-            strokeWidth="1.5"
-            fill="none"
-          />
-        </svg>
-      </div>
-      
-      {/* Subtle sound wave icon on top right */}
-      <div className="absolute top-8 right-8 opacity-10 -z-10 hidden lg:block pointer-events-none">
-        <svg
-          width="80"
-          height="40"
-          viewBox="0 0 80 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect x="5" y="20" width="4" height="15" fill="#666" />
-          <rect x="15" y="15" width="4" height="25" fill="#666" />
-          <rect x="25" y="10" width="4" height="30" fill="#666" />
-          <rect x="35" y="15" width="4" height="25" fill="#666" />
-          <rect x="45" y="20" width="4" height="15" fill="#666" />
-        </svg>
-      </div>
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="py-16 sm:py-20 lg:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Headline */}
         <div className="text-center max-w-4xl mx-auto mb-4">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1e3a8a] mb-4 leading-tight">
-            How Voica Redefines the Way{" "}
-            <span className="text-[#2563eb]">
-              Businesses Communicate
-            </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+            <span className="text-[#003E94]">How Voica Redefines the Way</span>{" "}
+            <span className="text-[#2563eb]">Businesses Communicate</span>
           </h2>
         </div>
         
@@ -131,101 +76,52 @@ export const GameChangerSection = () => {
           </p>
         </div>
         
-        {/* Benefit-Statistic Pairs Grid - 3 pairs per row, 2 rows total */}
-        <div className="max-w-7xl mx-auto space-y-6">
-          {/* First Row - 3 pairs */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-            {benefitPairs.slice(0, 3).map((pair, index) => (
-              <div key={index} className="flex gap-3 sm:gap-4 items-stretch group">
-                {/* Benefit Box */}
-                <div className="flex-1 bg-gradient-to-br from-[#E3F2FD] to-[#BBDEFB] rounded-xl p-5 sm:p-6 border border-[#36C0ED]/40 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 bg-white rounded-lg p-2 shadow-sm ring-2 ring-[#36C0ED]/30 transform transition-all duration-300 group-hover:rotate-6">
-                      <img
-                        src={pair.icon}
-                        alt={`${pair.label} icon`}
-                        className="w-10 h-10 sm:w-12 sm:h-12 transition-transform duration-300 group-hover:scale-110"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-base sm:text-lg font-bold text-[#1e3a8a] mb-2 leading-tight">
-                        {pair.label}
-                      </h3>
-                      <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                        {pair.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Statistic Box */}
-                <div className="flex-shrink-0 w-20 sm:w-24 md:w-28 bg-gradient-to-br from-white to-[#F0F8FF] rounded-xl p-4 sm:p-5 border-2 border-[#36C0ED] flex items-center justify-center min-h-[110px] shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                  <div className="text-center w-full">
-                    {pair.valueLabel && pair.valueLabel !== "hours" && (
-                      <div className="text-[10px] sm:text-xs text-[#2563eb] mb-1 uppercase leading-tight font-bold">
-                        {pair.valueLabel}
-                      </div>
-                    )}
-                    <div className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#1e3a8a] leading-tight animate-pulse">
-                      {pair.value}
-                    </div>
-                    {pair.valueLabel === "hours" && (
-                      <div className="text-[10px] sm:text-xs text-[#2563eb] mt-1 font-bold">
-                        {pair.valueLabel}
-                      </div>
-                    )}
-                  </div>
+        {/* Benefit-Statistic Pairs Grid */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {benefitPairs.map((pair, index) => (
+            <div key={index} className="relative bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden mx-auto" style={{ maxWidth: '350px' }}>
+              {/* L-shaped background element - full width bottom, 50% width top */}
+              {/* Horizontal part of L - full width at the bottom */}
+              <div className="absolute bottom-0 left-0 w-full h-1/2 bg-[#E4F0FE] rounded-b-xl z-0"></div>
+              {/* Vertical part of L - 50% width at the top */}
+              <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-[#E4F0FE] rounded-tr-xl z-0"></div>
+              
+              {/* Number box - positioned closer to heading with reduced margin and added padding/margin */}
+              <div className="absolute top-0 right-0 -mt-2 mr-3 bg-white rounded-lg z-10 shadow-sm"
+                   style={{ 
+                     border: '2px solid transparent',
+                     backgroundImage: 'linear-gradient(white, white), linear-gradient(90deg, #9BEAA6, #36C0ED)',
+                     backgroundClip: 'padding-box, border-box',
+                     backgroundOrigin: 'border-box'
+                   }}>
+                <div className="p-4 text-center min-h-[70px] flex flex-col justify-center">
+                  <div className="text-xl font-bold text-gray-900">{pair.value}</div>
+                  {pair.valueLabel && (
+                    <div className="text-xs font-medium text-gray-600 uppercase mt-1">{pair.valueLabel}</div>
+                  )}
                 </div>
               </div>
-            ))}
-          </div>
-          
-          {/* Second Row - 3 pairs */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-            {benefitPairs.slice(3, 6).map((pair, index) => (
-              <div key={index + 3} className="flex gap-3 sm:gap-4 items-stretch group">
-                {/* Benefit Box */}
-                <div className="flex-1 bg-gradient-to-br from-[#E3F2FD] to-[#BBDEFB] rounded-xl p-5 sm:p-6 border border-[#36C0ED]/40 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 bg-white rounded-lg p-2 shadow-sm ring-2 ring-[#36C0ED]/30 transform transition-all duration-300 group-hover:rotate-6">
-                      <img
-                        src={pair.icon}
-                        alt={`${pair.label} icon`}
-                        className="w-10 h-10 sm:w-12 sm:h-12 transition-transform duration-300 group-hover:scale-110"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-base sm:text-lg font-bold text-[#1e3a8a] mb-2 leading-tight">
-                        {pair.label}
-                      </h3>
-                      <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                        {pair.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Statistic Box */}
-                <div className="flex-shrink-0 w-20 sm:w-24 md:w-28 bg-gradient-to-br from-white to-[#F0F8FF] rounded-xl p-4 sm:p-5 border-2 border-[#36C0ED] flex items-center justify-center min-h-[110px] shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                  <div className="text-center w-full">
-                    {pair.valueLabel && pair.valueLabel !== "hours" && (
-                      <div className="text-[10px] sm:text-xs text-[#2563eb] mb-1 uppercase leading-tight font-bold">
-                        {pair.valueLabel}
-                      </div>
-                    )}
-                    <div className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#1e3a8a] leading-tight animate-pulse">
-                      {pair.value}
-                    </div>
-                    {pair.valueLabel === "hours" && (
-                      <div className="text-[10px] sm:text-xs text-[#2563eb] mt-1 font-bold">
-                        {pair.valueLabel}
-                      </div>
-                    )}
-                  </div>
+              
+              {/* Icon and heading - positioned in top left corner with reduced margin */}
+              <div className="absolute top-0 left-0 mt-3 ml-3 z-10">
+                <div className="flex items-start p-3">
+                  <img
+                    src={pair.icon}
+                    alt={`${pair.label} icon`}
+                    className="w-8 h-8"
+                  />
+                  <h3 className="text-lg font-semibold text-gray-900 ml-2">
+                    {formatHeading(pair.label)}
+                  </h3>
                 </div>
               </div>
-            ))}
-          </div>
+              
+              {/* Content area - adjusted padding to avoid overlap with numbers and icon/heading */}
+              <div className="p-6 pt-20 pb-6 relative z-10">
+                <p className="mt-1 text-sm text-gray-600">{pair.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

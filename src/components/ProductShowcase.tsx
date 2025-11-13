@@ -66,7 +66,8 @@ export const ProductShowcase = () => {
   };
 
   return (
-    <section id="suite" className="py-8 sm:py-12 lg:py-16 bg-muted/30 relative overflow-hidden">
+    <section id="suite" className="py-8 sm:py-12 lg:py-16 bg-muted/30 relative overflow-hidden" 
+             style={{ backgroundImage: "url('/dashboard/Rectangle 34.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Right side image - keeping this one - hidden on mobile */}
       <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-1/4 hidden lg:block">
         <img 
@@ -84,9 +85,8 @@ export const ProductShowcase = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-12">
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-3 lg:mb-4">
-            VoicaAI {" "}
-            <span className="text-custom-blue">
-              Overview 
+            <span style={{ color: '#012353', fontWeight: 'bold' }}>
+              VoicaAI Overview
             </span>
           </h2>
           <p className="text-sm sm:text-base text-foreground">

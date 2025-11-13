@@ -51,15 +51,16 @@ const features = [
 
 export const PowerFeatures = () => {
   return (
-    <section id="power-features" className="py-8 sm:py-12 bg-background relative overflow-hidden">
-      {/* Right side background image */}
-      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-1/4 hidden lg:block">
+    <section id="power-features" className="py-8 sm:py-12 relative overflow-hidden" style={{ backgroundColor: '#DBF9FF' }}>
+      {/* Background image at bottom, outside the main section content */}
+      <div className="absolute left-0 -bottom-10 w-1/2 hidden lg:block">
         <img 
-          src="/dashboard/Untitled design (10) 2.png" 
+          src="/dashboard/Untitled design (10) 2 (1).png" 
           alt="Decoration" 
           className="w-full h-auto object-contain opacity-80"
         />
       </div>
+      
       {/* Animated background elements */}
       <div className="absolute top-10 left-10 w-48 h-48 sm:w-64 sm:h-64 bg-primary/5 rounded-full blur-3xl animate-pulse hidden sm:block"></div>
       <div className="absolute bottom-10 right-10 w-32 h-32 sm:w-48 sm:h-48 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000 hidden sm:block"></div>
