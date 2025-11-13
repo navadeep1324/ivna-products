@@ -144,13 +144,14 @@ All colors MUST be HSL.
   left: -17%;
 }
 .number-main-card{
-top:-10px;
+top:-50px;
+right:-45px;
 }
 .number-card{
 /* position: absolute; */
   right: 30px;
-  width: 100px;
-  height: 90px;
+  width: 65px;
+  height: 85px;
 }
 .heading-card{
   width:65%;

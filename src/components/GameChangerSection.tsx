@@ -96,7 +96,7 @@ export const GameChangerSection = () => {
               <div className="absolute top-0 left-0  h-1/2 bg-[#E4F0FE] rounded-tr-xl z-0 heading-card"></div>
               
               {/* Number box - positioned closer to heading with reduced margin and added padding/margin */}
-              <div className="absolute right-0 -mt-2 bg-white rounded-lg z-10 shadow-sm number-main-card"
+              <div className="absolute mt-2 bg-white rounded-lg z-10 shadow-sm number-main-card"
                    style={{ 
                      border: '2px solid transparent',
                      backgroundImage: 'linear-gradient(white, white), linear-gradient(90deg, #9BEAA6, #36C0ED)',
