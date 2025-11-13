@@ -59,13 +59,22 @@ export const GameChangerSection = () => {
   };
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden" style={{ paddingTop: '7rem' }}>
+      {/* Background image positioned vertically on the left side */}
+      <div className="absolute left-0 top-0 bottom-0 w-1/3 z-0" style={{ opacity: 0.9 }}>
+        <img 
+          src="/dashboard/Untitled design (10) 1 (2).png" 
+          alt="Background decoration" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Headline */}
         <div className="text-center max-w-4xl mx-auto mb-4">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
             <span className="text-[#003E94]">How Voica Redefines the Way</span>{" "}
-            <span className="text-[#2563eb]">Businesses Communicate</span>
+            <span className="text-[#003E94]">Businesses Communicate</span>
           </h2>
         </div>
         
@@ -92,7 +101,10 @@ export const GameChangerSection = () => {
                      border: '2px solid transparent',
                      backgroundImage: 'linear-gradient(white, white), linear-gradient(90deg, #9BEAA6, #36C0ED)',
                      backgroundClip: 'padding-box, border-box',
-                     backgroundOrigin: 'border-box'
+                     backgroundOrigin: 'border-box',
+                     padding: '1px 15px',
+                     marginTop: '1.75rem',
+                     marginRight: '2.75rem'
                    }}>
                 <div className="p-4 text-center min-h-[80px] flex flex-col justify-center number-card">
                   <div className="text-xl font-bold text-gray-900">{pair.value}</div>

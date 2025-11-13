@@ -53,7 +53,7 @@ export const PowerFeatures = () => {
   return (
     <section id="power-features" className="py-8 sm:py-12 relative overflow-hidden" style={{ backgroundColor: '#DBF9FF' }}>
       {/* Background image at bottom, outside the main section content */}
-      <div className="absolute left-0 -bottom-10 w-1/2 hidden lg:block">
+      <div className="absolute left-0 bottom-0 w-1/2 hidden lg:block" style={{ transform: 'translateY(30%)' }}>
         <img 
           src="/dashboard/Untitled design (10) 2 (1).png" 
           alt="Decoration" 
@@ -67,23 +67,35 @@ export const PowerFeatures = () => {
       <div className="absolute top-1/3 right-1/4 w-24 h-24 sm:w-32 sm:h-32 bg-primary/10 rounded-full blur-2xl animate-ping delay-2000 hidden sm:block"></div>
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3">
-            Transform Your Voice Data with {" "}
-            <span className="text-custom-blue">
-              Voica’s Smart Capabilities
-            </span>
-          </h2>
-          <p className="text-base sm:text-lg text-foreground">
-            Turn conversations into insights with AI-driven tools that boost performance.
-          </p>
+        <div className="text-left max-w-3xl mb-10 sm:mb-12">
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3">
+                Transform Your Voice Data with {" "}
+                <span className="text-custom-blue">
+                  Voica’s Smart Capabilities
+                </span>
+              </h2>
+              <p className="text-base sm:text-lg text-foreground">
+                Turn conversations into insights with AI-driven tools that boost performance.
+              </p>
+            </div>
+            <div className="flex-shrink-0 self-start">
+              <img 
+                src="/logo/VoicaAi_Favicon-03 1.svg" 
+                alt="VoicaAI" 
+                className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20"
+                style={{ position: 'absolute', right: '50px' }}
+              />
+            </div>
+          </div>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
           {features.map((feature, index) => (
             <Card 
               key={index}
-              className="p-4 sm:p-5 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 border-border bg-card hover:border-primary/30 relative overflow-hidden"
+              className="p-4 sm:p-5 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 border-border bg-card hover:border-primary/30 relative overflow-hidden h-full"
             >
               {/* Animated icon background */}
               <div className="absolute -top-4 -right-4 w-12 h-12 sm:w-16 sm:h-16 bg-primary/5 rounded-full blur-xl"></div>
