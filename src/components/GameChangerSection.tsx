@@ -93,7 +93,7 @@ export const GameChangerSection = () => {
               {/* Horizontal part of L - full width at the bottom */}
               <div className="absolute bottom-0 left-0 w-full h-1/2 bg-[#E4F0FE] rounded-b-xl z-0 content-card"></div>
               {/* Vertical part of L - 50% width at the top */}
-              <div className="absolute top-0 left-0  h-1/2 bg-[#E4F0FE] rounded-tr-xl z-0 heading-card"></div>
+              <div className="absolute top-0 left-0  h-1/2 bg-[#E4F0FE] rounded-tr-xl rounded-tl-xl z-0 heading-card"></div>
               
               {/* Number box - positioned closer to heading with reduced margin and added padding/margin */}
               <div className="absolute mt-2 bg-white rounded-lg z-10 shadow-sm number-main-card"

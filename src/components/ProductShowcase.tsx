@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Play, Phone, Wifi, Users, Settings, Monitor, Pause, SkipBack, SkipForward, Video, Image } from "lucide-react";
+import { Play, Phone, Wifi, Users, Settings, Monitor, Pause, SkipBack, SkipForward, Video, Image, Volume2, VolumeX, Square } from "lucide-react";
 // import heroDashboard from "@/assets/hero-dashboard.jpg";
 import { useState, useEffect, useRef } from "react";
 
@@ -9,6 +9,11 @@ export const ProductShowcase = () => {
   const [selectedAlt, setSelectedAlt] = useState("");
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   // Dashboard screenshots for slideshow
@@ -37,6 +42,27 @@ export const ProductShowcase = () => {
     };
   }, [isPlaying, dashboardScreenshots.length]);
 
+  // Update time display
+  useEffect(() => {
+    const updateTimes = () => {
+      if (videoRef.current) {
+        setCurrentTime(videoRef.current.currentTime);
+        setDuration(videoRef.current.duration || 0);
+      }
+    };
+
+    const video = videoRef.current;
+    if (video) {
+      video.addEventListener('timeupdate', updateTimes);
+      video.addEventListener('loadedmetadata', updateTimes);
+      
+      return () => {
+        video.removeEventListener('timeupdate', updateTimes);
+        video.removeEventListener('loadedmetadata', updateTimes);
+      };
+    }
+  }, []);
+
   const openModal = (imageSrc: string, altText: string) => {
     setSelectedImage(imageSrc);
     setSelectedAlt(altText);
@@ -63,6 +89,44 @@ export const ProductShowcase = () => {
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
+  };
+
+  const handleVideoPlay = () => {
+    if (videoRef.current) {
+      if (isVideoPlaying) {
+        videoRef.current.pause();
+        setIsVideoPlaying(false);
+      } else {
+        videoRef.current.play();
+        setIsVideoPlaying(true);
+        setIsMuted(false); // Enable sound when user clicks play
+        if (videoRef.current) {
+          videoRef.current.muted = false;
+        }
+      }
+    }
+  };
+
+  const handleVideoStop = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+      setIsVideoPlaying(false);
+      setCurrentTime(0);
+    }
+  };
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
+
+  const formatTime = (time: number) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   };
 
   return (
@@ -107,69 +171,92 @@ export const ProductShowcase = () => {
                 Platform Demo
               </h3>
               
-              {/* Slideshow Carousel with Controls - Dashboard Images Only */}
+              {/* Video Player - Replacing the slideshow carousel */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-gradient-to-br from-primary/10 to-accent/10">
                 {/* Animated elements - hidden on mobile */}
                 <div className="absolute top-2 right-2 w-6 h-6 sm:w-8 sm:h-8 bg-white/20 rounded-full blur-sm animate-pulse hidden sm:block"></div>
                 <div className="absolute bottom-2 left-2 w-4 h-4 sm:w-6 sm:h-6 bg-white/20 rounded-full blur-sm animate-ping delay-500 hidden sm:block"></div>
                 
                 <div className="aspect-video flex items-center justify-center relative">
-                  {dashboardScreenshots.map((screenshot, index) => (
-                    <img 
-                      key={index}
-                      src={screenshot.src} 
-                      alt={screenshot.alt} 
-                      className={`w-full h-auto object-cover absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
-                    />
-                  ))}
+                  {/* Video player with poster image */}
+                  <video 
+                    ref={videoRef}
+                    src="/dashboard/VoicaAI-Demo_1920x1080.mp4" 
+                    poster="/dashboard/VoicaAI-Demo_1920x1080.jpg"
+                    controls={false}
+                    autoPlay={false}
+                    loop
+                    muted={isMuted}
+                    className="w-full h-auto object-cover"
+                    onEnded={() => setIsVideoPlaying(false)}
+                  />
                   
-                  {/* Overlay with Controls */}
-                  <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                    <div className="flex items-center gap-2 sm:gap-3">
-                      <button 
-                        onClick={goToPreviousSlide}
-                        className="bg-white/20 hover:bg-white/30 rounded-full p-1.5 sm:p-2 transition-colors"
-                        aria-label="Previous slide"
-                      >
-                        <SkipBack className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-                      </button>
-                      
-                      <button 
-                        onClick={togglePlayPause}
-                        className="bg-gradient-to-br from-primary/80 to-accent/80 backdrop-blur-sm rounded-full p-2 sm:p-3 cursor-pointer hover:from-primary/90 hover:to-accent/90 transition-all duration-300"
-                        aria-label={isPlaying ? "Pause" : "Play"}
-                      >
-                        {isPlaying ? (
-                          <Pause className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-                        ) : (
-                          <Play className="h-4 w-4 sm:h-5 sm:w-5 text-white ml-0.5" />
-                        )}
-                      </button>
-                      
-                      <button 
-                        onClick={goToNextSlide}
-                        className="bg-white/20 hover:bg-white/30 rounded-full p-1.5 sm:p-2 transition-colors"
-                        aria-label="Next slide"
-                      >
-                        <SkipForward className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-                      </button>
+                  {/* Play/Pause button overlay - only shown before playing */}
+                  {!isVideoPlaying && (
+                    <div 
+                      className="absolute inset-0 flex items-center justify-center cursor-pointer"
+                      onClick={handleVideoPlay}
+                    >
+                      <div className="bg-black/30 rounded-full p-4 sm:p-6 backdrop-blur-sm">
+                        <Play className="h-8 w-8 sm:h-12 sm:w-12 text-white ml-1" />
+                      </div>
                     </div>
+                  )}
+                  
+                  {/* Sound control button */}
+                  <button 
+                    onClick={toggleMute}
+                    className="absolute top-3 right-3 bg-black/50 rounded-full p-2 backdrop-blur-sm cursor-pointer"
+                  >
+                    {isMuted ? (
+                      <VolumeX className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+                    ) : (
+                      <Volume2 className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+                    )}
+                  </button>
+                </div>
+                
+                {/* Video Controls - shown at the bottom */}
+                <div className="bg-black/70 py-2 px-4 flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <button 
+                      onClick={handleVideoPlay}
+                      className="text-white hover:text-primary transition-colors"
+                    >
+                      {isVideoPlaying ? (
+                        <Pause className="h-5 w-5" />
+                      ) : (
+                        <Play className="h-5 w-5 ml-0.5" />
+                      )}
+                    </button>
+                    
+                    <button 
+                      onClick={handleVideoStop}
+                      className="text-white hover:text-primary transition-colors"
+                    >
+                      <Square className="h-5 w-5" />
+                    </button>
+                    
+                    <button 
+                      onClick={() => videoRef.current && (videoRef.current.currentTime -= 10)}
+                      className="text-white hover:text-primary transition-colors"
+                    >
+                      <SkipBack className="h-5 w-5" />
+                    </button>
+                    
+                    <button 
+                      onClick={() => videoRef.current && (videoRef.current.currentTime += 10)}
+                      className="text-white hover:text-primary transition-colors"
+                    >
+                      <SkipForward className="h-5 w-5" />
+                    </button>
                   </div>
                   
-                  <div className="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 bg-black/70 text-white px-1.5 py-1 sm:px-2 sm:py-1 rounded-full text-xs">
-                    Platform Demo
-                  </div>
-                  
-                  {/* Slide indicators */}
-                  <div className="absolute bottom-2 sm:bottom-3 right-2 sm:right-3 flex gap-1">
-                    {dashboardScreenshots.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => goToSlide(index)}
-                        className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-colors ${index === currentSlide ? 'bg-white' : 'bg-white/50'}`}
-                        aria-label={`Go to slide ${index + 1}`}
-                      />
-                    ))}
+                  {/* Time display */}
+                  <div className="text-white text-xs flex items-center gap-1">
+                    <span>{formatTime(currentTime)}</span>
+                    <span>/</span>
+                    <span>{formatTime(duration)}</span>
                   </div>
                 </div>
               </div>

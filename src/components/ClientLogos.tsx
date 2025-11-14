@@ -13,7 +13,7 @@ const clients = [
 
 export const ClientLogos = () => {
   return (
-    <section className="py-24 sm:py-28 bg-background relative overflow-hidden">
+    <section className="py-8 sm:py-12 bg-background relative overflow-hidden">
       {/* New background image in the middle with increased size */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
