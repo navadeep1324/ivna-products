@@ -13,15 +13,16 @@ const clients = [
 
 export const ClientLogos = () => {
   return (
-    <section className="py-8 sm:py-12 bg-background relative overflow-hidden">
+    <section className="py-16 sm:py-20 bg-background relative overflow-hidden">
       {/* New background image in the middle with increased size */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100 hidden lg:block"
         style={{ 
-          backgroundImage: `url('/dashboard/Group 25.png')`,
+          backgroundImage: `url('/dashboard/our-client-bg.png')`,
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          backgroundSize: '80%', // Further increased size
+          backgroundSize: '80%',
+          marginTop: '7rem',
           zIndex: 1
         }}
       ></div>
@@ -31,33 +32,30 @@ export const ClientLogos = () => {
       <div className="absolute bottom-0 right-1/3 w-24 h-24 sm:w-32 sm:h-32 bg-accent/5 rounded-full blur-2xl animate-ping delay-700 hidden sm:block"></div>
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="text-left mb-8 sm:mb-12">
-          <h2 className="font-bold mb-3" style={{ fontSize: "2.5rem", color: "#003E94" }}>
+        <div className="text-center mb-8 sm:mb-12 lg:text-left lg:ml-44">
+          <h2 className="font-bold mb-3 text-3xl md:text-4xl lg:text-5xl" style={{ color: "#003E94" }}>
             Our{" "}
             <span style={{ color: "#003E94" }}>
               Clients
             </span>
           </h2>
-          <p className="text-foreground text-sm sm:text-base">
-            From startups to enterprises — VoicaAI <br />
-            keeps teams connected and efficient. 
+          <p className="text-foreground text-sm sm:text-base lg:text-left lg:ml-44">
+            From startups to enterprises — VoicaAI keeps teams connected and efficient.
           </p>
         </div>
         
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" style={{ backgroundColor: "#F6F6F6", padding: "2rem" }}>
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 p-4 sm:p-6 md:p-8 bg-gray-50 rounded-lg lg:mx-44">
           {clients.map((client, index) => (
-            <Card 
+            <div 
               key={index}
-              className="p-4 sm:p-6 flex items-center justify-center border-border bg-card hover:border-primary/30 transition-all group relative overflow-hidden"
+              className="p-4 sm:p-6 flex items-center justify-center bg-card"
             >
-              {/* Animated element */}
-              <div className="absolute top-0 right-0 w-6 h-6 sm:w-8 sm:h-8 bg-primary/5 rounded-full blur-lg animate-pulse"></div>
               <img 
                 src={client.logo} 
                 alt={client.name} 
-                className={index >= 2 ? "h-16 sm:h-16 object-contain group-hover:brightness-125 transition-all relative z-10" : "h-12 sm:h-14 object-contain group-hover:brightness-125 transition-all relative z-10"}
+                className={index >= 2 ? "h-12 sm:h-16 object-contain" : "h-10 sm:h-14 object-contain"}
               />
-            </Card>
+            </div>
           ))}
         </div>
       </div>

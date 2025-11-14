@@ -53,9 +53,9 @@ export const PowerFeatures = () => {
   return (
     <section id="power-features" className="py-8 sm:py-12 relative overflow-hidden" style={{ backgroundColor: '#DBF9FF' }}>
       {/* Background image at bottom, outside the main section content */}
-      <div className="absolute left-0 bottom-0 w-1/2 hidden lg:block" style={{ transform: 'translateY(30%)' }}>
+      <div className="absolute left-0 bottom-0 w-1/2 hidden lg:block">
         <img 
-          src="/dashboard/Untitled design (10) 2 (1).png" 
+          src="/dashboard/new-wave.png" 
           alt="Decoration" 
           className="w-full h-auto object-contain opacity-80"
         />
@@ -67,8 +67,8 @@ export const PowerFeatures = () => {
       <div className="absolute top-1/3 right-1/4 w-24 h-24 sm:w-32 sm:h-32 bg-primary/10 rounded-full blur-2xl animate-ping delay-2000 hidden sm:block"></div>
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="text-left max-w-3xl mb-10 sm:mb-12">
-          <div className="flex items-start justify-between gap-4">
+        <div className="text-center max-w-3xl mb-10 sm:mb-12 mx-auto">
+          <div className="flex items-start justify-center gap-4">
             <div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3">
                 Transform Your Voice Data with {" "}
@@ -91,7 +91,7 @@ export const PowerFeatures = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <Card 
               key={index}

@@ -69,7 +69,7 @@ export const Header = () => {
             <Button 
               variant="default" 
               size="sm" 
-              className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground shadow-lg text-sm sm:text-base py-1.5 sm:py-2 px-3 sm:px-4"
+              className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground shadow-lg text-sm sm:text-base py-1.5 sm:py-2 px-3 sm:px-4 rounded-md"
               onClick={handleBookDemoClick}
             >
               Book Demo
@@ -78,7 +78,7 @@ export const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-1.5 sm:p-2 rounded-lg hover:bg-secondary transition-colors"
+            className="md:hidden p-1.5 sm:p-2 rounded-md hover:bg-secondary transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -92,7 +92,7 @@ export const Header = () => {
             <div className="flex flex-col gap-2 sm:gap-3">
               <a 
                 href="#power-features" 
-                className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-secondary flex items-center gap-2"
+                className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-md hover:bg-secondary flex items-center gap-2"
                 onClick={(e) => {
                   handleNavClick(e, "power-features");
                   setIsMenuOpen(false);
@@ -103,7 +103,7 @@ export const Header = () => {
               </a>
               <a 
                 href="#suite" 
-                className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-secondary flex items-center gap-2"
+                className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-md hover:bg-secondary flex items-center gap-2"
                 onClick={(e) => {
                   handleNavClick(e, "suite");
                   setIsMenuOpen(false);
@@ -114,7 +114,7 @@ export const Header = () => {
               </a>
               <a 
                 href="#contact" 
-                className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-secondary flex items-center gap-2"
+                className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-md hover:bg-secondary flex items-center gap-2"
                 onClick={(e) => {
                   handleNavClick(e, "contact");
                   setIsMenuOpen(false);
@@ -127,7 +127,7 @@ export const Header = () => {
                 <Button 
                   variant="default" 
                   size="sm" 
-                  className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground shadow-lg text-sm sm:text-base py-2"
+                  className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground shadow-lg text-sm sm:text-base py-2 rounded-md"
                   onClick={handleBookDemoClick}
                 >
                   Book Demo

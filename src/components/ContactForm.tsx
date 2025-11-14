@@ -273,24 +273,24 @@ export const ContactForm = () => {
 
   return (
     <section id="contact" className="py-8 sm:py-12 relative overflow-hidden"
-             style={{ backgroundColor: "#DBF9FF", backgroundImage: "url('/dashboard/Untitled design (10) 1.png')", backgroundSize: "50%", backgroundPosition: "left center", backgroundRepeat: "no-repeat" }}>
+             style={{ backgroundColor: "#DBF9FF", backgroundImage: "url('/dashboard/contact-bg.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
       {/* Background overlay for better image visibility */}
       <div className="absolute inset-0 opacity-20 -z-10" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-6 sm:mb-8">
-            <h2 className="font-bold mb-2 text-3xl sm:text-4xl lg:text-5xl xl:text-[56px]" style={{ color: "#003E94" }}>Ready to Transform Your Communication?</h2>
+            <h2 className="font-bold mb-2 text-2xl sm:text-4xl lg:text-5xl xl:text-[56px]" style={{ color: "#003E94" }}>Ready to Transform Your Communication?</h2>
             <p className="text-sm sm:text-base" style={{ color: "#003E94" }}>
               We're here to answer your questions and guide you toward smarter, seamless communication. Book your demo now!
             </p>
           </div>
           
-          <div className="rounded-xl shadow-md p-4 sm:p-6 border border-border relative overflow-hidden" style={{ backgroundColor: "#003e94bd" }}>
+          <div className="rounded-xl shadow-md p-6 sm:p-8 border border-border relative overflow-hidden" style={{ backgroundColor: "#003e94bd" }}>
             <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                 <div className="space-y-1.5">
-                  <Label htmlFor="name" className="text-xs sm:text-sm font-medium" style={{ color: "#ffffff" }}>Name</Label>
+                  <Label htmlFor="name" className="text-xs sm:text-sm font-medium sr-only" style={{ color: "#ffffff" }}>Name</Label>
                   <Input
                     id="name"
                     name="name"
@@ -303,7 +303,7 @@ export const ContactForm = () => {
                 </div>
                 
                 <div className="space-y-1.5">
-                  <Label htmlFor="email" className="text-xs sm:text-sm font-medium" style={{ color: "#ffffff" }}>Email</Label>
+                  <Label htmlFor="email" className="text-xs sm:text-sm font-medium sr-only" style={{ color: "#ffffff" }}>Email</Label>
                   <Input
                     id="email"
                     name="email"
@@ -317,7 +317,7 @@ export const ContactForm = () => {
                 </div>
                 
                 <div className="space-y-1.5">
-                  <Label htmlFor="phone" className="text-xs sm:text-sm font-medium" style={{ color: "#ffffff" }}>Phone Number</Label>
+                  <Label htmlFor="phone" className="text-xs sm:text-sm font-medium sr-only" style={{ color: "#ffffff" }}>Phone Number</Label>
                   <div className="relative">
                     <Phone className="absolute left-2.5 top-1/2 transform -translate-y-1/2 h-3.5 w-3.5 sm:h-4 sm:w-4 text-muted-foreground" style={{ color: "#ffffff" }} />
                     <Input
@@ -333,7 +333,7 @@ export const ContactForm = () => {
                 </div>
                 
                 <div className="space-y-1.5">
-                  <Label htmlFor="company" className="text-xs sm:text-sm font-medium" style={{ color: "#ffffff" }}>Company</Label>
+                  <Label htmlFor="company" className="text-xs sm:text-sm font-medium sr-only" style={{ color: "#ffffff" }}>Company</Label>
                   <Input
                     id="company"
                     name="company"
@@ -345,7 +345,7 @@ export const ContactForm = () => {
                 </div>
                 
                 <div className="space-y-1.5">
-                  <Label className="text-xs sm:text-sm font-medium" style={{ color: "#ffffff" }}>Schedule Demo Date</Label>
+                  <Label className="text-xs sm:text-sm font-medium sr-only" style={{ color: "#ffffff" }}>Schedule Demo Date</Label>
                   <Popover>
                     <PopoverTrigger asChild>
                       <div className="relative">
@@ -371,7 +371,7 @@ export const ContactForm = () => {
                 </div>
                 
                 <div className="space-y-1.5">
-                  <Label className="text-xs sm:text-sm font-medium" style={{ color: "#ffffff" }}>Schedule Demo Time</Label>
+                  <Label className="text-xs sm:text-sm font-medium sr-only" style={{ color: "#ffffff" }}>Schedule Demo Time</Label>
                   <Select 
                     value={formData.scheduleDemoTime} 
                     onValueChange={handleTimeChange}
@@ -391,7 +391,7 @@ export const ContactForm = () => {
                 </div>
                 
                 <div className="space-y-1.5 md:col-span-2">
-                  <Label htmlFor="message" className="text-xs sm:text-sm font-medium" style={{ color: "#ffffff" }}>Message</Label>
+                  <Label htmlFor="message" className="text-xs sm:text-sm font-medium sr-only" style={{ color: "#ffffff" }}>Message</Label>
                   <Textarea
                     id="message"
                     name="message"
@@ -411,7 +411,7 @@ export const ContactForm = () => {
                   size="sm" 
                   disabled={isSubmitting}
                   variant="outline"
-                  className="font-bold py-2 px-8 rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md text-xs sm:text-sm border-0"
+                  className="font-bold py-2 px-8 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md text-xs sm:text-sm border-0"
                   style={{ backgroundColor: "#00BDE5", color: "#06102E" }}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}

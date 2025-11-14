@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Play, Phone, Wifi, Users, Settings, Monitor, Pause, SkipBack, SkipForward, Video, Image, Volume2, VolumeX, Square } from "lucide-react";
+import { Play, Phone, Wifi, Users, Settings, Monitor, Pause, SkipBack, SkipForward, Volume2, VolumeX, Square } from "lucide-react";
 // import heroDashboard from "@/assets/hero-dashboard.jpg";
 import { useState, useEffect, useRef } from "react";
 
@@ -15,6 +15,7 @@ export const ProductShowcase = () => {
   const [duration, setDuration] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const progressBarRef = useRef<HTMLDivElement>(null);
 
   // Dashboard screenshots for slideshow
   const dashboardScreenshots = [
@@ -62,6 +63,14 @@ export const ProductShowcase = () => {
       };
     }
   }, []);
+
+  const handleBookDemoClick = () => {
+    // Scroll to contact form
+    const contactForm = document.getElementById("contact");
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const openModal = (imageSrc: string, altText: string) => {
     setSelectedImage(imageSrc);
@@ -123,6 +132,16 @@ export const ProductShowcase = () => {
     }
   };
 
+  const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (videoRef.current && duration) {
+      const rect = progressBarRef.current?.getBoundingClientRect();
+      if (rect) {
+        const pos = (e.clientX - rect.left) / rect.width;
+        videoRef.current.currentTime = pos * duration;
+      }
+    }
+  };
+
   const formatTime = (time: number) => {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
@@ -147,41 +166,52 @@ export const ProductShowcase = () => {
       <div className="absolute top-1/4 right-1/3 w-16 h-16 sm:w-24 sm:h-24 bg-primary/10 rounded-full blur-2xl animate-ping hidden sm:block"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-6">
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-3 lg:mb-4">
             <span style={{ color: '#012353', fontWeight: 'bold' }}>
               VoicaAI Overview
             </span>
           </h2>
-          <p className="text-sm sm:text-base text-foreground">
-            The next-generation platform for enterprises to simplify collaboration and strengthen client engagement. 
+          <p className="text-sm sm:text-base text-foreground whitespace-nowrap">
+            The next-generation platform for enterprises to simplify collaboration and strengthen client engagement.
           </p>
         </div>
 
         {/* Center the Platform Demo section - removed grid layout */}
         <div className="flex justify-center">
           <div className="w-full max-w-4xl">
+            {/* Book Demo Button */}
+            <div className="flex justify-center mb-4">
+              <button 
+                onClick={handleBookDemoClick}
+                className="px-6 py-3 rounded-md text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0"
+                style={{
+                  border: '2px solid transparent',
+                  background: 'linear-gradient(white, white), linear-gradient(90deg, rgb(155, 234, 166), rgb(54, 192, 237))',
+                  backgroundClip: 'padding-box, border-box',
+                  backgroundOrigin: 'padding-box, border-box'
+                }}
+              >
+                Book Demo
+              </button>
+            </div>
+            
             {/* Video Demo Section with Dashboard Images Only */}
             <div className="space-y-4 sm:space-y-5 relative">
               {/* Animated background elements - hidden on mobile */}
               <div className="absolute -top-4 -left-4 w-16 h-16 sm:w-24 sm:h-24 bg-accent/5 rounded-full blur-xl animate-ping delay-300 hidden sm:block"></div>
               
-              <h3 className="text-lg sm:text-xl font-bold text-foreground flex items-center gap-2 relative z-10">
-                <Video className="h-4 w-4 sm:h-5 sm:w-5" style={{ color: '#36c0ed' }} />
-                Platform Demo
-              </h3>
-              
               {/* Video Player - Replacing the slideshow carousel */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-gradient-to-br from-primary/10 to-accent/10">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary/10 to-accent/10" style={{ border: '20px solid white' }}>
                 {/* Animated elements - hidden on mobile */}
                 <div className="absolute top-2 right-2 w-6 h-6 sm:w-8 sm:h-8 bg-white/20 rounded-full blur-sm animate-pulse hidden sm:block"></div>
                 <div className="absolute bottom-2 left-2 w-4 h-4 sm:w-6 sm:h-6 bg-white/20 rounded-full blur-sm animate-ping delay-500 hidden sm:block"></div>
                 
-                <div className="aspect-video flex items-center justify-center relative">
+                <div className="aspect-video flex items-center justify-center relative" style={{ aspectRatio: '16/9' }}>
                   {/* Video player with poster image */}
                   <video 
                     ref={videoRef}
-                    src="/dashboard/VoicaAI-Demo_1920x1080.mp4" 
+                    src="/dashboard/VoicaAI-Demo_1920x1080 (1) 1.mp4" 
                     poster="/dashboard/VoicaAI-Demo_1920x1080.jpg"
                     controls={false}
                     autoPlay={false}
@@ -191,14 +221,21 @@ export const ProductShowcase = () => {
                     onEnded={() => setIsVideoPlaying(false)}
                   />
                   
-                  {/* Play/Pause button overlay - only shown before playing */}
+                  {/* Custom poster image - shown when video is not playing */}
                   {!isVideoPlaying && (
                     <div 
                       className="absolute inset-0 flex items-center justify-center cursor-pointer"
                       onClick={handleVideoPlay}
                     >
-                      <div className="bg-black/30 rounded-full p-4 sm:p-6 backdrop-blur-sm">
-                        <Play className="h-8 w-8 sm:h-12 sm:w-12 text-white ml-1" />
+                      <img 
+                        src="/dashboard/image (9).png" 
+                        alt="Platform Demo" 
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                        <div className="bg-black/30 rounded-full p-4 sm:p-6 backdrop-blur-sm">
+                          <Play className="h-8 w-8 sm:h-12 sm:w-12 text-white ml-1" />
+                        </div>
                       </div>
                     </div>
                   )}
@@ -250,6 +287,20 @@ export const ProductShowcase = () => {
                     >
                       <SkipForward className="h-5 w-5" />
                     </button>
+                  </div>
+                  
+                  {/* Progress bar */}
+                  <div className="flex items-center gap-2 flex-1 mx-4">
+                    <div 
+                      ref={progressBarRef}
+                      className="h-1 bg-gray-600 rounded-full overflow-hidden flex-1 cursor-pointer"
+                      onClick={handleProgressClick}
+                    >
+                      <div 
+                        className="h-full bg-white rounded-full" 
+                        style={{ width: `${duration ? (currentTime / duration) * 100 : 0}%` }}
+                      ></div>
+                    </div>
                   </div>
                   
                   {/* Time display */}
