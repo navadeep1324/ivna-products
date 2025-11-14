@@ -273,7 +273,7 @@ export const ContactForm = () => {
 
   return (
     <section id="contact" className="py-8 sm:py-12 relative overflow-hidden"
-             style={{ backgroundColor: "#DBF9FF", backgroundImage: "url('/dashboard/contact-bg.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+             style={{ backgroundColor: "#DBF9FF", backgroundImage: "url('/dashboard/contact-bg.png')", backgroundSize: "80%", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
       {/* Background overlay for better image visibility */}
       <div className="absolute inset-0 opacity-20 -z-10" />
       

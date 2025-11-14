@@ -3,50 +3,55 @@ const benefitPairs = [
   {
     icon: "/icons/fast icon.png",
     label: "Faster",
-    description: "Faster client responses through real-time call tracking and alerts.",
-    value: "40%",
+    description: "Faster client responses through real-time call tracking and alerts",
+    value: "75%",
     valueLabel: null,
   },
   {
     icon: "/icons/Overlay.png",
     label: "Better Team",
     description: "Performance with AI-driven insights and feedback",
-    value: "60%",
+    value: "90%",
     valueLabel: "UPTO",
   },
   {
     icon: "/icons/Overlay (1).png",
     label: "Saves Time",
-    description: "Weekly by eliminating manual note-taking and follow-ups.",
-    value: "6+",
+    description: "Weekly by eliminating manual note-taking and follow-ups",
+    value: "14+",
     valueLabel: "hours",
   },
   {
     icon: "/icons/Overlay (2).png",
     label: "Visibility",
-    description: "Visibility into every call, transcript, and action item.",
+    description: "Visibility into every call, transcript, and action item",
     value: "100%",
     valueLabel: null,
   },
   {
     icon: "/icons/lead conversion .png",
     label: "Lead Conversion",
-    description: "Improves prospect lead conversion rates by 25% through prompt follow-ups.",
-    value: "25%",
+    description: "Improves prospect lead conversion rates by 75% through prompt follow-ups",
+    value: "75%",
     valueLabel: null,
   },
   {
     icon: "/icons/workflow.png",
     label: "Workflow Efficiency",
-    description: "Boosts workflow efficiency by up to 50% through platform integration.",
-    value: "50%",
+    description: "Boosts workflow efficiency by up to 90% through platform integration",
+    value: "90%",
     valueLabel: "UPTO",
   },
 ];
 
 export const GameChangerSection = () => {
-  // Function to format headings with line breaks for two-word labels
+  // Function to format headings with line breaks for two-word labels, except for specific cases
   const formatHeading = (label: string) => {
+    // Keep "Better Team" and "Saves Time" on one line
+    if (label === "Better Team" || label === "Saves Time") {
+      return label;
+    }
+    
     const words = label.split(' ');
     if (words.length === 2) {
       return (
@@ -73,7 +78,7 @@ export const GameChangerSection = () => {
         {/* Headline */}
         <div className="text-center max-w-4xl mx-auto mb-4">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-            <span className="text-[#003E94]">How Voica Redefines the Way</span>{" "}
+            <span className="text-[#003E94]">How VoicaAI Redefines the Way</span>{" "}
             <span className="text-[#003E94]">Businesses Communicate</span>
           </h2>
         </div>
@@ -81,7 +86,7 @@ export const GameChangerSection = () => {
         {/* Sub-headline */}
         <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-            Experience the measurable edge that AI-powered communication brings.
+            Experience the measurable edge that AI-powered communication brings
           </p>
         </div>
         
@@ -110,13 +115,22 @@ export const GameChangerSection = () => {
                      marginRight: '2.75rem'
                    }}>
                 <div className="p-4 text-center min-h-[80px] flex flex-col justify-center items-center number-card">
-                  <div className="text-xl font-bold text-gray-900" style={{ textAlign: 'center' }}>{pair.value}</div>
-                  {pair.valueLabel && (
-                    <div className="text-xs font-medium text-gray-600 uppercase mt-1">{pair.valueLabel}</div>
+                  {pair.valueLabel && pair.valueLabel === "UPTO" ? (
+                    <>
+                      <div className="text-xs font-medium text-gray-600 uppercase mb-1">{pair.valueLabel}</div>
+                      <div className="text-xl font-bold text-gray-900" style={{ textAlign: 'center' }}>{pair.value}</div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="text-xl font-bold text-gray-900" style={{ textAlign: 'center' }}>{pair.value}</div>
+                      {pair.valueLabel && (
+                        <div className="text-xs font-medium text-gray-600 uppercase mt-1">{pair.valueLabel}</div>
+                      )}
+                    </>
                   )}
                 </div>
               </div>
-              
+
               {/* Icon and heading - positioned in top left corner with reduced margin */}
               <div className="absolute top-0 left-0 mt-3 ml-3 z-10">
                 <div className="flex items-start p-3">

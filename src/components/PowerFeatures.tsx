@@ -5,47 +5,47 @@ const features = [
   {
     icon: Phone,
     title: "AI-Powered Call Analysis",
-    description: "Gives real-time feedback on conversation quality.",
+    description: "Gives real-time feedback on conversation quality",
   },
   {
     icon: Wifi,
     title: "Conversation Summaries & Insight",
-    description: " Generates instant call summaries and action points.",
+    description: " Generates instant call summaries and action points",
   },
   {
     icon: Shield,
     title: "Performance Dashboard",
-    description: "Offers detailed analytics on call duration, response time, and customer satisfaction trends.",
+    description: "Offers detailed analytics on call duration, response time, and customer satisfaction trends",
   },
   {
     icon: Zap,
     title: "Intelligent Transcription",
-    description: "Transcribes every call with high accuracy, making it easy to review client interactions.",
+    description: "Transcribes every call with high accuracy, making it easy to review client interactions",
   },
   {
     icon: Users,
     title: "Security & Compliance",
-    description: "Protects data with enterprise-grade encryption and access control.",
+    description: "Protects data with enterprise-grade encryption and access control",
   },
   {
     icon: Globe,
     title: "Continuous Learning Engine",
-    description: "Gets smarter with every call for sharper insights and evaluations.",
+    description: "Gets smarter with every call for sharper insights and evaluations",
   },
   {
     icon: Headphones,
-    title: "Enquiry Call Tracking",
-    description: "Monitors and categorizes enquiry calls to prevent missed leads and boost conversions.",
+    title: "Inquiry Call Tracking",
+    description: "Monitors and categorizes inquiry calls to prevent missed leads and boost conversions",
   },
   {
     icon: BarChart3,
     title: "Communication Gap Detection",
-    description: "Identifies unclear or ineffective communication and flags them for improvement.",
+    description: "Identifies unclear or ineffective communication and flags them for improvement",
   },
   {
     icon: Clock,
     title: "Integration & Scalability",
-    description: "Seamlessly integrates with communication tools, and marketing platforms.",
+    description: "Seamlessly integrates with communication tools, and marketing platforms",
   },
 ];
 
@@ -71,13 +71,13 @@ export const PowerFeatures = () => {
           <div className="flex items-start justify-center gap-4">
             <div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3">
-                Transform Your Voice Data with {" "}
+                Transform Your Voice Data With {" "}
                 <span className="text-custom-blue">
-                  Voica’s Smart Capabilities
+                  VoicaAI's Smart Capabilities
                 </span>
               </h2>
               <p className="text-base sm:text-lg text-foreground">
-                Turn conversations into insights with AI-driven tools that boost performance.
+                Turn conversations into insights with AI-driven tools that boost performance
               </p>
             </div>
             <div className="flex-shrink-0 self-start">

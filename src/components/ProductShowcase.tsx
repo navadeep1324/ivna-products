@@ -106,11 +106,48 @@ export const ProductShowcase = () => {
         videoRef.current.pause();
         setIsVideoPlaying(false);
       } else {
-        videoRef.current.play();
-        setIsVideoPlaying(true);
-        setIsMuted(false); // Enable sound when user clicks play
-        if (videoRef.current) {
-          videoRef.current.muted = false;
+        // Ensure the video is ready to play
+        if (videoRef.current.readyState >= 1) {
+          videoRef.current.play().then(() => {
+            setIsVideoPlaying(true);
+            setIsMuted(false); // Enable sound when user clicks play
+            if (videoRef.current) {
+              videoRef.current.muted = false;
+            }
+          }).catch(error => {
+            console.error("Error playing video:", error);
+            // If play fails, try to reload and play again
+            videoRef.current.load();
+            setTimeout(() => {
+              if (videoRef.current) {
+                videoRef.current.play().then(() => {
+                  setIsVideoPlaying(true);
+                  setIsMuted(false);
+                  if (videoRef.current) {
+                    videoRef.current.muted = false;
+                  }
+                }).catch(error => {
+                  console.error("Error playing video after reload:", error);
+                });
+              }
+            }, 100);
+          });
+        } else {
+          // If video is not ready, load it first
+          videoRef.current.load();
+          setTimeout(() => {
+            if (videoRef.current) {
+              videoRef.current.play().then(() => {
+                setIsVideoPlaying(true);
+                setIsMuted(false);
+                if (videoRef.current) {
+                  videoRef.current.muted = false;
+                }
+              }).catch(error => {
+                console.error("Error playing video after load:", error);
+              });
+            }
+          }, 100);
         }
       }
     }
@@ -122,6 +159,10 @@ export const ProductShowcase = () => {
       videoRef.current.currentTime = 0;
       setIsVideoPlaying(false);
       setCurrentTime(0);
+      // Reset the video to ensure it can be played again
+      if (videoRef.current) {
+        videoRef.current.load();
+      }
     }
   };
 
@@ -173,7 +214,7 @@ export const ProductShowcase = () => {
             </span>
           </h2>
           <p className="text-sm sm:text-base text-foreground whitespace-nowrap">
-            The next-generation platform for enterprises to simplify collaboration and strengthen client engagement.
+            The next-generation platform for enterprises to simplify collaboration and strengthen client engagement
           </p>
         </div>
 

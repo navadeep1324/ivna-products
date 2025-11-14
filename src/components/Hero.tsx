@@ -34,13 +34,13 @@ export const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6" style={{ lineHeight: '1.3' }}>
+          <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold text-white mb-6" style={{ lineHeight: '1.3' }}>
             AI-Powered Voice Call Analyzer, for Smarter Business Communication
           </h1>
             
           {/* Description text */}
           <p className="text-base sm:text-lg lg:text-xl text-white/95 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Gain real-time insights, identify communication gaps, and empower your team to perform better — all with Voica's intelligent Voice Call Analyzer.
+            Gain real-time insights, identify communication gaps, and empower your team to perform better — all with VoicaAI
           </p>
           
           {/* CTA Button - centered */}
