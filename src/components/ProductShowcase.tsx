@@ -252,7 +252,7 @@ export const ProductShowcase = () => {
                   {/* Video player with poster image */}
                   <video 
                     ref={videoRef}
-                    src="/dashboard/VoicaAI-Demo_1920x1080 (1) 1.mp4" 
+                    src="/dashboard/VoicaAI_II-Demo_1920x1080-updated.mp4" 
                     poster="/dashboard/VoicaAI-Demo_1920x1080.jpg"
                     controls={false}
                     autoPlay={false}
