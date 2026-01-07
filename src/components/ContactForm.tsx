@@ -176,7 +176,7 @@ export const ContactForm = () => {
         company: formData.company,
         message: formData.message,
         schedule_demo: scheduleDemo,
-        to_email: "sodham@kleza.io"
+        to_email: "manasa@kleza.io"
       };
       
       const response = await emailjs.send(serviceId, templateId, templateParams);
