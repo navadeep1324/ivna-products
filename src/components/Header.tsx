@@ -33,7 +33,7 @@ export const Header = () => {
           <div className="flex items-center">
             <a href="/" className="flex items-center">
               <img 
-                src="/logo/Voica AI-01.svg" 
+                src="/logo/Ivna.png" 
                 alt="VoicaAI Logo" 
                 className="h-8 sm:h-18 w-auto"
               />

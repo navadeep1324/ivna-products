@@ -38,9 +38,9 @@ export const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-3 sm:mb-4">
               <img 
-                src="/logo/Voica AI-01.svg" 
+                src="/logo/Ivna.png" 
                 alt="VoicaAI Logo" 
-                className="h-8 sm:h-18 w-auto"
+                className="h-24 sm:h-26 w-auto"
               />
             </div>
             <p className="text-muted-foreground text-sm sm:text-base mb-3 sm:mb-4 max-w-xs">
@@ -101,7 +101,7 @@ export const Footer = () => {
         
         <div className="pt-6 sm:pt-8 border-t border-border/30 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
           <div className="flex items-center gap-2">
-            <span className="text-muted-foreground text-sm sm:text-base">© 2025 VoicaAI. All rights reserved.</span>
+            <span className="text-muted-foreground text-sm sm:text-base">© 2026 Ivna. All rights reserved.</span>
           </div>
           
           {/* Hidden the copyright links on the right side as per user request */}

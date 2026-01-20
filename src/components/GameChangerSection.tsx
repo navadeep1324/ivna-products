@@ -1,157 +1,79 @@
-// Benefit-Statistic pairs data - matching reference image order
-const benefitPairs = [
-  {
-    icon: "/icons/fast icon.png",
-    label: "Faster",
-    description: "Faster client responses through real-time call tracking and alerts",
-    value: "75%",
-    valueLabel: null,
-  },
-  {
-    icon: "/icons/Overlay.png",
-    label: "Better Team",
-    description: "Performance with AI-driven insights and feedback",
-    value: "90%",
-    valueLabel: "UPTO",
-  },
-  {
-    icon: "/icons/Overlay (1).png",
-    label: "Saves Time",
-    description: "Weekly by eliminating manual note-taking and follow-ups",
-    value: "14+",
-    valueLabel: "hours",
-  },
-  {
-    icon: "/icons/Overlay (2).png",
-    label: "Visibility",
-    description: "Visibility into every call, transcript, and action item",
-    value: "100%",
-    valueLabel: null,
-  },
-  {
-    icon: "/icons/lead conversion .png",
-    label: "Lead Conversion",
-    description: "Improves prospect lead conversion rates by 75% through prompt follow-ups",
-    value: "75%",
-    valueLabel: null,
-  },
-  {
-    icon: "/icons/workflow.png",
-    label: "Workflow Efficiency",
-    description: "Boosts workflow efficiency by up to 90% through platform integration",
-    value: "90%",
-    valueLabel: "UPTO",
-  },
-];
-
 export const GameChangerSection = () => {
-  // Function to format headings with line breaks for two-word labels, except for specific cases
-  const formatHeading = (label: string) => {
-    // Keep "Better Team" and "Saves Time" on one line
-    if (label === "Better Team" || label === "Saves Time") {
-      return label;
-    }
-    
-    const words = label.split(' ');
-    if (words.length === 2) {
-      return (
-        <>
-          {words[0]} <br /> {words[1]}
-        </>
-      );
-    }
-    return label;
-  };
 
   return (
-    <section className="py-8 sm:py-12 bg-white relative overflow-hidden">
-      {/* Background image positioned vertically on the left side */}
-      <div className="absolute left-0 top-0 bottom-0 w-1/3 z-0" style={{ opacity: 0.9 }}>
-        <img 
-          src="/dashboard/banner-below.png" 
-          alt="Background decoration" 
-          className="w-full h-full object-cover"
-        />
-      </div>
-      
+    <section className="py-8 sm:py-12 bg-[#EEFCFF] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Headline */}
-        <div className="text-center max-w-4xl mx-auto mb-4">
+        <div className="text-center max-w-6xl mx-auto mb-4">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-            <span className="text-[#003E94]">How VoicaAI Redefines the Way</span>{" "}
-            <span className="text-[#003E94]">Businesses Communicate</span>
+            <span className="text-[#003E94]">Everything Your Business Needs,</span> <span className="text-[#31E6C8]">In One Place</span>
           </h2>
         </div>
         
         {/* Sub-headline */}
-        <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
             Experience the measurable edge that AI-powered communication brings
           </p>
         </div>
-        
-        {/* Benefit-Statistic Pairs Grid */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {benefitPairs.map((pair, index) => (
-            <div key={index} className="relative bg-white shadow-sm hover:shadow-md transition-shadow mx-auto rounded-br-[0.75rem]" style={{ maxWidth: '320px', marginTop: '25px' }}>
-              {/* Background image for the entire card */}
-              <div className="absolute inset-0 bg-cover bg-center rounded-br-[0.75rem] z-0" style={{ backgroundImage: "url('/dashboard/Rectangle 9.png')" }}></div>
-              
-              {/* L-shaped background element - full width bottom, 50% width top */}
-              {/* Horizontal part of L - full width at the bottom */}
-              <div className="absolute bottom-0 left-0 w-full h-1/2 bg-[#E4F0FE] rounded-b-xl rounded-br-[0.75rem] z-0 content-card"></div>
-              {/* Vertical part of L - 65% width at the top */}
-              <div className="absolute top-0 left-0 h-1/2 rounded-tr-xl rounded-tl-xl z-0 heading-card" style={{ width: '65%' }}></div>
-              
-              {/* Number box - positioned closer to heading with reduced margin and added padding/margin */}
-              <div className="absolute mt-2 bg-white rounded-lg z-10 shadow-sm number-main-card"
-                   style={{ 
-                     border: '2px solid transparent',
-                     backgroundImage: 'linear-gradient(white, white), linear-gradient(90deg, #9BEAA6, #36C0ED)',
-                     backgroundClip: 'padding-box, border-box',
-                     backgroundOrigin: 'border-box',
-                     padding: '1px 25px',
-                     marginTop: '1.75rem',
-                     marginRight: '2.75rem'
-                   }}>
-                <div className="p-4 text-center min-h-[80px] flex flex-col justify-center items-center number-card">
-                  {pair.valueLabel && pair.valueLabel === "UPTO" ? (
-                    <>
-                      <div className="text-xs font-medium text-gray-600 uppercase mb-1">{pair.valueLabel}</div>
-                      <div className="text-xl font-bold text-gray-900" style={{ textAlign: 'center' }}>{pair.value}</div>
-                    </>
-                  ) : (
-                    <>
-                      <div className="text-xl font-bold text-gray-900" style={{ textAlign: 'center' }}>{pair.value}</div>
-                      {pair.valueLabel && (
-                        <div className="text-xs font-medium text-gray-600 uppercase mt-1">{pair.valueLabel}</div>
-                      )}
-                    </>
-                  )}
-                </div>
-              </div>
 
-              {/* Icon and heading - positioned in top left corner with reduced margin */}
-              <div className="absolute top-0 left-0 mt-3 ml-3 z-10">
-                <div className="flex items-start p-3">
-                  <img
-                    src={pair.icon}
-                    alt={`${pair.label} icon`}
-                    className="w-8 h-8"
+        {/* New Card Section */}
+        <div className="py-12 px-4 sm:px-6 lg:px-8 rounded-2xl mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {[
+              {
+                image: "/sections/medical-records.png",
+                title: "Secure Electronic Records",
+                description: "Streamline clinical documentation and maintain HIPAA compliance with our intuitive digital health record system."
+              },
+              {
+                image: "/sections/care-coordination.png",
+                title: "Seamless Care Coordination",
+                description: "Build stronger relationships between caregivers and clients through organized, efficient service delivery."
+              },
+              {
+                image: "/sections/communication.jpg",
+                title: "AI-Powered CRM",
+                description: "Never miss a lead with intelligent call tracking and automated follow-ups designed for home care agencies."
+              },
+              {
+                image: "/sections/home-care.jpg",
+                title: "Patient-Centered Care",
+                description: "Empower your staff to focus on what matters most—providing high-quality, compassionate care in the home."
+              }
+            ].map((feature, index) => (
+              <div key={index} className="rounded-xl overflow-hidden shadow-sm flex flex-col transition-all duration-300 hover:shadow-md card-border-gradient">
+                <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
+                  <img 
+                    src={feature.image} 
+                    alt={feature.title}
+                    className="w-full h-full object-cover"
                   />
-                  <h3 className="text-lg font-semibold text-gray-900 ml-2">
-                    {formatHeading(pair.label)}
+                </div>
+                <div className="p-6 flex-grow flex flex-col text-center">
+                  <h3 className="text-[#003E94] text-lg font-bold mb-4">
+                    {feature.title}
                   </h3>
+                  <p className="text-gray-600 text-sm mb-8 leading-relaxed">
+                    {feature.description}
+                  </p>
+                  <div className="mt-auto">
+                    <button 
+                      className="w-full py-3 px-6 rounded-lg text-[#003E94] font-semibold transition-all hover:opacity-90 active:scale-95"
+                      style={{
+                        background: 'linear-gradient(90deg, #31E6C8 0%, #00BDE5 100%)'
+                      }}
+                    >
+                      Learn more
+                    </button>
+                  </div>
                 </div>
               </div>
-              
-              {/* Content area - adjusted padding to avoid overlap with numbers and icon/heading */}
-              <div className="p-6 pt-20 relative z-10 heading-content">
-                <p className="mt-1 text-sm text-gray-600 desc-content">{pair.description}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+        
+        <div className="mb-16" />
       </div>
     </section>
   );

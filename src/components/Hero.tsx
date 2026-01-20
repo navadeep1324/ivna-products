@@ -12,41 +12,36 @@ export const Hero = () => {
 
   return (
     <section className="relative min-h-[300px] lg:min-h-[300px] flex items-center justify-center overflow-hidden pt-20">
-      {/* Background gradient */}
+      {/* Background image */}
       <div 
-        className="absolute inset-0"
+        className="absolute inset-0 z-0"
         style={{
-          background: 'linear-gradient(90deg, #003E94 0%, #007088 100%)'
+          backgroundImage: "url('/dashboard/hero-bg.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
         }}
       />
       
-      {/* Background image in the left corner */}
-      <div className="absolute left-0 top-0 w-1/2 h-full z-0 hidden lg:block">
-        <img 
-          src="/dashboard/wave.webp" 
-          alt="Banner background decoration" 
-          className="w-full h-full object-cover"
-          style={{ opacity: 1.0, transform: 'scale(1.5) translateX(20px)' }}
-        />
-      </div>
+      {/* Subtle overlay to ensure text readability if needed */}
+      <div className="absolute inset-0 bg-black/10 z-0" />
       
       {/* Main content container */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           {/* Main headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold text-white mb-6" style={{ lineHeight: '1.3' }}>
-            AI-Powered Voice Call Analyzer, for Smarter Business Communication
-          </h1>
+          <h1 className="h1-heading font-bold text-white mb-6" style={{ lineHeight: '1.3' }}>
+Home care software for private duty and independent agencies          </h1>
             
           {/* Description text */}
           <p className="text-base sm:text-lg lg:text-xl text-white/95 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Gain real-time insights, identify communication gaps, and empower your team to perform better — all with VoicaAI
+          Designed by home care industry experts and private duty home care agencies, IVNA is transforming the home care software industry.
           </p>
           
           {/* CTA Button - centered */}
           <div className="flex justify-center">
             <button 
-              className="px-6 py-3 text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0 cursor-pointer rounded-md"
+              className="px-6 py-2 text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0 cursor-pointer rounded-md"
               onClick={handleBookDemoClick}
               style={{ 
                 backgroundColor: '#fff',
@@ -57,7 +52,7 @@ export const Hero = () => {
                 backgroundClip: 'padding-box, border-box'
               }}
             >
-              Book Demo
+              Schedule A Demo
             </button>
           </div>
         </div>

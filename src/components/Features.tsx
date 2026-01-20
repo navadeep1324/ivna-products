@@ -1,154 +1,173 @@
-import { User, Headphones, BarChart3, Clock, CheckCircle, TrendingUp, Phone } from "lucide-react";
+import { User, BarChart3, CheckCircle, Zap, Clock, Headphones, Phone, TrendingUp } from "lucide-react";
 
 export const Features = () => {
-  return (
-    <section id="features" className="py-8 sm:py-12 bg-background relative overflow-hidden">
-      {/* Background image positioned behind the container */}
-      <div className="absolute inset-0 z-0">
-        {/* Removed background wave image */}
-      </div>
-      
-      {/* Animated background elements - hidden on mobile */}
-      <div className="absolute top-10 left-10 w-48 h-48 sm:w-64 sm:h-64 bg-primary/5 rounded-full blur-3xl animate-pulse hidden sm:block"></div>
-      <div className="absolute bottom-10 right-10 w-32 h-32 sm:w-48 sm:h-48 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000 hidden sm:block"></div>
-      <div className="absolute top-1/3 right-1/4 w-24 h-24 sm:w-32 sm:h-32 bg-primary/10 rounded-full blur-2xl animate-ping delay-2000 hidden sm:block"></div>
-      
-      {/* Left side background image from GameChangerSection - moved to section level - hidden on mobile */}
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1/4 hidden lg:block z-0">
-        {/* <img 
-          src="/dashboard/Untitled design (10) 1.png" 
-          alt="Decoration" 
-          className="w-full h-auto object-contain opacity-80"
-        /> */}
-      </div>
-      
-      {/* Right side corner image */}
-      <div className="absolute right-0 bottom-0 w-1/6 hidden lg:block z-0">
-        <img 
-          src="/dashboard/Group 21.png" 
-          alt="Decoration" 
-          className="w-full h-auto object-contain opacity-80"
-        />
-      </div>
-      
-      {/* Middle left side image */}
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1/12 hidden lg:block z-0">
-        <img 
-          src="/dashboard/Group 22.png" 
-          alt="Decoration" 
-          className="w-full h-auto object-contain opacity-80"
-        />
-      </div>
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* New Section 1: Text on left, Image on right - Removed padding and margin */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 items-center rounded-2xl relative overflow-hidden py-8 sm:py-10">
-          {/* Animated background elements - hidden on mobile */}
-          <div className="absolute -top-4 -left-4 w-24 h-24 sm:w-32 sm:h-32 bg-primary/5 rounded-full blur-2xl animate-pulse hidden sm:block"></div>
-          <div className="absolute -bottom-4 -right-4 w-16 h-16 sm:w-24 sm:h-24 bg-accent/5 rounded-full blur-xl animate-ping delay-500 hidden sm:block"></div>
-          
-          <div className="order-2 lg:order-1 relative z-10 lg:ml-20">
-            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3 lg:mb-4 text-foreground">
-              Know <span className="text-custom-blue">What's Happening</span>
-              <br />
-              in Every Conversation 
-            </h3>
-            <p className="text-foreground mb-2 sm:mb-3 lg:mb-4 text-sm sm:text-base" >
-              Stay in control with a unified view of all your business communications - <br />
-              track, analyze, and improve every conversation effortlessly
-            </p>
-            <ul className="space-y-2 sm:space-y-3 mb-3 sm:mb-4 lg:mb-6">
-              <li className="flex items-start gap-2 sm:gap-3">
-                <User className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5" style={{ color: '#36c0ed' }} />
-                <span className="text-foreground text-base">Caller details and communication history </span>
-              </li>
-              <li className="flex items-start gap-2 sm:gap-3">
-                <BarChart3 className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5" style={{ color: '#36c0ed' }} />
-                <span className="text-foreground text-base">Call quality indicators and performance scores </span>
-              </li>
-              <li className="flex items-start gap-2 sm:gap-3">
-                <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5" style={{ color: '#36c0ed' }} />
-                <span className="text-foreground text-base">Follow-up status and assigned team member </span>
-              </li>
-              <li className="flex items-start gap-2 sm:gap-3">
-                <Phone className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5" style={{ color: '#36c0ed' }} />
-                <span className="text-foreground text-base">Real-time AI insights and feedback </span>
-              </li>
-              <li className="flex items-start gap-2 sm:gap-3">
-                <Clock className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5" style={{ color: '#36c0ed' }} />
-                <span className="text-foreground text-base">Quick filters to sort by date, client, or call type   </span>
-              </li>
-              <li className="flex items-start gap-2 sm:gap-3">
-                <Headphones className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5" style={{ color: '#36c0ed' }} />
-                <span className="text-foreground text-base">One-click access to transcripts and summaries </span>
-              </li>
-            </ul>
-          </div>
-          <div className="order-1 lg:order-2 relative z-10">
-            <img 
-              src="/dashboard/Group-19 .png" 
-              alt="VoicaAI Analytics Dashboard" 
-              className="rounded-xl w-full"
-            />
-          </div>
-        </div>
+  const schedulingFeatures = [
+    {
+      icon: User,
+      text: "Caller details and communication history.",
+    },
+    {
+      icon: BarChart3,
+      text: "Call quality indicators and performance scores.",
+    },
+    {
+      icon: CheckCircle,
+      text: "Follow-up status and assigned team member.",
+    },
+    {
+      icon: Zap,
+      text: "Real-time AI insights and feedback.",
+    },
+    {
+      icon: Clock,
+      text: "Quick filters to sort by date, client, or call type.",
+    },
+    {
+      icon: Headphones,
+      text: "One-click access to transcripts and summaries.",
+    },
+  ];
 
-        {/* New Section 2: Image on left, Content on right */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 items-center rounded-2xl relative overflow-hidden py-8 sm:py-10 mt-6 sm:mt-8">
-          {/* Animated background elements - hidden on mobile */}
-          <div className="absolute -top-4 -right-4 w-16 h-16 sm:w-24 sm:h-24 bg-accent/5 rounded-full blur-2xl animate-ping delay-700 hidden sm:block"></div>
-          <div className="absolute -bottom-4 -left-4 w-24 h-24 sm:w-32 sm:h-32 bg-primary/5 rounded-full blur-xl animate-pulse delay-1000 hidden sm:block"></div>
-          
-          <div className="relative z-10 order-1">
-            <img 
-              src="/dashboard/Group 20.png" 
-              alt="Track Your Communication With our AI Dashboard" 
-              className="rounded-xl w-full"
-            />
-          </div>
-          <div className="relative z-10 order-2 lg:ml-20">
-            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3 lg:mb-4 text-foreground">
-              Track <span className="text-custom-blue">Your Communication</span> <br />
-              With our AI Dashboard
-            </h3>
-            <p className="text-foreground mb-2 sm:mb-3 lg:mb-4 text-sm sm:text-base">
-              Gain a 360° view of your calls, enquiries, and team performance —<br />
-              all powered by real-time AI analytics that help you make faster, smarter business decisions
+  const callTrackingFeatures = [
+    {
+      icon: BarChart3,
+      text: "Call Summary Snapshot.",
+    },
+    {
+      icon: Phone,
+      text: "Call Type Analysis.",
+    },
+    {
+      icon: Headphones,
+      text: "Recordings & Transcriptions.",
+    },
+    {
+      icon: User,
+      text: "Lead Enquiry Tracking.",
+    },
+    {
+      icon: Zap,
+      text: "Quality Call Insights.",
+    },
+    {
+      icon: BarChart3,
+      text: "Team Performance Dashboard.",
+    },
+    {
+      icon: TrendingUp,
+      text: "Strategic Analytics & Trends.",
+    },
+  ];
+
+  return (
+    <>
+      <section id="features" className="py-20 bg-white overflow-hidden">
+        <div className="container mx-auto px-4 lg:px-16">
+          {/* Main Header */}
+          <div className="text-center max-w-4xl mx-auto mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#003E94]">
+              Features that help you scale
+            </h2>
+            <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
+              Stay in control with a unified view of all your business communications —
+              track, analyze, and improve every conversation effortlessly.
             </p>
-            <ul className="space-y-2 sm:space-y-3 mb-3 sm:mb-4 lg:mb-6">
-              <li className="flex items-start gap-2 sm:gap-3">
-                <BarChart3 className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5" style={{ color: '#36c0ed' }} />
-                <span className="text-foreground text-base">Call Summary Snapshot </span>
-              </li>
-              <li className="flex items-start gap-2 sm:gap-3">
-                <Phone className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5" style={{ color: '#36c0ed' }} />
-                <span className="text-foreground text-base">Call Type Analysis </span>
-              </li>
-              <li className="flex items-start gap-2 sm:gap-3">
-                <Headphones className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5" style={{ color: '#36c0ed' }} />
-                <span className="text-foreground text-base">Recordings & Transcriptions </span>
-              </li>
-              <li className="flex items-start gap-2 sm:gap-3">
-                <User className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5" style={{ color: '#36c0ed' }} />
-                <span className="text-foreground text-base">Lead Enquiry Tracking </span>
-              </li>
-              <li className="flex items-start gap-2 sm:gap-3">
-                <Phone className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5" style={{ color: '#36c0ed' }} />
-                <span className="text-foreground text-base">Quality Call Insights </span>
-              </li>
-              <li className="flex items-start gap-2 sm:gap-3">
-                <BarChart3 className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5" style={{ color: '#36c0ed' }} />
-                <span className="text-foreground text-base">Team Performance Dashboard </span>
-              </li>
-              <li className="flex items-start gap-2 sm:gap-3">
-                <TrendingUp className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5" style={{ color: '#36c0ed' }} />
-                <span className="text-foreground text-base">Strategic Analytics & Trends </span>
-              </li>
-            </ul>
-          
+          </div>
+
+          {/* Scheduling Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
+            {/* Left Column: Content */}
+            <div className="flex flex-col">
+              <h3 className="h3-heading font-bold mb-5 text-[#003E94]">
+                Scheduling
+              </h3>
+              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+                Stay in control with a unified view of all your business communications —
+                track, analyze, and improve every conversation effortlessly.
+              </p>
+
+              <ul className="space-y-5 mb-10">
+                {schedulingFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-center gap-4">
+                    <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
+                      <feature.icon className="w-5 h-5 text-[#36C0ED]" />
+                    </div>
+                    <span className="text-gray-700 text-lg">{feature.text}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div>
+                <button 
+                  className="px-8 py-3 rounded-lg text-white font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  style={{
+                    background: 'linear-gradient(90deg, #31E6C8 0%, #00BDE5 100%)'
+                  }}
+                >
+                  Book Demo
+                </button>
+              </div>
+            </div>
+
+            {/* Right Column: Image Placeholder */}
+            <div className="relative min-h-[400px]">
+              <img 
+                src="/dashboard/schedule.jpg" 
+                alt="Scheduling Dashboard" 
+                className="rounded-2xl w-full h-auto"
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="py-24 bg-[#F2F2F7] overflow-hidden">
+        <div className="container mx-auto px-4 lg:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
+            {/* Left Column: Image Area */}
+            <div className="order-2 lg:order-1 relative">
+              <img 
+                src="/dashboard/Call Tracking.png" 
+                alt="Call Tracking Dashboard" 
+                className="rounded-2xl w-full h-auto"
+              />
+            </div>
+
+            {/* Right Column: Content */}
+            <div className="order-1 lg:order-2 flex flex-col">
+              <h3 className="h3-heading font-bold mb-5 text-[#003E94]">
+                Call Tracking
+              </h3>
+              <p className="text-gray-600 text-lg mb-10 leading-relaxed">
+                Stay in control with a unified view of all your business communications —
+                track, analyze, and improve every conversation effortlessly.
+              </p>
+
+              <ul className="space-y-5 mb-10">
+                {callTrackingFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-center gap-4">
+                    <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
+                      <feature.icon className="w-5 h-5 text-[#36C0ED]" />
+                    </div>
+                    <span className="text-gray-700 text-lg">{feature.text}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div>
+                <button 
+                  className="px-8 py-3 rounded-lg text-white font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  style={{
+                    background: 'linear-gradient(90deg, #31E6C8 0%, #00BDE5 100%)'
+                  }}
+                >
+                  Book Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };

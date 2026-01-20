@@ -59,16 +59,18 @@ const Index = () => {
         <div className="bg-background">
           <ClientLogos />
         </div>
+
+        {/* Call to Action Section - Restored as per requirements */}
+        <div className="bg-background">
+          <CTA />
+        </div>
         
         {/* Contact Form Section */}
         <div className="bg-muted/30">
           <ContactForm />
         </div>
         
-        {/* Call to Action Section - Restored as per requirements */}
-        {/* <div className="bg-background">
-          <CTA />
-        </div> */}
+        
       </main>
       <Footer />
     </div>
