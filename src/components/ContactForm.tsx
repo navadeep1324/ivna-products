@@ -28,7 +28,7 @@ export const ContactForm = () => {
 
   return (
     <section
-      className="py-10 md:py-14 relative overflow-hidden"
+      className="py-20 md:py-24 relative overflow-hidden"
       id="contact"
       style={{
         backgroundColor: '#F2F2F7',
@@ -51,7 +51,7 @@ export const ContactForm = () => {
           </div>
 
           {/* Form Card */}
-          <div className="bg-white rounded-3xl shadow-sm p-5 md:p-6 max-w-3xl mx-auto">
+          <div className="bg-white rounded-3xl shadow-sm p-8 md:p-12 max-w-3xl mx-auto">
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Name and Email Row */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -197,7 +197,7 @@ export const ContactForm = () => {
               </div>
 
               {/* Submit Button */}
-              <div className="flex justify-center pt-2">
+              <div className="flex justify-center pt-8">
                 <button
                   type="submit"
                   className="px-8 py-3 bg-[#31E6C8] hover:bg-[#25cbb0] text-black font-bold rounded-lg transition-all duration-300 shadow-md hover:shadow-lg text-lg min-w-[200px]"

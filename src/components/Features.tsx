@@ -64,12 +64,6 @@ export const Features = () => {
       <section
         id="features"
         className="py-20 bg-white overflow-hidden relative"
-        style={{
-          backgroundImage: "url('/dashboard/Features-section.png')",
-          backgroundSize: '40%',
-          backgroundPosition: 'right top',
-          backgroundRepeat: 'no-repeat'
-        }}
       >
         <div className="container mx-auto px-4 lg:px-16 relative z-10">
           {/* Main Header */}
@@ -84,9 +78,9 @@ export const Features = () => {
           </div>
 
           {/* Scheduling Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             {/* Left Column: Content */}
-            <div className="flex flex-col">
+            <div className="flex flex-col lg:col-span-5">
               <h3 className="h3-heading font-bold mb-5 text-[#003E94]">
                 Scheduling
               </h3>
@@ -119,9 +113,9 @@ export const Features = () => {
             </div>
 
             {/* Right Column: Image Placeholder */}
-            <div className="relative min-h-[400px]">
+            <div className="relative min-h-[400px] lg:col-span-7 md:translate-x-12 md:-translate-y-16">
               <img
-                src="/dashboard/schedule.jpg"
+                src="/dashboard/feature_v2.png"
                 alt="Scheduling Dashboard"
                 className="rounded-2xl w-full h-auto"
               />

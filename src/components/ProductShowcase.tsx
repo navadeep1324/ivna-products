@@ -103,9 +103,9 @@ export const ProductShowcase = () => {
             </ul>
 
             <div>
-              <button 
+              <button
                 onClick={handleBookDemoClick}
-                className="px-10 py-3 rounded-lg bg-white text-[#0059B2] font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95"
+                className="px-10 py-3 rounded-lg bg-white text-black font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 border-2 border-[#5FE9EF]"
               >
                 Book Demo
               </button>
@@ -116,11 +116,11 @@ export const ProductShowcase = () => {
           <div className="flex-1 relative z-10 w-full lg:w-auto h-[400px] sm:h-[500px] flex items-center justify-center">
             {/* Tablet Mockup */}
             <div className="relative w-[300px] sm:w-[400px] rounded-[2rem] overflow-hidden">
-               <img 
-                 src="/dashboard/Team Performance.png" 
-                 alt="Tablet Dashboard" 
-                 className="w-full h-full object-cover rounded-[1.5rem]"
-               />
+              <img
+                src="/dashboard/Team Performance.png"
+                alt="Tablet Dashboard"
+                className="w-full h-full object-cover rounded-[1.5rem]"
+              />
             </div>
 
             {/* Phone Mockup - overlapping */}
@@ -141,9 +141,9 @@ export const ProductShowcase = () => {
           <div className="order-2 lg:order-1 relative">
             {/* Cyan background element */}
             <div className="absolute inset-0 transform translate-y-4 scale-95" />
-            <img 
-              src="/dashboard/Assesment.jpg" 
-              alt="Performance Graph" 
+            <img
+              src="/dashboard/Assesment.jpg"
+              alt="Performance Graph"
               className="rounded-2xl w-full h-auto relative z-10"
             />
           </div>
@@ -170,11 +170,11 @@ export const ProductShowcase = () => {
             </ul>
 
             <div>
-              <button 
+              <button
                 onClick={handleBookDemoClick}
-                className="px-8 py-3 rounded-lg text-white font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="px-8 py-3 rounded-lg text-black font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 style={{
-                  background: 'linear-gradient(90deg, #31E6C8 0%, #00BDE5 100%)'
+                  background: 'linear-gradient(90deg, #64FEF0 0%, #15B6E7 100%)'
                 }}
               >
                 Book Demo
