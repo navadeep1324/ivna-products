@@ -42,10 +42,10 @@ export const Stats = () => {
             Join thousands of companies transforming their customer experience
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <div 
+            <div
               key={index}
               className="text-center group animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
@@ -53,7 +53,7 @@ export const Stats = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-4 group-hover:scale-110 transition-transform duration-300">
                 <stat.icon className="h-8 w-8" style={{ color: '#36c0ed' }} />
               </div>
-              <div className="text-4xl lg:text-5xl font-bold mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <div className="text-4xl lg:text-5xl font-bold mb-2" style={{ color: '#FFCB05' }}>
                 {stat.value}
               </div>
               <div className="text-lg font-semibold mb-1 text-foreground">{stat.label}</div>

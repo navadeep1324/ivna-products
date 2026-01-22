@@ -61,8 +61,17 @@ export const Features = () => {
 
   return (
     <>
-      <section id="features" className="py-20 bg-white overflow-hidden">
-        <div className="container mx-auto px-4 lg:px-16">
+      <section
+        id="features"
+        className="py-20 bg-white overflow-hidden relative"
+        style={{
+          backgroundImage: "url('/dashboard/Features-section.png')",
+          backgroundSize: '40%',
+          backgroundPosition: 'right top',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="container mx-auto px-4 lg:px-16 relative z-10">
           {/* Main Header */}
           <div className="text-center max-w-4xl mx-auto mb-20">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#003E94]">
@@ -98,10 +107,10 @@ export const Features = () => {
               </ul>
 
               <div>
-                <button 
-                  className="px-8 py-3 rounded-lg text-white font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                <button
+                  className="px-8 py-3 rounded-lg text-black font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                   style={{
-                    background: 'linear-gradient(90deg, #31E6C8 0%, #00BDE5 100%)'
+                    background: 'linear-gradient(90deg, #64FEF0 0%, #15B6E7 100%)'
                   }}
                 >
                   Book Demo
@@ -111,9 +120,9 @@ export const Features = () => {
 
             {/* Right Column: Image Placeholder */}
             <div className="relative min-h-[400px]">
-              <img 
-                src="/dashboard/schedule.jpg" 
-                alt="Scheduling Dashboard" 
+              <img
+                src="/dashboard/schedule.jpg"
+                alt="Scheduling Dashboard"
                 className="rounded-2xl w-full h-auto"
               />
             </div>
@@ -126,9 +135,9 @@ export const Features = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
             {/* Left Column: Image Area */}
             <div className="order-2 lg:order-1 relative">
-              <img 
-                src="/dashboard/Call Tracking.png" 
-                alt="Call Tracking Dashboard" 
+              <img
+                src="/dashboard/Call Tracking.png"
+                alt="Call Tracking Dashboard"
                 className="rounded-2xl w-full h-auto"
               />
             </div>
@@ -155,10 +164,10 @@ export const Features = () => {
               </ul>
 
               <div>
-                <button 
-                  className="px-8 py-3 rounded-lg text-white font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                <button
+                  className="px-8 py-3 rounded-lg text-black font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                   style={{
-                    background: 'linear-gradient(90deg, #31E6C8 0%, #00BDE5 100%)'
+                    background: 'linear-gradient(90deg, #64FEF0 0%, #15B6E7 100%)'
                   }}
                 >
                   Book Demo
