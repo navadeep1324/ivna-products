@@ -103,12 +103,13 @@ export const ProductShowcase = () => {
             </ul>
 
             <div>
-              <button
+              <a href="https://cornflowerblue-buffalo-126512.hostingersite.com/" target="_blank"><button
                 onClick={handleBookDemoClick}
                 className="px-10 py-3 rounded-lg bg-white text-black font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 border-2 border-[#5FE9EF]"
               >
                 Book Demo
               </button>
+              </a>
             </div>
           </div>
 
@@ -170,7 +171,7 @@ export const ProductShowcase = () => {
             </ul>
 
             <div>
-              <button
+             <a href="https://voicaai.kleza.io/" target="_blank"> <button
                 onClick={handleBookDemoClick}
                 className="px-8 py-3 rounded-lg text-black font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 style={{
@@ -179,6 +180,7 @@ export const ProductShowcase = () => {
               >
                 Book Demo
               </button>
+              </a>
             </div>
           </div>
         </div>
