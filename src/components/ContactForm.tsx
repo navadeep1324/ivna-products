@@ -42,11 +42,11 @@ export const ContactForm = () => {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-6 space-y-4">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black whitespace-nowrap" style={{ letterSpacing: '-0.5px' }}>
-              Ready to Transform Your Communication?
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black whitespace-nowrap" style={{ letterSpacing: '-0.5px', lineHeight:'1.3em' }}>
+Looking to optimize your operations<br></br> and decision-making? 
             </h2>
             <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-              We're here to answer your questions and guide you toward smarter, seamless communication. Book your demo now!
+             Book a demo to see how IVNA supports smarter, scalable growth 
             </p>
           </div>
 
@@ -146,7 +146,7 @@ export const ContactForm = () => {
                     htmlFor="date"
                     className="absolute text-sm text-gray-400 duration-300 transform -translate-y-4 scale-75 top-1 z-10 origin-[0] bg-white px-2 left-3 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:top-1 peer-focus:text-gray-500"
                   >
-                    October 30th, 2025
+Schedule Demo
                   </label>
                 </div>
                 <div className="relative">

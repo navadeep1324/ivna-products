@@ -11,10 +11,10 @@ export const ClientLogos = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#003E94]">
-            Our Clients
+          Organizations That Trust IVNA 
           </h2>
           <p className="text-gray-600 text-lg">
-            From startups to enterprises — VoicaAI keeps teams connected and efficient.
+             Supporting care teams with intelligent, scalable care management solutions.
           </p>
         </div>
 

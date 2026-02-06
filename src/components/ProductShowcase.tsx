@@ -1,62 +1,52 @@
-import { User, BarChart3, CheckCircle, Zap, Clock, Headphones, Phone, TrendingUp } from "lucide-react";
+import { User, BarChart3, CheckCircle, Zap, Clock, Headphones, Phone, TrendingUp, Laptop, FileText, Lock, ClipboardList, Shield, FileCheck, Activity, History } from "lucide-react";
 
 export const ProductShowcase = () => {
   const featureList = [
     {
-      icon: User,
-      text: "Caller details and communication history.",
+      icon: Laptop,
+      text: "Digital onboarding workflows and task tracking ",
     },
     {
-      icon: BarChart3,
-      text: "Call quality indicators and performance scores.",
+      icon: FileText,
+      text: "Document collection and compliance validation",
     },
     {
       icon: CheckCircle,
-      text: "Follow-up status and assigned team member.",
+      text: "License, certification, and background check tracking ",
     },
     {
-      icon: Zap,
-      text: "Real-time AI insights and feedback.",
+      icon: Lock,
+      text: "Role-based access for HR and coordinators ",
     },
     {
       icon: Clock,
-      text: "Quick filters to sort by date, client, or call type.",
+      text: "Reduced onboarding time and faster caregiver readiness",
     },
-    {
-      icon: Headphones,
-      text: "One-click access to transcripts and summaries.",
-    },
+    
   ];
 
   const assessmentFeatures = [
     {
-      icon: BarChart3,
-      text: "Call Summary Snapshot.",
+      icon: ClipboardList,
+      text: "Customizable assessment templates by care type ",
     },
     {
-      icon: Phone,
-      text: "Call Type Analysis.",
+      icon: Activity,
+      text: "Medical, functional, and lifestyle data capture ",
     },
     {
-      icon: Headphones,
-      text: "Recordings & Transcriptions.",
+      icon: FileCheck,
+      text: "Notes, attachments, and supporting documents",
     },
     {
-      icon: User,
-      text: "Lead Enquiry Tracking.",
+      icon: History,
+      text: "Assessment history and version tracking ",
     },
     {
-      icon: Zap,
-      text: "Quality Call Insights.",
+      icon: Shield,
+      text: "Secure storage with audit-ready documentation ",
     },
-    {
-      icon: BarChart3,
-      text: "Team Performance Dashboard.",
-    },
-    {
-      icon: TrendingUp,
-      text: "Strategic Analytics & Trends.",
-    },
+    
   ];
 
   const handleBookDemoClick = () => {
@@ -83,16 +73,15 @@ export const ProductShowcase = () => {
 
           {/* Left Column: Content */}
           <div className="flex-1 text-white relative z-10">
-            <h2 className="h3-heading font-bold mb-4">
-              Team performance
+             <h2 className="h3-heading font-bold mb-4">
+               Smart Digital Care Assessments
             </h2>
             <p className="text-white/90 text-lg mb-8 leading-relaxed max-w-xl">
-              Stay in control with a unified view of all your business communications —
-              track, analyze, and improve every conversation effortlessly.
+               Capture every critical detail to evaluate care needs accurately and create personalized, compliant care plans.
             </p>
 
             <ul className="space-y-5 mb-10">
-              {featureList.map((feature, index) => (
+              {assessmentFeatures.map((feature, index) => (
                 <li key={index} className="flex items-center gap-4">
                   <div className="flex-shrink-0">
                     <feature.icon className="w-5 h-5 text-white" />
@@ -119,7 +108,7 @@ export const ProductShowcase = () => {
             <div className="relative w-[300px] sm:w-[400px] rounded-[2rem] overflow-hidden">
               <img
                 src="/dashboard/Team Performance.png"
-                alt="Tablet Dashboard"
+                alt="Assessment Dashboard"
                 className="w-full h-full object-cover rounded-[1.5rem]"
               />
             </div>
@@ -137,30 +126,29 @@ export const ProductShowcase = () => {
         </div>
 
         {/* Assessment Now Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-26 items-center">
           {/* Left Column: Image Area */}
           <div className="order-2 lg:order-1 relative">
             {/* Cyan background element */}
             <div className="absolute inset-0 transform translate-y-4 scale-95" />
             <img
-              src="/dashboard/Assesment.jpg"
-              alt="Performance Graph"
-              className="rounded-2xl w-full h-auto relative z-10"
+              src="/dashboard/feature.png"
+              alt="Hiring Dashboard"
+              className="rounded-2xl w-full h-auto relative z-10" style={{marginTop:'-80px'}}
             />
           </div>
 
           {/* Right Column: Content */}
           <div className="order-1 lg:order-2 flex flex-col">
             <h3 className="h3-heading font-bold mb-4 text-[#003E94] ">
-              Assessment now
+              Simplified Hiring & Caregiver Readiness 
             </h3>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              Stay in control with a unified view of all your business communications —
-              track, analyze, and improve every conversation effortlessly.
+              Automate and manage the entire caregiver onboarding journey—from hiring to compliance—without delays.
             </p>
 
             <ul className="space-y-5 mb-10">
-              {assessmentFeatures.map((feature, index) => (
+              {featureList.map((feature, index) => (
                 <li key={index} className="flex items-center gap-4">
                   <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
                     <feature.icon className="w-5 h-5 text-[#36C0ED]" />

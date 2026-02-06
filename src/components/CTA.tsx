@@ -11,10 +11,12 @@ export const CTA = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
-            Curious how real-time insights can <br className="hidden md:block" /> boost your conversions?
+            Looking to stay ahead with real-time <br className="hidden md:block" />operational intelligence? 
+
+
           </h2>
           <p className="text-white/90 text-xl lg:text-2xl mb-12">
-            Connect with us and learn how PulseBoard can give your business the edge.
+             Connect with us to see how IVNA gives your business a smarter advantage.
           </p>
 
           <div className="flex justify-center">

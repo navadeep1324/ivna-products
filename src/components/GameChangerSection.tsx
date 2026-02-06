@@ -6,15 +6,14 @@ export const GameChangerSection = () => {
         {/* Headline */}
         <div className="text-center max-w-6xl mx-auto mb-4">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight text-black">
-            Everything Your Business Needs, In One Place
+           Enterprise-Grade Applications Built for Better Care Outcomes
           </h2>
         </div>
 
         {/* Sub-headline */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-semibold">
-            Specializations that empower teams, streamline processes, and drive smarter decisions
-          </p>
+Built to adapt, integrate, and perform—our applications help care organizations stay ahead in an evolving care landscape.           </p>
         </div>
 
         {/* New Card Section */}
@@ -23,26 +22,26 @@ export const GameChangerSection = () => {
             {[
               {
                 image: "/sections/medical-records.png",
-                title: "Secure Electronic Records",
-                description: "Streamline clinical documentation and maintain HIPAA compliance with our intuitive digital health record system.",
+                title: "Voica",
+                description: "AI-powered voice intelligence that captures, analyzes, and transforms care conversations into actionable insights.",
                 borderColor: "#01A0E4"
               },
               {
                 image: "/sections/care-coordination.png",
-                title: "Seamless Care Coordination",
-                description: "Build stronger relationships between caregivers and clients through organized, efficient service delivery.",
+                title: "Pulseboard ",
+                description: " A real-time operational dashboard that gives care teams instant visibility into performance, compliance, and care metrics.",
                 borderColor: "#ED1B24"
               },
               {
                 image: "/sections/communication.jpg",
-                title: "AI-Powered CRM",
-                description: "Never miss a lead with intelligent call tracking and automated follow-ups designed for home care agencies.",
+                title: "Caregiver Onboarding",
+                description: " An end-to-end onboarding solution that simplifies hiring, training, and compliance for faster, confident caregiver readiness.",
                 borderColor: "#FFCB05"
               },
               {
                 image: "/sections/home-care.jpg",
-                title: "Patient-Centered Care",
-                description: "Empower your staff to focus on what matters most—providing high-quality, compassionate care in the home.",
+                title: "Client Assessment",
+                description: "A smart digital assessment tool that standardizes evaluations, identifies care needs, and helps build accurate, personalized care plans.",
                 borderColor: "#00A652"
               }
             ].map((feature, index) => (

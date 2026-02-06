@@ -31,12 +31,11 @@ export const Hero = () => {
         <div className="max-w-5xl mx-auto text-center">
           {/* Main headline */}
           <h1 className="h1-heading font-bold text-black mb-6" style={{ lineHeight: '1.3' }}>
-            Home care software for private duty and independent agencies          </h1>
+            Powering the Future of Care with AI-Driven Applications </h1>
 
           {/* Description text */}
           <p className="text-base sm:text-lg lg:text-xl text-gray-800 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
-            Designed by home care industry experts and private duty home care agencies, IVNA is transforming the home care software industry.
-          </p>
+At IVNA, we manage a growing ecosystem of AI-powered care solutions that help care organizations operate smarter, respond faster, and deliver more personalized, reliable care.           </p>
 
           {/* CTA Button - centered */}
           <div className="flex justify-center">

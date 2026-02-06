@@ -1,31 +1,37 @@
-import { Briefcase, UserCheck, TrendingUp } from "lucide-react";
+import { Briefcase, UserCheck, TrendingUp, BarChart3 } from "lucide-react";
 
 export const PowerFeatures = () => {
   const stats = [
     {
-      image: "/dashboard/material-symbols_business-center-outline.png",
-      value: "90%",
-      title: "Business growth",
-      description: "Stay in control with a unified view of all your business",
+      icon: Briefcase,
+      value: "40–50%",
+      title: "Operational efficiency",
+      description: "Automate workflows and reduce manual administrative work ",
     },
     {
-      image: "/dashboard/mdi_account-check-outline.png",
-      value: "99%",
-      title: "Efficiency work",
-      description: "Stay in control with a unified view of all your business",
+      icon: UserCheck,
+      value: "2× Faster",
+      title: "Decision-making",
+      description: "Act quickly with real-time insights across care operations ",
     },
     {
-      image: "/dashboard/game-icons_progression.png",
+      icon: TrendingUp,
+      value: "40–50%",
+      title: "Improved care accuracy",
+      description: "Standardized assessments for consistent care planning ",
+    },
+    {
+      icon: BarChart3,
       value: "90%",
-      title: "Data Analysis",
-      description: "Stay in control with a unified view of all your business",
+      title: "Business visibility",
+      description: "Stay in control with a unified view of all your care operations",
     },
   ];
 
   return (
     <section id="power-features" className="py-20 bg-[#042C70] relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-0 max-w-[1400px] mx-auto">
           {stats.map((stat, index) => (
             <div key={index} className="relative flex flex-col items-center text-center px-8 py-4">
               {/* Vertical Divider for desktop */}
@@ -34,16 +40,11 @@ export const PowerFeatures = () => {
               )}
 
               <div className="mb-6 h-[42px] flex items-end justify-center pb-2 relative">
-                <img
-                  src={stat.image}
-                  alt={stat.title}
-                  className="w-10 h-10 object-contain text-[#31E6C8]"
-                  style={{ filter: 'brightness(0) saturate(100%) invert(86%) sepia(21%) saturate(996%) hue-rotate(109deg) brightness(97%) contrast(93%)' }}
-                />
+                <stat.icon className="w-10 h-10 text-[#31E6C8]" />
               </div>
 
               <div className="mb-4">
-                <span className="text-5xl lg:text-7xl font-bold" style={{ color: '#FFCB05' }}>
+                <span className="text-4xl lg:text-5xl font-bold" style={{ color: '#FFCB05' }}>
                   {stat.value}
                 </span>
               </div>
@@ -52,7 +53,7 @@ export const PowerFeatures = () => {
                 {stat.title}
               </h3>
 
-              <p className="text-white/70 text-sm lg:text-base max-w-[240px]">
+              <p className="text-white/70 text-sm lg:text-base max-w-[280px]">
                 {stat.description}
               </p>
             </div>
