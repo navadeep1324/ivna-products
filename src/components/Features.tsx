@@ -86,7 +86,7 @@ export const Features = () => {
               </ul>
 
               <div>
-                <a href="https://lightslategrey-cattle-983050.hostingersite.com/" target="_blank"><button
+                <a href="https://voicaai.kleza.io/" target="_blank"><button
                   className="px-8 py-3 rounded-lg text-black font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                   style={{
                     background: 'linear-gradient(90deg, #64FEF0 0%, #15B6E7 100%)'

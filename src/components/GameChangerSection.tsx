@@ -1,7 +1,7 @@
 export const GameChangerSection = () => {
 
   return (
-    <section className="py-8 sm:py-12 bg-[#F1F1F1] relative overflow-hidden">
+    <section id="product" className="py-8 sm:py-12 bg-[#F1F1F1] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Headline */}
         <div className="text-center max-w-6xl mx-auto mb-4">
@@ -22,27 +22,31 @@ Built to adapt, integrate, and perform—our applications help care organization
             {[
               {
                 image: "/sections/medical-records.png",
-                title: "Voica",
+                title: "Voica AI",
                 description: "AI-powered voice intelligence that captures, analyzes, and transforms care conversations into actionable insights.",
-                borderColor: "#01A0E4"
+                borderColor: "#01A0E4",
+                link: "https://voicaai.kleza.io/"
               },
               {
                 image: "/sections/care-coordination.png",
                 title: "Pulseboard ",
                 description: " A real-time operational dashboard that gives care teams instant visibility into performance, compliance, and care metrics.",
-                borderColor: "#ED1B24"
+                borderColor: "#ED1B24",
+                link: "https://blue-sandpiper-473638.hostingersite.com/"
               },
               {
                 image: "/sections/communication.jpg",
                 title: "Caregiver Onboarding",
                 description: " An end-to-end onboarding solution that simplifies hiring, training, and compliance for faster, confident caregiver readiness.",
-                borderColor: "#FFCB05"
+                borderColor: "#FFCB05",
+                link: "https://lightslategrey-cattle-983050.hostingersite.com/"
               },
               {
                 image: "/sections/home-care.jpg",
                 title: "Client Assessment",
                 description: "A smart digital assessment tool that standardizes evaluations, identifies care needs, and helps build accurate, personalized care plans.",
-                borderColor: "#00A652"
+                borderColor: "#00A652",
+                link: "https://cornflowerblue-buffalo-126512.hostingersite.com/"
               }
             ].map((feature, index) => (
               <div
@@ -65,14 +69,17 @@ Built to adapt, integrate, and perform—our applications help care organization
                     {feature.description}
                   </p>
                   <div className="mt-auto">
-                    <button
-                      className="w-full py-3 px-6 rounded-lg text-black font-bold transition-all hover:opacity-90 active:scale-95 shadow-md"
+                    <a
+                      href={feature.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full py-3 px-6 rounded-lg text-black font-bold transition-all hover:opacity-90 active:scale-95 shadow-md"
                       style={{
                         background: 'linear-gradient(90deg, #64FEF0 0%, #15B6E7 100%)'
                       }}
                     >
                       Learn more
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

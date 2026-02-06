@@ -10,13 +10,7 @@ export const Footer = () => {
     }
   };
 
-  const handleWatchDemoClick = () => {
-    // Scroll to Product Showcase section (VoicaAI Professional Suite)
-    const productShowcase = document.getElementById("suite");
-    if (productShowcase) {
-      productShowcase.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
@@ -52,11 +46,11 @@ export const Footer = () => {
           <div>
             <h3 className="font-semibold text-foreground mb-3 sm:mb-4 text-lg sm:text-xl border-b border-primary/20 pb-2">Quick Links</h3>
             <ul className="space-y-2 sm:space-y-3">
-              <li><a href="#suite" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-sm sm:text-base" onClick={(e) => handleNavClick(e, "suite")}>
+              <li><a href="#product" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-sm sm:text-base" onClick={(e) => handleNavClick(e, "product")}>
                 <Package className="h-4 w-4" style={{ color: '#36c0ed' }} />
                 Product Showcase
               </a></li>
-              <li><a href="#power-features" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-sm sm:text-base" onClick={(e) => handleNavClick(e, "power-features")}>
+              <li><a href="#features" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-sm sm:text-base" onClick={(e) => handleNavClick(e, "features")}>
                 <Zap className="h-4 w-4" style={{ color: '#36c0ed' }} />
                 Features
               </a></li>
@@ -87,14 +81,14 @@ export const Footer = () => {
               >
                 Book a Demo
               </Button>
-              <Button 
+              {/* <Button 
                 variant="outline" 
                 size="lg" 
                 className="border-primary bg-background hover:bg-primary/10 text-primary group border-2 text-sm sm:text-base py-2 sm:py-3 w-full"
                 onClick={handleWatchDemoClick}
               >
                 Watch Demo
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

@@ -43,17 +43,17 @@ export const Header = () => {
           {/* Desktop Navigation - Right aligned */}
           <div className="hidden md:flex items-center gap-4 lg:gap-6 ml-auto">
             <a 
-              href="#power-features" 
+              href="#features" 
               className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105 flex items-center gap-1"
-              onClick={(e) => handleNavClick(e, "power-features")}
+              onClick={(e) => handleNavClick(e, "features")}
             >
               <Zap className="h-4 w-4" style={{ color: '#36c0ed' }} />
               Features
             </a>
             <a 
-              href="#suite" 
+              href="#product" 
               className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105 flex items-center gap-1"
-              onClick={(e) => handleNavClick(e, "suite")}
+              onClick={(e) => handleNavClick(e, "product")}
             >
               <Package className="h-4 w-4" style={{ color: '#36c0ed' }} />
               Product
@@ -91,10 +91,10 @@ export const Header = () => {
           <div className="md:hidden py-3 sm:py-4 animate-fade-in bg-background/95 backdrop-blur-lg rounded-xl mt-2 border border-border/50 shadow-lg">
             <div className="flex flex-col gap-2 sm:gap-3">
               <a 
-                href="#power-features" 
+                href="#features" 
                 className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-md hover:bg-secondary flex items-center gap-2"
                 onClick={(e) => {
-                  handleNavClick(e, "power-features");
+                  handleNavClick(e, "features");
                   setIsMenuOpen(false);
                 }}
               >
@@ -102,10 +102,10 @@ export const Header = () => {
                 Features
               </a>
               <a 
-                href="#suite" 
+                href="#product" 
                 className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-md hover:bg-secondary flex items-center gap-2"
                 onClick={(e) => {
-                  handleNavClick(e, "suite");
+                  handleNavClick(e, "product");
                   setIsMenuOpen(false);
                 }}
               >

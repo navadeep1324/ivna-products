@@ -28,13 +28,13 @@ export const Hero = () => {
 
       {/* Main content container */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center">
           {/* Main headline */}
           <h1 className="h1-heading font-bold text-black mb-6" style={{ lineHeight: '1.3' }}>
             Powering the Future of Care with AI-Driven Applications </h1>
 
           {/* Description text */}
-          <p className="text-base sm:text-lg lg:text-xl text-gray-800 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-800 mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
 At IVNA, we manage a growing ecosystem of AI-powered care solutions that help care organizations operate smarter, respond faster, and deliver more personalized, reliable care.           </p>
 
           {/* CTA Button - centered */}
