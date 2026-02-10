@@ -1,27 +1,26 @@
-import { Briefcase, UserCheck, TrendingUp, BarChart3 } from "lucide-react";
 
 export const PowerFeatures = () => {
   const stats = [
     {
-      icon: Briefcase,
+      image: "/sections/Operaiton.png",
       value: "40–50%",
       title: "Operational efficiency",
       description: "Automate workflows and reduce manual administrative work ",
     },
     {
-      icon: UserCheck,
+      image: "/sections/decision.png",
       value: "2× Faster",
       title: "Decision-making",
       description: "Act quickly with real-time insights across care operations ",
     },
     {
-      icon: TrendingUp,
+      image: "/sections/care.png",
       value: "40–50%",
       title: "Improved care accuracy",
       description: "Standardized assessments for consistent care planning ",
     },
     {
-      icon: BarChart3,
+      image: "/sections/bussiness.png",
       value: "90%",
       title: "Business visibility",
       description: "Stay in control with a unified view of all your care operations",
@@ -40,7 +39,7 @@ export const PowerFeatures = () => {
               )}
 
               <div className="mb-6 h-[42px] flex items-end justify-center pb-2 relative">
-                <stat.icon className="w-10 h-10 text-[#31E6C8]" />
+                <img src={stat.image} alt={stat.title} className="w-10 h-10 object-contain" />
               </div>
 
               <div className="mb-4">

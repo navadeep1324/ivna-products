@@ -21,28 +21,28 @@ Built to adapt, integrate, and perform—our applications help care organization
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {[
               {
-                image: "/sections/medical-records.png",
+                image: "/sections/Voica AI.jpg",
                 title: "Voica AI",
                 description: "AI-powered voice intelligence that captures, analyzes, and transforms care conversations into actionable insights.",
                 borderColor: "#01A0E4",
                 link: "https://voicaai.kleza.io/"
               },
               {
-                image: "/sections/care-coordination.png",
+                image: "/sections/Pulseboard.jpg",
                 title: "Pulseboard ",
                 description: " A real-time operational dashboard that gives care teams instant visibility into performance, compliance, and care metrics.",
                 borderColor: "#ED1B24",
                 link: "https://blue-sandpiper-473638.hostingersite.com/"
               },
               {
-                image: "/sections/communication.jpg",
+                image: "/sections/Caregiver Onboarding.jpg",
                 title: "Caregiver Onboarding",
                 description: " An end-to-end onboarding solution that simplifies hiring, training, and compliance for faster, confident caregiver readiness.",
                 borderColor: "#FFCB05",
                 link: "https://lightslategrey-cattle-983050.hostingersite.com/"
               },
               {
-                image: "/sections/home-care.jpg",
+                image: "/sections/Client Assessment.jpg",
                 title: "Client Assessment",
                 description: "A smart digital assessment tool that standardizes evaluations, identifies care needs, and helps build accurate, personalized care plans.",
                 borderColor: "#00A652",

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone } from "lucide-react";
+
 
 
 export const ContactForm = () => {
@@ -101,9 +101,8 @@ Looking to optimize your operations<br></br> and decision-making?
                     placeholder=" "
                     value={formData.phone}
                     onChange={handleChange}
-                    className="block px-4 py-2.5 w-full text-base text-gray-700 bg-white rounded-md border border-[#31E6C8] appearance-none focus:outline-none focus:ring-1 focus:ring-[#31E6C8] focus:border-[#31E6C8] peer placeholder-transparent pr-10"
+                    className="block px-4 py-2.5 w-full text-base text-gray-700 bg-white rounded-md border border-[#31E6C8] appearance-none focus:outline-none focus:ring-1 focus:ring-[#31E6C8] focus:border-[#31E6C8] peer placeholder-transparent"
                   />
-                  <Phone className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                   <label
                     htmlFor="phone"
                     className="absolute text-sm text-gray-400 duration-300 transform -translate-y-4 scale-75 top-1 z-10 origin-[0] bg-white px-2 left-3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:top-3 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:top-1 peer-focus:text-gray-500"
@@ -140,7 +139,7 @@ Looking to optimize your operations<br></br> and decision-making?
                     placeholder=" "
                     value={formData.date}
                     onChange={handleChange}
-                    className="block px-4 py-2.5 w-full text-base text-gray-700 bg-white rounded-md border border-[#31E6C8] appearance-none focus:outline-none focus:ring-1 focus:ring-[#31E6C8] focus:border-[#31E6C8] peer placeholder-transparent min-h-[46px]"
+                    className="block px-4 py-2.5 w-full text-base text-gray-700 bg-white rounded-md border border-[#31E6C8] appearance-none focus:outline-none focus:ring-1 focus:ring-[#31E6C8] focus:border-[#31E6C8] peer placeholder-transparent min-h-[46px] no-calendar-icon"
                   />
                   <label
                     htmlFor="date"

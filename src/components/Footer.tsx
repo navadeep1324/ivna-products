@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Package, Zap, Mail, Shield, FileText } from "lucide-react";
+import { Zap, Shield, FileText } from "lucide-react";
 
 export const Footer = () => {
   const handleBookDemoClick = () => {
@@ -38,7 +38,7 @@ export const Footer = () => {
               />
             </div>
             <p className="text-muted-foreground text-sm sm:text-base mb-3 sm:mb-4 max-w-xs">
-              Transforming business communications with professional VoicaAI solutions.
+            At IVNA, we manage a growing ecosystem of AI-powered care solutions that help care organizations operate smarter, respond faster, and deliver more personalized, reliable care.
             </p>
           </div>
           
@@ -47,23 +47,23 @@ export const Footer = () => {
             <h3 className="font-semibold text-foreground mb-3 sm:mb-4 text-lg sm:text-xl border-b border-primary/20 pb-2">Quick Links</h3>
             <ul className="space-y-2 sm:space-y-3">
               <li><a href="#product" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-sm sm:text-base" onClick={(e) => handleNavClick(e, "product")}>
-                <Package className="h-4 w-4" style={{ color: '#36c0ed' }} />
+                <img src="/sections/Product Showcase.png" alt="Product Showcase" className="h-4 w-4 object-contain" />
                 Product Showcase
               </a></li>
               <li><a href="#features" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-sm sm:text-base" onClick={(e) => handleNavClick(e, "features")}>
-                <Zap className="h-4 w-4" style={{ color: '#36c0ed' }} />
+                <img src="/sections/Features.png" alt="Features" className="h-4 w-4 object-contain" />
                 Features
               </a></li>
               <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-sm sm:text-base" onClick={(e) => handleNavClick(e, "contact")}>
-                <Mail className="h-4 w-4" style={{ color: '#36c0ed' }} />
+                <img src="/sections/Contact.png" alt="Contact" className="h-4 w-4 object-contain" />
                 Contact
               </a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-sm sm:text-base">
-                <Shield className="h-4 w-4" style={{ color: '#36c0ed' }} />
+                <img src="/sections/Privacy Policy.png" alt="Privacy Policy" className="h-4 w-4 object-contain" />
                 Privacy Policy
               </a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:pl-1 flex items-center gap-2 text-sm sm:text-base">
-                <FileText className="h-4 w-4" style={{ color: '#36c0ed' }} />
+                <img src="/sections/Terms & Conditions.png" alt="Terms and Conditions" className="h-4 w-4 object-contain" />
                 Terms and Conditions
               </a></li>
             </ul>
