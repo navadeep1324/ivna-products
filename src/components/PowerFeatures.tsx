@@ -30,12 +30,12 @@ export const PowerFeatures = () => {
   return (
     <section id="power-features" className="py-20 bg-[#042C70] relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-0 max-w-[1400px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 max-w-[1400px] mx-auto">
           {stats.map((stat, index) => (
             <div key={index} className="relative flex flex-col items-center text-center px-8 py-4">
               {/* Vertical Divider for desktop */}
               {index < stats.length - 1 && (
-                <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-32 bg-white/20" />
+                <div className={`absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-32 bg-white/20 ${index === 1 ? "hidden lg:block" : "hidden md:block"}`} />
               )}
 
               <div className="mb-6 h-[42px] flex items-end justify-center pb-2 relative">

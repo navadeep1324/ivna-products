@@ -33,7 +33,7 @@ export const Footer = () => {
             <div className="flex items-center gap-2 mb-3 sm:mb-4">
               <img 
                 src="/logo/Ivna.png" 
-                alt="VoicaAI Logo" 
+                alt="IVNA Logo" 
                 className="h-24 sm:h-26 w-auto"
               />
             </div>
@@ -79,7 +79,7 @@ export const Footer = () => {
                 className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white shadow-lg text-sm sm:text-base py-2 sm:py-3 w-full"
                 onClick={handleBookDemoClick}
               >
-                Book a Demo
+                Schedule A Demo
               </Button>
               {/* <Button 
                 variant="outline" 
@@ -95,7 +95,7 @@ export const Footer = () => {
         
         <div className="pt-6 sm:pt-8 border-t border-border/30 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
           <div className="flex items-center gap-2">
-            <span className="text-muted-foreground text-sm sm:text-base">© 2026 Ivna. All rights reserved.</span>
+            <span className="text-muted-foreground text-sm sm:text-base">© 2026 IVNA. All rights reserved.</span>
           </div>
           
           {/* Hidden the copyright links on the right side as per user request */}

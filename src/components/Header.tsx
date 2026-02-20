@@ -34,8 +34,8 @@ export const Header = () => {
             <a href="/" className="flex items-center">
               <img 
                 src="/logo/Ivna.png" 
-                alt="VoicaAI Logo" 
-                className="h-8 sm:h-18 w-auto"
+                alt="IVNA Logo" 
+                className="h-8 sm:h-10 w-auto"
               />
             </a>
           </div>
@@ -72,7 +72,7 @@ export const Header = () => {
               className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground shadow-lg text-sm sm:text-base py-1.5 sm:py-2 px-3 sm:px-4 rounded-md"
               onClick={handleBookDemoClick}
             >
-              Book Demo
+              Schedule A Demo
             </Button>
           </div>
 
@@ -130,7 +130,7 @@ export const Header = () => {
                   className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground shadow-lg text-sm sm:text-base py-2 rounded-md"
                   onClick={handleBookDemoClick}
                 >
-                  Book Demo
+                  Schedule A Demo
                 </Button>
               </div>
             </div>

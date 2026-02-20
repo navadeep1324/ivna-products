@@ -92,11 +92,11 @@ export const ProductShowcase = () => {
             </ul>
 
             <div>
-              <a href="https://cornflowerblue-buffalo-126512.hostingersite.com/" target="_blank"><button
+              <a href="https://clientassessment.ivna.ai/" target="_blank"><button
                 onClick={handleBookDemoClick}
                 className="px-10 py-3 rounded-lg bg-white text-black font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 border-2 border-[#5FE9EF]"
               >
-                Book Demo
+                Schedule A Demo
               </button>
               </a>
             </div>
@@ -134,7 +134,7 @@ export const ProductShowcase = () => {
             <img
               src="/dashboard/feature.png"
               alt="Hiring Dashboard"
-              className="rounded-2xl w-full h-auto relative z-10" style={{marginTop:'-80px'}}
+              className="rounded-2xl w-full h-auto relative z-10 lg:-mt-20"
             />
           </div>
 
@@ -159,14 +159,14 @@ export const ProductShowcase = () => {
             </ul>
 
             <div>
-             <a href="https://lightslategrey-cattle-983050.hostingersite.com/" target="_blank"> <button
+             <a href="https://caregiveronboarding.ivna.ai/" target="_blank"> <button
                 onClick={handleBookDemoClick}
                 className="px-8 py-3 rounded-lg text-black font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'linear-gradient(90deg, #64FEF0 0%, #15B6E7 100%)'
                 }}
               >
-                Book Demo
+                Schedule A Demo
               </button>
               </a>
             </div>

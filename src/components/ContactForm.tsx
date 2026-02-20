@@ -46,12 +46,12 @@ export const ContactForm = () => {
 Looking to optimize your operations<br></br> and decision-making? 
             </h2>
             <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-             Book a demo to see how IVNA supports smarter, scalable growth 
+             Schedule A Demo to see how IVNA supports smarter, scalable growth 
             </p>
           </div>
 
           {/* Form Card */}
-          <div className="bg-white rounded-3xl shadow-sm p-8 md:p-12 max-w-3xl mx-auto">
+          <div className="bg-white rounded-3xl shadow-sm p-6 md:p-12 max-w-3xl mx-auto">
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Name and Email Row */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

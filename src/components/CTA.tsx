@@ -28,7 +28,7 @@ export const CTA = () => {
                 border: '3px solid transparent',
               }}
             >
-              Book Demo
+              Schedule A Demo
             </button>
           </div>
         </div>
