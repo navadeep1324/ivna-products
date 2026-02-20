@@ -28,14 +28,14 @@ export const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border/50 shadow-sm">
       <nav className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-14 sm:h-16">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <div className="flex items-center">
             <a href="/" className="flex items-center">
               <img 
                 src="/logo/Ivna.png" 
                 alt="IVNA Logo" 
-                className="h-8 sm:h-10 w-auto"
+                className="h-[2.5rem] sm:h-[4.5rem] w-auto"
               />
             </a>
           </div>
