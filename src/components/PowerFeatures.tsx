@@ -4,31 +4,41 @@ export const PowerFeatures = () => {
     {
       image: "/sections/Operaiton.png",
       value: "40–50%",
-      title: "Operational efficiency",
+      title: "Operational Efficiency",
       description: "Automate workflows and reduce manual administrative work ",
     },
     {
       image: "/sections/decision.png",
       value: "2× Faster",
-      title: "Decision-making",
+      title: "Decision-Making",
       description: "Act quickly with real-time insights across care operations ",
     },
     {
       image: "/sections/care.png",
       value: "40–50%",
-      title: "Improved care accuracy",
+      title: "Improved Care Accuracy",
       description: "Standardized assessments for consistent care planning ",
     },
     {
       image: "/sections/bussiness.png",
       value: "90%",
-      title: "Business visibility",
+      title: "Business Visibility",
       description: "Stay in control with a unified view of all your care operations",
     },
   ];
 
   return (
-    <section id="power-features" className="py-20 bg-[#042C70] relative overflow-hidden">
+    <section id="power-features" className="py-20 relative overflow-hidden">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url('/dashboard/powerfeatures bg.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 max-w-[1400px] mx-auto">
           {stats.map((stat, index) => (
@@ -43,16 +53,16 @@ export const PowerFeatures = () => {
               </div>
 
               <div className="mb-4">
-                <span className="text-4xl lg:text-5xl font-bold" style={{ color: '#FFCB05' }}>
+                <span className="text-4xl lg:text-5xl font-bold" style={{ color: '#000000' }}>
                   {stat.value}
                 </span>
               </div>
 
-              <h3 className="text-xl lg:text-2xl font-bold text-white mb-3">
+              <h3 className="text-xl lg:text-2xl font-bold text-black mb-3">
                 {stat.title}
               </h3>
 
-              <p className="text-white/70 text-sm lg:text-base max-w-[280px]">
+              <p className="text-sm lg:text-base max-w-[280px]" style={{ color: '#666' }}>
                 {stat.description}
               </p>
             </div>

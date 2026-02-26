@@ -7,13 +7,23 @@ const clients = [
 
 export const ClientLogos = () => {
   return (
-    <section className="py-20 bg-[#EFF4FB] relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url('/dashboard/clientsbg.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#003E94]">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">
           Organizations That Trust IVNA 
           </h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-weight-600 text-lg text-[#333333]">
              Supporting care teams with intelligent, scalable care management solutions.
           </p>
         </div>

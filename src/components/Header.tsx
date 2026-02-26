@@ -1,9 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, Zap, Package, Mail } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleBookDemoClick = () => {
     // Scroll to contact form
@@ -26,7 +33,13 @@ export const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border/50 shadow-sm">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white shadow-md border-b border-gray-200"
+          : "bg-transparent border-b border-transparent"
+      }`}
+    >
       <nav className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
@@ -72,7 +85,7 @@ export const Header = () => {
               className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground shadow-lg text-sm sm:text-base py-1.5 sm:py-2 px-3 sm:px-4 rounded-md"
               onClick={handleBookDemoClick}
             >
-              Schedule A Demo
+              Schedule a Demo
             </Button>
           </div>
 
@@ -130,7 +143,7 @@ export const Header = () => {
                   className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground shadow-lg text-sm sm:text-base py-2 rounded-md"
                   onClick={handleBookDemoClick}
                 >
-                  Schedule A Demo
+                  Schedule a Demo
                 </Button>
               </div>
             </div>

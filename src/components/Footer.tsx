@@ -38,7 +38,7 @@ export const Footer = () => {
               />
             </div>
             <p className="text-muted-foreground text-sm sm:text-base mb-3 sm:mb-4 max-w-xs">
-            At IVNA, we manage a growing ecosystem of AI-powered care solutions that help care organizations operate smarter, respond faster, and deliver more personalized, reliable care.
+            At IVNA, we manage a growing ecosystem of AI-Powered Care Solutions that help care organizations operate smarter, respond faster, and deliver more personalized, reliable care.
             </p>
           </div>
           
@@ -79,7 +79,7 @@ export const Footer = () => {
                 className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white shadow-lg text-sm sm:text-base py-2 sm:py-3 w-full"
                 onClick={handleBookDemoClick}
               >
-                Schedule A Demo
+                Schedule a Demo
               </Button>
               {/* <Button 
                 variant="outline" 

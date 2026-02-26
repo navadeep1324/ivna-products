@@ -43,10 +43,10 @@ export const ContactForm = () => {
           {/* Header */}
           <div className="text-center mb-6 space-y-4">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black whitespace-nowrap" style={{ letterSpacing: '-0.5px', lineHeight:'1.3em' }}>
-Looking to optimize your operations<br></br> and decision-making? 
+Looking To Optimize Your Operations<br></br> And Decision-Making? 
             </h2>
-            <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-             Schedule A Demo to see how IVNA supports smarter, scalable growth 
+            <p className="text-black-600 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+             Schedule a demo to see how IVNA supports smarter scalable growth.
             </p>
           </div>
 
@@ -199,12 +199,12 @@ Schedule Demo
               <div className="flex justify-center pt-8">
                 <button
                   type="submit"
-                  className="px-8 py-3 bg-[#31E6C8] hover:bg-[#25cbb0] text-black font-bold rounded-lg transition-all duration-300 shadow-md hover:shadow-lg text-lg min-w-[200px]"
+                  className="px-8 py-3 bg-[#006EF5] hover:bg-[#25cbb0] text-white font-bold rounded-lg transition-all duration-300 shadow-md hover:shadow-lg text-lg min-w-[200px]"
                   style={{
-                    background: 'linear-gradient(90deg, #31E6C8 0%, #00BDE5 100%)'
+                    background: '#006EF5'
                   }}
                 >
-                  Send Message
+                 Submit
                 </button>
               </div>
             </form>
