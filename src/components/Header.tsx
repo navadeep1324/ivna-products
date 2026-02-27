@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X, Zap, Package, Mail } from "lucide-react";
+import { Menu, X, Zap, Package, Mail, Store } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export const Header = () => {
@@ -34,20 +34,19 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? "bg-white shadow-md border-b border-gray-200"
           : "bg-transparent border-b border-transparent"
-      }`}
+        }`}
     >
       <nav className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <div className="flex items-center">
             <a href="/" className="flex items-center">
-              <img 
-                src="/logo/Ivna.png" 
-                alt="IVNA Logo" 
+              <img
+                src="/logo/Ivna.png"
+                alt="IVNA Logo"
                 className="h-[2.5rem] sm:h-[4.5rem] w-auto"
               />
             </a>
@@ -55,33 +54,42 @@ export const Header = () => {
 
           {/* Desktop Navigation - Right aligned */}
           <div className="hidden md:flex items-center gap-4 lg:gap-6 ml-auto">
-            <a 
-              href="#features" 
+            <a
+              href="https://marketplace.kleza.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105 flex items-center gap-1"
+            >
+              <Store className="h-4 w-4" style={{ color: '#36c0ed' }} />
+              Marketplace
+            </a>
+            <a
+              href="#features"
               className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105 flex items-center gap-1"
               onClick={(e) => handleNavClick(e, "features")}
             >
               <Zap className="h-4 w-4" style={{ color: '#36c0ed' }} />
               Features
             </a>
-            <a 
-              href="#product" 
+            <a
+              href="#product"
               className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105 flex items-center gap-1"
               onClick={(e) => handleNavClick(e, "product")}
             >
               <Package className="h-4 w-4" style={{ color: '#36c0ed' }} />
               Product
             </a>
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105 flex items-center gap-1"
               onClick={(e) => handleNavClick(e, "contact")}
             >
               <Mail className="h-4 w-4" style={{ color: '#36c0ed' }} />
               Contact
             </a>
-            <Button 
-              variant="default" 
-              size="sm" 
+            <Button
+              variant="default"
+              size="sm"
               className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground shadow-lg text-sm sm:text-base py-1.5 sm:py-2 px-3 sm:px-4 rounded-md"
               onClick={handleBookDemoClick}
             >
@@ -103,8 +111,18 @@ export const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-3 sm:py-4 animate-fade-in bg-background/95 backdrop-blur-lg rounded-xl mt-2 border border-border/50 shadow-lg">
             <div className="flex flex-col gap-2 sm:gap-3">
-              <a 
-                href="#features" 
+              <a
+                href="https://marketplace.kleza.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-md hover:bg-secondary flex items-center gap-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Store className="h-4 w-4" style={{ color: '#36c0ed' }} />
+                Marketplace
+              </a>
+              <a
+                href="#features"
                 className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-md hover:bg-secondary flex items-center gap-2"
                 onClick={(e) => {
                   handleNavClick(e, "features");
@@ -114,8 +132,8 @@ export const Header = () => {
                 <Zap className="h-4 w-4" style={{ color: '#36c0ed' }} />
                 Features
               </a>
-              <a 
-                href="#product" 
+              <a
+                href="#product"
                 className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-md hover:bg-secondary flex items-center gap-2"
                 onClick={(e) => {
                   handleNavClick(e, "product");
@@ -125,8 +143,8 @@ export const Header = () => {
                 <Package className="h-4 w-4" style={{ color: '#36c0ed' }} />
                 Product
               </a>
-              <a 
-                href="#contact" 
+              <a
+                href="#contact"
                 className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2 px-4 rounded-md hover:bg-secondary flex items-center gap-2"
                 onClick={(e) => {
                   handleNavClick(e, "contact");
@@ -137,9 +155,9 @@ export const Header = () => {
                 Contact
               </a>
               <div className="flex flex-col gap-2 pt-3 sm:pt-4 border-t border-border px-4">
-                <Button 
-                  variant="default" 
-                  size="sm" 
+                <Button
+                  variant="default"
+                  size="sm"
                   className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground shadow-lg text-sm sm:text-base py-2 rounded-md"
                   onClick={handleBookDemoClick}
                 >

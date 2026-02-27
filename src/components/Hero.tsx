@@ -11,7 +11,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[500px] lg:min-h-[600px] flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative flex flex-col justify-center overflow-hidden pt-[110px] pb-[70px] lg:pt-[130px] lg:pb-[90px]">
       {/* Background image */}
       <div
         className="absolute inset-0 z-0"
@@ -26,7 +26,7 @@ export const Hero = () => {
 
 
       {/* Main content container */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
           {/* Main headline */}
           <h1 className="h1-heading font-bold text-black mb-6" style={{ lineHeight: '1.3' }}>
@@ -34,7 +34,7 @@ export const Hero = () => {
 
           {/* Description text */}
           <p className="text-base sm:text-lg lg:text-xl text-gray-800 mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
-At IVNA, we manage a growing ecosystem of AI-Powered Care Solutions that help care organizations operate smarter, respond faster, and deliver more personalized, reliable care.           </p>
+            At IVNA, we manage a growing ecosystem of AI-Powered Care Solutions that help care organizations operate smarter, respond faster, and deliver more personalized, reliable care.           </p>
 
           {/* CTA Button - centered */}
           <div className="flex justify-center">

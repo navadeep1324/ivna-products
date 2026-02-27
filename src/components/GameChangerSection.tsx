@@ -1,23 +1,23 @@
 export const GameChangerSection = () => {
 
   return (
-    <section id="product" className="py-8 sm:py-12  relative overflow-hidden">
+    <section id="product" className="pt-8 sm:pt-12 pb-2 sm:pb-4 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Headline */}
         <div className="text-center max-w-6xl mx-auto mb-4">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight text-black">
-           Enterprise-Grade Applications Built for <br></br>Better Care Outcomes
+            Enterprise-Grade Applications Built for <br></br>Better Care Outcomes
           </h2>
         </div>
 
         {/* Sub-headline */}
         <div className="text-center max-w-3xl mx-auto">
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-semibold">
-Built to Adapt, Integrate, and Perform—our applications help care organizations stay ahead in an evolving care landscape.           </p>
+            Built to Adapt, Integrate, and Perform—our applications help care organizations stay ahead in an evolving care landscape.           </p>
         </div>
 
         {/* New Card Section */}
-        <div className="py-12 px-4 sm:px-6 lg:px-8 rounded-2xl mb-16">
+        <div className="pt-12 pb-4 px-4 sm:px-6 lg:px-8 rounded-2xl mb-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-8xl mx-auto">
             {[
               {
@@ -48,17 +48,19 @@ Built to Adapt, Integrate, and Perform—our applications help care organization
             ].map((feature, index) => (
               <div
                 key={index}
-                className="rounded-xl bg-white border border-gray-300 shadow-md p-2 flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                className="group rounded-xl bg-white border border-gray-300 shadow-md p-2 flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               >
-                {/* Inner box: background image */}
-                <div
-                  className="rounded-xl overflow-hidden flex flex-col flex-grow relative"
-                  style={{
-                    backgroundImage: `url('${feature.bgImage}')`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                  }}
-                >
+                {/* Inner box: background image wrapper */}
+                <div className="rounded-xl overflow-hidden flex flex-col flex-grow relative bg-white">
+                  {/* Background image layer */}
+                  <div
+                    className="absolute inset-0 z-0 transition-opacity duration-300"
+                    style={{
+                      backgroundImage: `url('${feature.bgImage}')`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }}
+                  />
                   {/* Card content */}
                   <div className="relative z-10 py-12 px-4 flex flex-col flex-grow text-center">
                     <h3 className="text-[#003E94] text-lg font-bold mb-3">
@@ -85,7 +87,6 @@ Built to Adapt, Integrate, and Perform—our applications help care organization
           </div>
         </div>
 
-        <div className="mb-16" />
       </div>
     </section>
   );
