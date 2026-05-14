@@ -54,7 +54,7 @@ export const Header = () => {
 
           {/* Desktop Navigation - Right aligned */}
           <div className="hidden md:flex items-center gap-4 lg:gap-6 ml-auto">
-            <a
+            {/* <a
               href="https://marketplace.kleza.io/"
               target="_blank"
               rel="noopener noreferrer"
@@ -62,7 +62,7 @@ export const Header = () => {
             >
               <Store className="h-4 w-4" style={{ color: '#36c0ed' }} />
               Marketplace
-            </a>
+            </a> */}
             <a
               href="#features"
               className="text-sm sm:text-base font-medium text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105 flex items-center gap-1"
